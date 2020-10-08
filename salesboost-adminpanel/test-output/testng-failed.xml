@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage">
+        <methods>
+          <include name="logout"/>
+          <include name="precondition"/>
+          <include name="validUserUpdate"/>
+          <include name="testReportResult"/>
+          <include name="initialize"/>
+          <include name="endSuite"/>
+        </methods>
+      </class> <!-- com.Salesboost_Adminpanel.testscript.administratorsPage -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

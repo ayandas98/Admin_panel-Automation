@@ -20,7 +20,7 @@ public class TracksObject  extends BaseClass{
 		PageFactory.initElements(this.driver, this);
 	}
 	
-	public void tracks (String sel) {
+	public void tracks (String sel, String search) {
 		try {
 		log.info("tracks page");	
 		waitForElementToLoad(this.page);

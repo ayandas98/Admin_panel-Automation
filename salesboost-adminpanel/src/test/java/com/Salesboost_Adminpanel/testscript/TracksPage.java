@@ -86,7 +86,7 @@ public class TracksPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid search failed");
+			System.out.println("valid selection failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
@@ -142,7 +142,7 @@ public class TracksPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid search failed");
+			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
@@ -150,7 +150,7 @@ public class TracksPage extends BaseClass{
 	@Test(priority = 3)
 	public void validtrackdelete () {
 		try {
-				log.info("valid tracks selection");
+				log.info("valid tracks delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
@@ -173,7 +173,7 @@ public class TracksPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid search failed");
+			System.out.println("valid delete failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}

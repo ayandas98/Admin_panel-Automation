@@ -272,17 +272,6 @@ public class RoleManagementPage extends BaseClass {
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	@BeforeClass
 	public void initialize() {
 		try {

@@ -60,7 +60,7 @@ public class TracksPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid account adding failed");
+			System.out.println("valid track adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
@@ -101,7 +101,7 @@ public class TracksPage extends BaseClass{
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
 				
-				// add user	
+				// add track	
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddTrackData(tdImport);
 				dashboardObj.contentTab.click();
@@ -125,7 +125,7 @@ public class TracksPage extends BaseClass{
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//update the track if found
 				TracksData tracksData2 = new TracksData();
 				testdata = tracksData2.getTracksData(tdImport);
 				expectedArray.add(testdata[0]);

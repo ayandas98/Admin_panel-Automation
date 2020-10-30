@@ -75,7 +75,7 @@ public class PrivateTracksPage extends BaseClass {
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
 
-				// valid tracks selection
+				// valid tracks selection for display based on active/inactive
 				
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getTracksData(tdImport);
@@ -102,7 +102,7 @@ public class PrivateTracksPage extends BaseClass {
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
 				
-				// add user	
+				// add track	
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
 			
@@ -128,7 +128,7 @@ public class PrivateTracksPage extends BaseClass {
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//update the track if user found
 				TracksData tracksData2 = new TracksData();
 				testdata = tracksData2.getEditPrivateTrackData(tdImport);
 				expectedArray.add(testdata[0]); //name
@@ -146,7 +146,7 @@ public class PrivateTracksPage extends BaseClass {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid search failed");
+			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
@@ -177,7 +177,7 @@ public class PrivateTracksPage extends BaseClass {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid search failed");
+			System.out.println("valid delete failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}

@@ -106,7 +106,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
 
-				// valid tracks selection
+				// valid posts selection
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getSystemAnnouncementData(tdImport);
 				
@@ -123,17 +123,17 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void validActivePostEditTrack () {
 		try {
-				log.info("valid active edit edit track");
+				log.info("valid active edit system announcement post");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
 				
-				// add user	
+				// add post	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
 			
@@ -150,7 +150,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				addSystemAnnouncementObj.addButton.click();	
 				Thread.sleep(2000);
 					
-				//search track from tracks list as there is no specified search button this step integrated with edit
+				//search post from list as there is no specified search button this step integrated with edit
 				SystemAnnouncementData systemAnnouncementData1 = new SystemAnnouncementData();
 				testdata = systemAnnouncementData1.getAddSystemAnnouncementData(tdImport);
 				dashboardObj.contentTab.click();
@@ -160,7 +160,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//update the post if user found
 				SystemAnnouncementData systemAnnouncementData2 = new SystemAnnouncementData();
 				testdata = systemAnnouncementData2.getAddSystemAnnouncementData(tdImport);
 			
@@ -178,7 +178,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}	
 	} 
 	
-	@Test(priority = 5)
+	@Test(priority = 4)
 	public void validInActivePostEditTrack () {
 		try {
 				log.info("valid Inactive edit edit track");
@@ -188,7 +188,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
 				
-				// add user	
+				// add post	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
 			
@@ -205,7 +205,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				addSystemAnnouncementObj.addButton.click();	
 				Thread.sleep(2000);
 					
-				//search track from tracks list as there is no specified search button this step integrated with edit
+				//search post from list as there is no specified search button this step integrated with edit
 				SystemAnnouncementData systemAnnouncementData1 = new SystemAnnouncementData();
 				testdata = systemAnnouncementData1.getAddSystemAnnouncementData(tdImport);
 				dashboardObj.contentTab.click();
@@ -215,7 +215,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//update the post if user found
 				SystemAnnouncementData systemAnnouncementData2 = new SystemAnnouncementData();
 				testdata = systemAnnouncementData2.getAddSystemAnnouncementData(tdImport);
 			
@@ -232,7 +232,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}	
 	} 
 	
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void validDeleteTrack () {
 		try {
 				log.info("valid Delete track");
@@ -269,7 +269,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//delete the user if user found
 				SystemAnnouncementData systemAnnouncementData2 = new SystemAnnouncementData();
 				testdata = systemAnnouncementData2.getAddSystemAnnouncementData(tdImport);
 			

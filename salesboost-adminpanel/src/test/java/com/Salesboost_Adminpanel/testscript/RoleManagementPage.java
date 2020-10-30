@@ -33,7 +33,7 @@ public class RoleManagementPage extends BaseClass {
 	@Test(priority = 0)
 	public void validaddroles () {
 		try {
-				log.info("Tracks -add new track");
+				log.info("Tracks -cancel add new role");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("add account");
@@ -68,7 +68,7 @@ public class RoleManagementPage extends BaseClass {
 	@Test(priority = 1)
 	public void validcanceladdroles () {
 		try {
-				log.info("Tracks -add new track");
+				log.info("Tracks - cancel add new role");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("add account");
@@ -109,7 +109,7 @@ public class RoleManagementPage extends BaseClass {
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
 
-				// valid tracks selection
+				// valid roles selection in display page based on active/inactive 
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
 				dashboardObj.contentTab.click();
@@ -128,7 +128,7 @@ public class RoleManagementPage extends BaseClass {
 	@Test(priority = 3)
 	public void validEditRoles () {
 		try {
-				log.info("valid edit track");
+				log.info("valid edit role");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
@@ -154,7 +154,7 @@ public class RoleManagementPage extends BaseClass {
 				addRolesObj.addRoleButton.click();	
 				
 					
-				//search track from tracks list as there is no specified search button this step integrated with edit
+				//search role from roles list as there is no specified search button this step integrated with edit
 				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
 				testdata = roleManagementDataObj1.getAddRolesData(tdImport);
 				dashboardObj.contentTab.click();
@@ -164,7 +164,7 @@ public class RoleManagementPage extends BaseClass {
 				driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]//following::td[contains(@value, 'Edit Role')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//update the role if found
 				RoleManagementData roleManagementDataObj2 = new RoleManagementData();
 				testdata = roleManagementDataObj2.getAddRolesData(tdImport);
 				expectedArray.add(testdata[0]);
@@ -188,7 +188,7 @@ public class RoleManagementPage extends BaseClass {
 	@Test(priority = 4)
 	public void validCancelEditRoles () {
 		try {
-				log.info("valid cancel edit track");
+				log.info("valid cancel edit role");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
@@ -214,7 +214,7 @@ public class RoleManagementPage extends BaseClass {
 				addRolesObj.addRoleButton.click();	
 				
 					
-				//search track from tracks list as there is no specified search button this step integrated with edit
+				//search role from roles list as there is no specified search button this step integrated with edit
 				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
 				testdata = roleManagementDataObj1.getAddRolesData(tdImport);
 				dashboardObj.contentTab.click();
@@ -224,7 +224,7 @@ public class RoleManagementPage extends BaseClass {
 				driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]//following::td[contains(@value, 'Edit Role')]")).click();
 				System.out.println(testdata[1]);
 				
-				//update the user if user found
+				//update the role if found
 				RoleManagementData roleManagementDataObj2 = new RoleManagementData();
 				testdata = roleManagementDataObj2.getAddRolesData(tdImport);
 				expectedArray.add(testdata[0]);
@@ -248,13 +248,13 @@ public class RoleManagementPage extends BaseClass {
 	@Test(priority = 2)
 	public void validroledeletion () {
 		try {
-				log.info("valid roles selection");
+				log.info("valid roles selection and delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
 
-				// valid tracks selection
+				// valid roles deletion once selected
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
 				dashboardObj.contentTab.click();

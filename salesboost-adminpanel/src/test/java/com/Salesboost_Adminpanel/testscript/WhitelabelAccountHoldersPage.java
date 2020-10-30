@@ -162,7 +162,7 @@ public class WhitelabelAccountHoldersPage extends BaseClass {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid search failed");
+			System.out.println("valid update failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 

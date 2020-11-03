@@ -235,7 +235,7 @@ public class LeadershipTipsPage extends BaseClass{
 		}	
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void validDeleteLeadershipTip () {
 		try {
 				log.info("valid delete leadership tip");

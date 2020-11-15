@@ -48,4 +48,12 @@ public class LeadershipToolData extends BaseClass{
 		testdata[3] = tdImport.getValue(13, 3);
 		return testdata;
 	}
+	
+	public String[] getDuplicateLeadershipToolData (TestDataImport tdImport) {
+		testdata = new String[3];
+		testdata[0] = tdImport.getValue(13, 0);
+		testdata[1] = tdImport.getValue(13, 0);
+		testdata[2] = tdImport.getValue(13, 0);
+		return testdata;
+	}
 }

@@ -24,6 +24,7 @@ public class DashboardObject extends BaseClass {
 	@FindBy (xpath ="//a[contains(text(),'System Announcements')]") public WebElement systemAnnouncement;
 	@FindBy (xpath ="//a[contains(text(),'Leadership Tips')]") public WebElement leadershipTips;
 	@FindBy (xpath ="//a[contains(text(),'Quick Sales Tips')]") public WebElement salesTips;
+	@FindBy (xpath ="//a[contains(text(),'Leadership Tool Kits')]") public WebElement leadershipTools;
 	
 	public DashboardObject (WebDriver driver) {
 		this.driver = driver;

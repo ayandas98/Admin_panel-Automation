@@ -15,8 +15,8 @@ import com.Salesboost_Adminpanel.baseclass.BaseClass;
 
 //			tdImport.readExcel("Data");
 			testdata = new String[2];
-			testdata[0] = tdImport.getValue(0, 0);
-			testdata[1] = tdImport.getValue(0, 1);
+			testdata[0] = tdImport.getValue(1, 0);
+			testdata[1] = tdImport.getValue(1, 1);
 			return testdata;
 		}
 }

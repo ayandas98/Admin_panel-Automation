@@ -13,7 +13,7 @@ public class ManagePasswordData extends BaseClass {
 	public String[] getEmail(TestDataImport tdImport) {
 		
 		testdata = new String[1];
-		testdata[0] = tdImport.getValue(1, 0);
+		testdata[0] = tdImport.getValue(2, 1);
 		return testdata;
 	}
 }

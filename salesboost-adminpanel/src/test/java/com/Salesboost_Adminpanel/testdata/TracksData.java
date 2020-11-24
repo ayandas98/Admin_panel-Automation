@@ -11,26 +11,26 @@ public class TracksData extends BaseClass{
 	
 	public String[] getTracksData(TestDataImport tdImport) {
 		testdata = new String[2];
-		testdata[0] = tdImport.getValue(9, 0);
-		testdata[1] = tdImport.getValue(9, 1);
+		testdata[0] = tdImport.getValue(56, 1);
+		testdata[1] = tdImport.getValue(56, 2);
 		return testdata;
 	}
 	
 	public String[] getAddTrackData(TestDataImport tdImport) {
 		testdata = new String[3];
-		testdata[0] = tdImport.getValue(10, 0);
-		testdata[1] = tdImport.getValue(10, 1);
-		testdata[2] = tdImport.getValue(10, 2);
+		testdata[0] = tdImport.getValue(58, 1);
+		testdata[1] = tdImport.getValue(58, 2);
+		testdata[2] = tdImport.getValue(58, 3);
 		return testdata;
 	}
 	
 	public String[] getEditTrackData(TestDataImport tdImport) {
 		testdata = new String[5];
-		testdata[0] = tdImport.getValue(11, 0);
-		testdata[1] = tdImport.getValue(11, 1);
-		testdata[2] = tdImport.getValue(11, 2);
-		testdata[3] = tdImport.getValue(11, 3);
-		testdata[4] = tdImport.getValue(11, 4);
+		testdata[0] = tdImport.getValue(60, 1);
+		testdata[1] = tdImport.getValue(60, 2);
+		testdata[2] = tdImport.getValue(60, 3);
+		testdata[3] = tdImport.getValue(60, 4);
+		testdata[4] = tdImport.getValue(60, 5);
 		return testdata;
 	}
 	

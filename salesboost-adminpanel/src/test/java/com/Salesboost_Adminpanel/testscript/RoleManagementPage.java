@@ -52,7 +52,7 @@ public class RoleManagementPage extends BaseClass {
 				roleManagementObj.addButton.click();
 				waitForElementToLoad(addRolesObj.roleName);
 				
-				addRolesObj.addRoles(testdata[0], testdata[1], testdata[2]);
+				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
 				Thread.sleep(2000);
@@ -87,7 +87,7 @@ public class RoleManagementPage extends BaseClass {
 				roleManagementObj.addButton.click();
 				waitForElementToLoad(addRolesObj.roleName);
 				
-				addRolesObj.addRoles(testdata[0], testdata[1], testdata[2]);
+				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.cancelButton);
 				addRolesObj.cancelButton.click();	
 				Thread.sleep(2000);
@@ -149,7 +149,7 @@ public class RoleManagementPage extends BaseClass {
 				roleManagementObj.addButton.click();
 				waitForElementToLoad(addRolesObj.roleName);
 				
-				addRolesObj.addRoles(testdata[0], testdata[1], testdata[2]);
+				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
 				
@@ -209,7 +209,7 @@ public class RoleManagementPage extends BaseClass {
 				roleManagementObj.addButton.click();
 				waitForElementToLoad(addRolesObj.roleName);
 				
-				addRolesObj.addRoles(testdata[0], testdata[1], testdata[2]);
+				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
 				

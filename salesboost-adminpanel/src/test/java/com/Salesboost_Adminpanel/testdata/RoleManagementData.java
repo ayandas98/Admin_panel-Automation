@@ -11,24 +11,24 @@ public class RoleManagementData extends BaseClass {
 	
 	public String[] getRolesData(TestDataImport tdImport) {
 		testdata = new String[2];
-		testdata[0] = tdImport.getValue(15, 0);
-		testdata[1] = tdImport.getValue(15, 1);
+		testdata[0] = tdImport.getValue(20, 1);
+		testdata[1] = tdImport.getValue(20, 2);
 		return testdata;
 	}
 	
 	public String[] getAddRolesData(TestDataImport tdImport) {
-		testdata = new String[3];
-		testdata[0] = tdImport.getValue(16, 0);
-		testdata[1] = tdImport.getValue(16, 1);
-		testdata[2] = tdImport.getValue(16, 2);
+		testdata = new String[2];
+		testdata[0] = tdImport.getValue(22, 1);
+		testdata[1] = tdImport.getValue(22, 2);
+		//testdata[2] = tdImport.getValue(16, 2);
 		return testdata;
 	}
 	
 	public String[] getEditRolesData(TestDataImport tdImport) {
 		testdata = new String[3];
-		testdata[0] = tdImport.getValue(17, 0);
-		testdata[1] = tdImport.getValue(17, 1);
-		testdata[2] = tdImport.getValue(17, 2);
+		testdata[0] = tdImport.getValue(24, 1);
+		testdata[1] = tdImport.getValue(24, 2);
+		testdata[2] = tdImport.getValue(24, 3);
 		return testdata;
 	}
 }

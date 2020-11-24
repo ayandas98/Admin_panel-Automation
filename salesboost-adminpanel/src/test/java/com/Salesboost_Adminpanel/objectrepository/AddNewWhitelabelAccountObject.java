@@ -73,8 +73,8 @@ public class AddNewWhitelabelAccountObject extends BaseClass {
 			this.headerColor.sendKeys(headercolor);
 			this.layoutColor.clear();
 			this.layoutColor.sendKeys(layoutcolor);
-			this.logoUploadButton.click();
-			wait(5000);
+			//this.logoUploadButton.click();
+			wait(500);
 			this.ownerFirstName.clear();
 			this.ownerFirstName.sendKeys(firstname);
 			this.ownerLastName.clear();

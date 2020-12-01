@@ -29,7 +29,7 @@ public class QuickSalesPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validActivePostAddSalesTips () {
 		try {
@@ -63,7 +63,8 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 1)
 	public void validInActivePostAddSalesTips () {
 		try {
@@ -95,7 +96,8 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validSalesTipsSelection () {
 		try {
@@ -122,7 +124,8 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
+	/*
 	@Test(priority = 3)
 	public void validActivePostEditSalesTip () {
 		try {
@@ -179,7 +182,8 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	*/
+	/*
 	@Test(priority = 4)
 	public void validInActivePostEditSalesTip () {
 		try {
@@ -234,7 +238,8 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	*/
+	/*
 	@Test(priority = 5)
 	public void validInDeleteSalesTip () {
 		try {
@@ -286,7 +291,7 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
 	@BeforeClass
 	public void initialize() {
 		try {

@@ -27,8 +27,6 @@ public class RoleManagementObject extends BaseClass {
 			waitForElementToLoad(this.confText);
 			this.filterList.click();
 			this.filterList.sendKeys(sel);
-			this.addButton.click();
-			wait(1000);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -32,8 +32,6 @@ public class EditRolesObject extends BaseClass {
 			this.roleName.sendKeys(name);
 			this.roleDescription.clear();
 			this.roleDescription.sendKeys(description);
-			this.imageUpload.click();
-			wait(1000);
 			this.roleList.clear();
 			this.roleList.sendKeys(list);
 		}

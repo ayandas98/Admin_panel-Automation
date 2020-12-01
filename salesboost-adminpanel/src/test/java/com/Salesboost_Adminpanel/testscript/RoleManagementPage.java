@@ -3,6 +3,7 @@ package com.Salesboost_Adminpanel.testscript;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -29,7 +30,7 @@ public class RoleManagementPage extends BaseClass {
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validaddroles () {
 		try {
@@ -43,7 +44,6 @@ public class RoleManagementPage extends BaseClass {
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
 				expectedArray.add(testdata[0]); //name
 				expectedArray.add(testdata[1]); //description 
-				expectedArray.add(testdata[2]); //list
 				
 				dashboardObj.contentTab.click();
 				dashboardObj.roleManagement.click();
@@ -54,6 +54,8 @@ public class RoleManagementPage extends BaseClass {
 				
 				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.addRoleButton);
+
+				addRolesObj.imageUpload.sendKeys("D:/salesboost admin/role management/add role/download.png");
 				addRolesObj.addRoleButton.click();	
 				Thread.sleep(2000);
 								
@@ -64,7 +66,8 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-
+	*/
+/*
 	@Test(priority = 1)
 	public void validcanceladdroles () {
 		try {
@@ -99,7 +102,8 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validrolesselection () {
 		try {
@@ -124,6 +128,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
+	*/
 	
 	@Test(priority = 3)
 	public void validEditRoles () {
@@ -134,7 +139,7 @@ public class RoleManagementPage extends BaseClass {
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
-				
+				/*
 				// add role
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
@@ -152,21 +157,20 @@ public class RoleManagementPage extends BaseClass {
 				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
-				
-					
+				*/
 				//search role from roles list as there is no specified search button this step integrated with edit
 				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
-				testdata = roleManagementDataObj1.getAddRolesData(tdImport);
+				testdata = roleManagementDataObj1.getRolesData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.roleManagement.click();
 				waitForElementToLoad(roleManagementObj.addButton);
 				roleManagementObj.roleManagement(testdata[0], testdata[1]);
-				driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]//following::td[contains(@value, 'Edit Role')]")).click();
+				driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]//following::td[contains(text(), 'Edit Role')]")).click();
 				System.out.println(testdata[1]);
 				
 				//update the role if found
 				RoleManagementData roleManagementDataObj2 = new RoleManagementData();
-				testdata = roleManagementDataObj2.getAddRolesData(tdImport);
+				testdata = roleManagementDataObj2.getEditRolesData(tdImport);
 				expectedArray.add(testdata[0]);
 				expectedArray.add(testdata[1]);
 				expectedArray.add(testdata[2]);
@@ -175,6 +179,7 @@ public class RoleManagementPage extends BaseClass {
 				editRolesObj.editRoles(testdata[0], testdata[1], testdata[2]);
 				Thread.sleep(2000);
 				waitForElementToLoad (editRolesObj.updateRoleButton);
+				editRolesObj.imageUpload.sendKeys("D:/salesboost admin/role management/edit role/1.png");
 				editRolesObj.updateRoleButton.click();
 			
 		}
@@ -185,6 +190,7 @@ public class RoleManagementPage extends BaseClass {
 		}	
 	} 
 	
+	/*
 	@Test(priority = 4)
 	public void validCancelEditRoles () {
 		try {
@@ -244,7 +250,8 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validroledeletion () {
 		try {
@@ -271,7 +278,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+*/	
 	@BeforeClass
 	public void initialize() {
 		try {

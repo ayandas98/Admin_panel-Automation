@@ -29,7 +29,7 @@ public class TracksPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validaddtracks () {
 		try {
@@ -64,7 +64,8 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-
+	*/
+	/*
 	@Test(priority = 1)
 	public void validtracksselection () {
 		try {
@@ -90,7 +91,8 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validEditTrack () {
 		try {
@@ -100,7 +102,7 @@ public class TracksPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
-				
+		/*		
 				// add track	
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddTrackData(tdImport);
@@ -123,11 +125,10 @@ public class TracksPage extends BaseClass{
 				waitForElementToLoad(tracksObj.addTrackButton);
 				tracksObj.tracks(testdata[0], testdata[1]);
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
 				
 				//update the track if found
 				TracksData tracksData2 = new TracksData();
-				testdata = tracksData2.getTracksData(tdImport);
+				testdata = tracksData2.getEditTrackData(tdImport);
 				expectedArray.add(testdata[0]);
 				expectedArray.add(testdata[1]);
 				expectedArray.add(testdata[2]);
@@ -135,7 +136,7 @@ public class TracksPage extends BaseClass{
 				expectedArray.add(testdata[4]);
 				
 				editTracksObj.editTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4]);
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				waitForElementToLoad (editTracksObj.trackUpdateButton);
 				editTracksObj.trackUpdateButton.click();
 			
@@ -146,6 +147,7 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
+	*/
 	
 	@Test(priority = 3)
 	public void validtrackdelete () {
@@ -169,6 +171,7 @@ public class TracksPage extends BaseClass{
 				System.out.println(testdata[1]);
 				waitForElementToLoad(editTracksObj.trackDelete);
 				editTracksObj.trackDelete.click();
+				driver.switchTo().alert().accept(); 
 				Thread.sleep(1000);
 		}
 		catch (Exception e) {

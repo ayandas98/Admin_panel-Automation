@@ -32,7 +32,7 @@ public class LeadershipObjectPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validAddTools () {
 		try {
@@ -64,7 +64,8 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 1)
 	public void validActiveStatusAddTools () {
 		try {
@@ -98,7 +99,8 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validtoolsselection () {
 		try {
@@ -140,7 +142,8 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
+	/*
 	@Test(priority = 3)
 	public void validEditTools () {
 		try {
@@ -199,7 +202,8 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
-	
+	*/
+	/*
 	@Test(priority = 4)
 	public void validToolDelete () {
 		try {
@@ -250,7 +254,8 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
+	/*
 	@Test(priority = 5)
 	public void validAddDuplicateTools () {
 		try {
@@ -282,7 +287,8 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 6)
 	public void validCancelAddDuplicateTools () {
 		try {
@@ -314,7 +320,7 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
 	@BeforeClass
 	public void initialize() {
 		try {

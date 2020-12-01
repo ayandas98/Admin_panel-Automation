@@ -34,10 +34,7 @@ public class AddRolesObject extends BaseClass {
 			this.roleActive.click();
 			this.roleDescription.clear();
 			this.roleDescription.sendKeys(description);
-			this.imageUpload.click();
-			wait(1000);
-			//this.roleList.click();
-			//this.roleList.sendKeys(list);
+			
 		}
 		catch (Exception e) {
 			e.printStackTrace();

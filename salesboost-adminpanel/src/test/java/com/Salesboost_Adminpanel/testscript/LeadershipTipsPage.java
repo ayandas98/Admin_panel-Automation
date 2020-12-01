@@ -29,7 +29,7 @@ public class LeadershipTipsPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validActivePostAddLeadershipTips () {
 		try {
@@ -63,7 +63,8 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 1)
 	public void validInActivePostAddLeadershipTips () {
 		try {
@@ -95,7 +96,8 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validLeadershipTipsSelection () {
 		try {
@@ -122,7 +124,8 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
+	/*
 	@Test(priority = 3)
 	public void validActivePostEditLeadershipTip () {
 		try {
@@ -179,7 +182,8 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	*/
+	/*
 	@Test(priority = 4)
 	public void validInActivePostEditLeadershipTip () {
 		try {
@@ -234,7 +238,8 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	*/
+	/*
 	@Test(priority = 5)
 	public void validDeleteLeadershipTip () {
 		try {
@@ -285,7 +290,7 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+*/	
 	@BeforeClass
 	public void initialize() {
 		try {

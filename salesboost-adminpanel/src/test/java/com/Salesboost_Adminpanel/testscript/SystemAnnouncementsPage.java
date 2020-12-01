@@ -29,7 +29,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validActivePostAddSystemAnnouncements () {
 		try {
@@ -63,7 +63,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 1)
 	public void validInActivePostAddSystemAnnouncements () {
 		try {
@@ -96,7 +97,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
+	/*
 	@Test(priority = 2)
 	public void validSystemAnnouncementSelection () {
 		try {
@@ -122,7 +124,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
+	/*
 	@Test(priority = 3)
 	public void validActivePostEditTrack () {
 		try {
@@ -132,7 +135,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
-				
+				/*			
 				// add post	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
@@ -152,7 +155,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 					
 				//search post from list as there is no specified search button this step integrated with edit
 				SystemAnnouncementData systemAnnouncementData1 = new SystemAnnouncementData();
-				testdata = systemAnnouncementData1.getAddSystemAnnouncementData(tdImport);
+				testdata = systemAnnouncementData1.getSystemAnnouncementData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.systemAnnouncement.click();
 				waitForElementToLoad(systemAnnouncementsObj.addPost);
@@ -162,7 +165,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				
 				//update the post if user found
 				SystemAnnouncementData systemAnnouncementData2 = new SystemAnnouncementData();
-				testdata = systemAnnouncementData2.getAddSystemAnnouncementData(tdImport);
+				testdata = systemAnnouncementData2.getEditSystemAnnouncementData(tdImport);
 			
 				editSystemAnnouncementsObj.EditAnnouncements(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7], testdata[8], testdata[9], testdata[10]);
 				Thread.sleep(2000);
@@ -177,7 +180,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
-	
+	*/
+	/*
 	@Test(priority = 4)
 	public void validInActivePostEditTrack () {
 		try {
@@ -231,6 +235,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
+	*/
 	
 	@Test(priority = 5)
 	public void validDeleteTrack () {
@@ -241,7 +246,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
-				
+				/*
 				// add user	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
@@ -258,10 +263,10 @@ public class SystemAnnouncementsPage extends BaseClass{
 				waitForElementToLoad (addSystemAnnouncementObj.addButton);
 				addSystemAnnouncementObj.addButton.click();	
 				Thread.sleep(2000);
-					
+				*/	
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				SystemAnnouncementData systemAnnouncementData1 = new SystemAnnouncementData();
-				testdata = systemAnnouncementData1.getAddSystemAnnouncementData(tdImport);
+				testdata = systemAnnouncementData1.getSystemAnnouncementData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.systemAnnouncement.click();
 				waitForElementToLoad(systemAnnouncementsObj.addPost);
@@ -270,13 +275,11 @@ public class SystemAnnouncementsPage extends BaseClass{
 				System.out.println(testdata[1]);
 				
 				//delete the user if user found
-				SystemAnnouncementData systemAnnouncementData2 = new SystemAnnouncementData();
-				testdata = systemAnnouncementData2.getAddSystemAnnouncementData(tdImport);
-			
-				editSystemAnnouncementsObj.EditAnnouncements(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7], testdata[8], testdata[9], testdata[10]);
+				
 				Thread.sleep(2000);
 				waitForElementToLoad (editSystemAnnouncementsObj.deleteButton);
-				editSystemAnnouncementsObj.deleteButton.click();		
+				editSystemAnnouncementsObj.deleteButton.click();
+				driver.switchTo().alert().accept(); 
 		}
 		catch (Exception e) {
 			e.printStackTrace();

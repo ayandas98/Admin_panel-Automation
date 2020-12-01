@@ -26,7 +26,7 @@ public class TracksObject  extends BaseClass{
 		waitForElementToLoad(this.page);
 		this.select.click();
 		this.select.sendKeys(sel);
-		this.addTrackButton.click();
+		//this.addTrackButton.click();
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -33,7 +33,7 @@ public class EditTracksObject extends BaseClass {
 	public void editTrack (String name, String slug, String description, String tag, String course) {
 		try {
 			log.info("edit track");
-			waitForElementToLoad(this.confText);
+			//waitForElementToLoad(this.confText);
 			this.trackName.clear();
 			this.trackName.sendKeys(name);
 			this.trackSlug.clear();
@@ -43,13 +43,12 @@ public class EditTracksObject extends BaseClass {
 			this.trackDescription.sendKeys(description);
 			this.trackTags.click();
 			this.trackTags.sendKeys(tag);
-			driver.findElement(By.id("Value")).sendKeys(Keys.RETURN);
+			waitForElementToLoad(this.trackCourses);
 			this.trackCourses.click();
 			this.trackCourses.sendKeys(course);
 			driver.findElement(By.id("Value")).sendKeys(Keys.RETURN);
 			this.trackCertified.click();
-			waitForElementToLoad(this.trackUpdateButton);
-			this.trackUpdateButton.click();
+			wait(1000);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

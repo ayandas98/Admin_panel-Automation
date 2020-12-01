@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="22098" started-at="2020-10-01T13:18:55Z" finished-at="2020-10-01T13:19:17Z">
+  <suite name="Default suite" duration-ms="9453" started-at="2020-12-01T11:21:11Z" finished-at="2020-12-01T11:21:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="22098" started-at="2020-10-01T13:18:55Z" finished-at="2020-10-01T13:19:17Z">
-      <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage">
-        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9]" name="precondition" is-config="true" duration-ms="11780" started-at="2020-10-01T13:18:43Z" finished-at="2020-10-01T13:18:55Z">
+    <test name="Default test" duration-ms="9453" started-at="2020-12-01T11:21:11Z" finished-at="2020-12-01T11:21:20Z">
+      <class name="com.Salesboost_Adminpanel.testscript.RoleManagementPage">
+        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9]" name="precondition" is-config="true" duration-ms="13502" started-at="2020-12-01T11:20:58Z" finished-at="2020-12-01T11:21:11Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@77bd7fe7]]>
+                <![CDATA[org.testng.TestRunner@2d84cb86]]>
               </value>
             </param>
             <param index="1">
@@ -23,34 +23,34 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9]" name="initialize" is-config="true" duration-ms="6752" started-at="2020-10-01T13:18:55Z" finished-at="2020-10-01T13:19:02Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9]" name="initialize" is-config="true" duration-ms="6621" started-at="2020-12-01T11:21:11Z" finished-at="2020-12-01T11:21:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validUserUpdate()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9]" name="validUserUpdate" duration-ms="13443" started-at="2020-10-01T13:19:02Z" finished-at="2020-10-01T13:19:15Z">
+        <test-method status="PASS" signature="validEditRoles()[pri:3, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9]" name="validEditRoles" duration-ms="1822" started-at="2020-12-01T11:21:18Z" finished-at="2020-12-01T11:21:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validUserUpdate -->
-        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9]" name="testReportResult" is-config="true" duration-ms="4" started-at="2020-10-01T13:19:15Z" finished-at="2020-10-01T13:19:15Z">
+        </test-method> <!-- validEditRoles -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9]" name="testReportResult" is-config="true" duration-ms="1" started-at="2020-12-01T11:21:20Z" finished-at="2020-12-01T11:21:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validUserUpdate status=SUCCESS method=accountHoldersPage.validUserUpdate()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9] output={null}]]]>
+                <![CDATA[[TestResult name=validEditRoles status=SUCCESS method=RoleManagementPage.validEditRoles()[pri:3, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReportResult -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9]" name="logout" is-config="true" duration-ms="1875" started-at="2020-10-01T13:19:15Z" finished-at="2020-10-01T13:19:17Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9]" name="logout" is-config="true" duration-ms="988" started-at="2020-12-01T11:21:20Z" finished-at="2020-12-01T11:21:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@79ca92b9]" name="endSuite" is-config="true" duration-ms="1319" started-at="2020-10-01T13:19:17Z" finished-at="2020-10-01T13:19:19Z">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@79ca92b9]" name="endSuite" is-config="true" duration-ms="1642" started-at="2020-12-01T11:21:21Z" finished-at="2020-12-01T11:21:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
-      </class> <!-- com.Salesboost_Adminpanel.testscript.accountHoldersPage -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.RoleManagementPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

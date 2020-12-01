@@ -27,6 +27,8 @@ public class loginPage extends BaseClass {
 	public void validEmailValidPassword() {
 		try {
 			log.info("Sign In: validEmailValidPassword");
+			driver.switchTo().alert().accept();
+			
 			actualstring=""; expectedstring="";
 			eTest = eReports.createTest("validEmailValidPassword");
 			eTest.assignCategory("SignIn");

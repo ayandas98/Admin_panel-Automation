@@ -36,8 +36,8 @@ public class TracksPage extends BaseClass{
 				log.info("Tracks -add new track");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add track");
+				eTest.assignCategory("tracks");
 				
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddTrackData(tdImport);
@@ -73,7 +73,7 @@ public class TracksPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("tracks");
 
 				// valid tracks selection
 				
@@ -100,8 +100,8 @@ public class TracksPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update track");
+				eTest.assignCategory("tracks");
 		/*		
 				// add track	
 				TracksData tracksData = new TracksData();
@@ -155,8 +155,8 @@ public class TracksPage extends BaseClass{
 				log.info("valid tracks delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("tracks");
 
 				// valid tracks selection then once selected delete
 				

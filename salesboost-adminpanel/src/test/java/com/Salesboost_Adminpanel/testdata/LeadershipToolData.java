@@ -51,9 +51,9 @@ public class LeadershipToolData extends BaseClass{
 	
 	public String[] getDuplicateLeadershipToolData (TestDataImport tdImport) {
 		testdata = new String[3];
-		testdata[0] = tdImport.getValue(50, 0);
-		testdata[1] = tdImport.getValue(50, 0);
-		testdata[2] = tdImport.getValue(50, 0);
+		testdata[0] = tdImport.getValue(50, 1);
+		testdata[1] = tdImport.getValue(50, 2);
+		testdata[2] = tdImport.getValue(50, 3);
 		return testdata;
 	}
 }

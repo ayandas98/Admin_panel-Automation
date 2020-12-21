@@ -29,6 +29,7 @@ public class LeadershipToolObject extends BaseClass{
 			this.listSelect.click();
 			this.listSelect.sendKeys(sel);
 			this.searchBar.clear();
+			this.searchBar.sendKeys(name);
 			this.searchButton.click();
 		}
 		catch (Exception e) {

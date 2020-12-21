@@ -17,7 +17,7 @@ public class AddQuickSalesTips extends BaseClass{
 	@FindBy(xpath ="//input[@id='QuickSalesTip_SEOMetaDescription']") public WebElement seoDescription;
 	@FindBy(xpath ="//input[@id='QuickSalesTip_SEOMetaKeywords']") public WebElement seoKeyboard;
 	@FindBy(xpath ="//input[@id='QuickSalesTip_IsActive']") public WebElement postActive;
-	@FindBy(xpath ="//iframe[@id='QuickSalesTip_Content_ifr']") public WebElement postContent;
+	@FindBy(css ="html") public WebElement postContent;
 	@FindBy(xpath ="//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement addButton;
 	
 	public AddQuickSalesTips (WebDriver driver) {

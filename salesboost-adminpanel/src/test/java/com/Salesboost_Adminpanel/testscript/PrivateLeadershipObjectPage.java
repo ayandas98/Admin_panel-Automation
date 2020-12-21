@@ -37,8 +37,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("Tracks -add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add tips");
+				eTest.assignCategory("pvt leadership tips");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
@@ -69,8 +69,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("Tracks - active status add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add tips");
+				eTest.assignCategory("pvt leadership tip");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
@@ -104,7 +104,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("pvt leadership tip");
 
 				// add tool	
 				LeadershipToolData leadershipData = new LeadershipToolData();
@@ -147,8 +147,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update tip");
+				eTest.assignCategory("pvt leadership tip");
 				
 				// add track	
 
@@ -207,8 +207,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("valid tools delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("pvt leadership tip");
 
 				// add tool
 				LeadershipToolData leadershipData = new LeadershipToolData();

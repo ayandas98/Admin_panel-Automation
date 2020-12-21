@@ -29,15 +29,15 @@ public class LeadershipTipsPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validActivePostAddLeadershipTips () {
 		try {
 				log.info("leadership tips active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add tips");
+				eTest.assignCategory("leadership tips");
 				
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
 				testdata = leadershipTipsData.getAddLeadershipTipsData(tdImport);
@@ -63,7 +63,7 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
+	
 	/*
 	@Test(priority = 1)
 	public void validInActivePostAddLeadershipTips () {
@@ -71,8 +71,8 @@ public class LeadershipTipsPage extends BaseClass{
 				log.info("leadership tips In-active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add tips");
+				eTest.assignCategory("leadership tips");
 				
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
 				testdata = leadershipTipsData.getAddLeadershipTipsData(tdImport);
@@ -105,7 +105,7 @@ public class LeadershipTipsPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("leadership tips");
 
 				// valid tracks selection
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
@@ -133,8 +133,8 @@ public class LeadershipTipsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update tips");
+				eTest.assignCategory("leadership tips");
 				
 				// add user	
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
@@ -191,8 +191,8 @@ public class LeadershipTipsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update tip");
+				eTest.assignCategory("leadership tips");
 				
 				// add user	
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
@@ -247,8 +247,8 @@ public class LeadershipTipsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify delete tips");
+				eTest.assignCategory("leadership tips");
 				
 				// add user	
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();

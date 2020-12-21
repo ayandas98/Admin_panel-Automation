@@ -36,8 +36,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 				log.info("system announcement active posts add new system announcements");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add announcement");
+				eTest.assignCategory("system announcement");
 				
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
@@ -72,7 +72,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest.assignCategory("system announcement");
 				
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
 				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
@@ -106,7 +106,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("system announcement");
 
 				// valid posts selection
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
@@ -133,8 +133,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update announcement");
+				eTest.assignCategory("system announcement");
 				/*			
 				// add post	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
@@ -189,8 +189,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update announcement");
+				eTest.assignCategory("system announcement");
 				
 				// add post	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
@@ -244,8 +244,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("system announcement");
 				/*
 				// add user	
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();

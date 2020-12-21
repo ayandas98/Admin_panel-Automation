@@ -37,8 +37,8 @@ public class RoleManagementPage extends BaseClass {
 				log.info("Tracks -cancel add new role");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add role");
+				eTest.assignCategory("role management");
 				
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
@@ -74,8 +74,8 @@ public class RoleManagementPage extends BaseClass {
 				log.info("Tracks - cancel add new role");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("cancel add role");
+				eTest.assignCategory("role management");
 				
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
@@ -111,7 +111,7 @@ public class RoleManagementPage extends BaseClass {
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("role management");
 
 				// valid roles selection in display page based on active/inactive 
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
@@ -129,7 +129,7 @@ public class RoleManagementPage extends BaseClass {
 		}
 	}
 	*/
-	
+	/*
 	@Test(priority = 3)
 	public void validEditRoles () {
 		try {
@@ -137,8 +137,8 @@ public class RoleManagementPage extends BaseClass {
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update role");
+				eTest.assignCategory("role management");
 				/*
 				// add role
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
@@ -157,7 +157,7 @@ public class RoleManagementPage extends BaseClass {
 				addRolesObj.addRoles(testdata[0], testdata[1]);
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
-				*/
+				
 				//search role from roles list as there is no specified search button this step integrated with edit
 				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
 				testdata = roleManagementDataObj1.getRolesData(tdImport);
@@ -189,7 +189,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
-	
+	*/
 	/*
 	@Test(priority = 4)
 	public void validCancelEditRoles () {
@@ -198,8 +198,8 @@ public class RoleManagementPage extends BaseClass {
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update role");
+				eTest.assignCategory("role management");
 				
 				// add role
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
@@ -251,26 +251,28 @@ public class RoleManagementPage extends BaseClass {
 		}	
 	}
 	*/
-	/*
+	
 	@Test(priority = 2)
 	public void validroledeletion () {
 		try {
 				log.info("valid roles selection and delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("role management");
 
 				// valid roles deletion once selected
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
-				testdata = roleManagementDataObj.getAddRolesData(tdImport);
+				testdata = roleManagementDataObj.getRolesData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.roleManagement.click();
 				waitForElementToLoad(roleManagementObj.addButton);
 				roleManagementObj.roleManagement(testdata[0], testdata[1]);
-				driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]//following::td[contains(@value, 'Delete Role')]")).click();
-				wait(500);
+				//driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]/following::")).click();
+				driver.findElement(By.xpath("//td[contains(text(),'"+ testdata[1] +"')]/following::td[contains(@value, 'Delete Role')]")).click();
+				//driver.findElement(By.xpath("//tbody/tr[20]/td[8]/input[1]")).click();
 				driver.switchTo().alert().accept();
+				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -278,7 +280,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-*/	
+
 	@BeforeClass
 	public void initialize() {
 		try {

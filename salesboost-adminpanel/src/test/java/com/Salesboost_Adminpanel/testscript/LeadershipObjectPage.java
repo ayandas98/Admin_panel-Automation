@@ -36,11 +36,11 @@ public class LeadershipObjectPage extends BaseClass{
 	@Test(priority = 0)
 	public void validAddTools () {
 		try {
-				log.info("Tracks -add new tools");
+				log.info("add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add new tools");
+				eTest.assignCategory("leadership tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
@@ -72,8 +72,8 @@ public class LeadershipObjectPage extends BaseClass{
 				log.info("Tracks - active status add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add tools");
+				eTest.assignCategory("leadership tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
@@ -108,8 +108,8 @@ public class LeadershipObjectPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
-
+				eTest.assignCategory("leadership tools");
+				
 				// add tool
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
@@ -152,7 +152,7 @@ public class LeadershipObjectPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest.assignCategory("leadership tools");
 				
 				// add track	
 				LeadershipToolData leadershipData = new LeadershipToolData();
@@ -179,16 +179,15 @@ public class LeadershipObjectPage extends BaseClass{
 				dashboardObj.leadershipTools.click();
 				waitForElementToLoad(leadershipObj.addButton);
 				leadershipObj.leadershipTools(testdata[0], testdata[1]);
-				wait(1000);
+
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
 				//update the tool if found
-				TracksData tracksData2 = new TracksData();
-				testdata = tracksData2.getTracksData(tdImport);
+				LeadershipToolData leadershipData2 = new LeadershipToolData();
+				testdata = leadershipData2.getEditLeadershipToolsData(tdImport);
 				expectedArray.add(testdata[0]);
 				expectedArray.add(testdata[1]);
-				expectedArray.add(testdata[2]);
 				
 				editToolObj.editleadershipTool(testdata[0], testdata[1], testdata[2]);
 				Thread.sleep(2000);
@@ -203,15 +202,15 @@ public class LeadershipObjectPage extends BaseClass{
 		}	
 	} 
 	*/
-	/*
+/*	
 	@Test(priority = 4)
 	public void validToolDelete () {
 		try {
 				log.info("valid tools delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("leadership tools");
 
 				// add tool
 				LeadershipToolData leadershipData = new LeadershipToolData();
@@ -228,6 +227,7 @@ public class LeadershipObjectPage extends BaseClass{
 				waitForElementToLoad (addToolObj.addButton);
 				addToolObj.addButton.click();	
 				Thread.sleep(2000);
+				
 				// search tool
 				LeadershipToolData leadershipData1 = new LeadershipToolData();
 				testdata = leadershipData1.getLeadershipToolsData(tdImport);
@@ -236,17 +236,17 @@ public class LeadershipObjectPage extends BaseClass{
 				dashboardObj.leadershipTools.click();
 				waitForElementToLoad(leadershipObj.addButton);
 				leadershipObj.leadershipTools(testdata[0], testdata[1]);
-				wait(1000);
+
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
 				// valid tracks selection then once selected delete
 				Thread.sleep(1000);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				waitForElementToLoad(editToolObj.deleteButton);
 				editToolObj.deleteButton.click();
-				Thread.sleep(1000);
+				driver.switchTo().alert().accept();
+				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -255,18 +255,18 @@ public class LeadershipObjectPage extends BaseClass{
 		}
 	}
 	*/
-	/*
+	
 	@Test(priority = 5)
 	public void validAddDuplicateTools () {
 		try {
-				log.info("Tracks -add new duplicate tools");
+				log.info("new duplicate tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("duplicate tool");
+				eTest.assignCategory("leadership tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
-				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
+				testdata = leadershipData.getDuplicateLeadershipToolData(tdImport);
 			
 				dashboardObj.contentTab.click();
 				dashboardObj.leadershipTools.click();
@@ -287,7 +287,7 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
+	
 	/*
 	@Test(priority = 6)
 	public void validCancelAddDuplicateTools () {
@@ -295,8 +295,8 @@ public class LeadershipObjectPage extends BaseClass{
 				log.info("Tracks -cancel add new duplicate tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("cancel duplicate tools");
+				eTest.assignCategory("duplicate tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
@@ -310,8 +310,9 @@ public class LeadershipObjectPage extends BaseClass{
 				
 				duplicateObj.duplicateLeadership(testdata[0], testdata[1], testdata[2]);
 				waitForElementToLoad (duplicateObj.closeButton);
-				duplicateObj.closeButton.click();	
 				Thread.sleep(2000);
+				duplicateObj.closeButton.click();	
+				
 								
 		}
 		catch (Exception e) {

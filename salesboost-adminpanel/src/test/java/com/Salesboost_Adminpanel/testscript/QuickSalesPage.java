@@ -29,15 +29,15 @@ public class QuickSalesPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validActivePostAddSalesTips () {
 		try {
 				log.info("sales tips active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add sales");
+				eTest.assignCategory("quick sales");
 				
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
 				testdata = 	quickSalesTipsData.getAddSalesTipsData(tdImport);
@@ -63,7 +63,7 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
+	
 	/*
 	@Test(priority = 1)
 	public void validInActivePostAddSalesTips () {
@@ -71,8 +71,8 @@ public class QuickSalesPage extends BaseClass{
 				log.info("sales tips In-active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("add sales tip");
+				eTest.assignCategory("quick sales");
 				
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
 				testdata = 	quickSalesTipsData.getAddSalesTipsData(tdImport);
@@ -105,7 +105,7 @@ public class QuickSalesPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("quick sales");
 
 				// valid tracks selection
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
@@ -133,8 +133,8 @@ public class QuickSalesPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update sales tip");
+				eTest.assignCategory("quick sales");
 				
 				// add user	
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
@@ -191,8 +191,8 @@ public class QuickSalesPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update sales tip");
+				eTest.assignCategory("quick sales");
 				
 				// add user	
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
@@ -247,8 +247,8 @@ public class QuickSalesPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify delete tip");
+				eTest.assignCategory("quick sales");
 				
 				// add user	
 				QuickSalesTipsData 	quickSalesTipsData = new QuickSalesTipsData();

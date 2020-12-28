@@ -29,7 +29,7 @@ public class LeadershipTipsPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validActivePostAddLeadershipTips () {
 		try {
@@ -63,7 +63,7 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
 	/*
 	@Test(priority = 1)
 	public void validInActivePostAddLeadershipTips () {
@@ -125,7 +125,7 @@ public class LeadershipTipsPage extends BaseClass{
 		}
 	}
 	*/
-	/*
+	
 	@Test(priority = 3)
 	public void validActivePostEditLeadershipTip () {
 		try {
@@ -167,7 +167,7 @@ public class LeadershipTipsPage extends BaseClass{
 				
 				//update the user if user found
 				LeadershipTipsData leadershipTipsData2 = new LeadershipTipsData();
-				testdata = leadershipTipsData2.getLeadershipTipsData(tdImport);
+				testdata = leadershipTipsData2.getEditLeadershipTipsData(tdImport);
 			
 				editLeadershipTips.editTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7], testdata[8]);
 				Thread.sleep(2000);
@@ -182,7 +182,7 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	*/
+	
 	/*
 	@Test(priority = 4)
 	public void validInActivePostEditLeadershipTip () {
@@ -265,7 +265,7 @@ public class LeadershipTipsPage extends BaseClass{
 				waitForElementToLoad (addLeadershipTips.addButton);
 				addLeadershipTips.addButton.click();	
 				Thread.sleep(2000);
-					
+									
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				LeadershipTipsData leadershipTipsData1 = new LeadershipTipsData();
 				testdata = leadershipTipsData1.getLeadershipTipsData(tdImport);
@@ -282,7 +282,8 @@ public class LeadershipTipsPage extends BaseClass{
 				//delete the user if user found
 				Thread.sleep(1000);
 				waitForElementToLoad (editLeadershipTips.deleteButton);
-				editLeadershipTips.deleteButton.click();		
+				editLeadershipTips.deleteButton.click();	
+				driver.switchTo().alert().accept();	
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -290,7 +291,7 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-*/	
+	*/
 	@BeforeClass
 	public void initialize() {
 		try {

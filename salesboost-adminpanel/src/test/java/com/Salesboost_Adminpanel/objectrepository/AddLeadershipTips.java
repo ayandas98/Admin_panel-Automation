@@ -19,7 +19,7 @@ public class AddLeadershipTips extends BaseClass{
 	@FindBy(xpath ="//input[@id='LeadershipTip_SEOMetaDescription']") public WebElement seoDescription;
 	@FindBy(xpath ="//input[@id='LeadershipTip_SEOMetaKeywords']") public WebElement seoKeywords;
 	@FindBy(xpath ="//input[@id='LeadershipTip_IsActive']") public WebElement tipActive;
-	@FindBy(xpath ="//iframe[@id='LeadershipTip_Content_ifr']") public WebElement tipContent;
+	@FindBy(xpath ="//div[@id='mceu_41-0']") public WebElement tipContent;
 	@FindBy(xpath ="//body/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/input[1]") public WebElement addButton;
 	@FindBy(xpath = "//h1[contains(text(),'Add Leadership Tip')]") public WebElement confText;
 	
@@ -44,7 +44,7 @@ public class AddLeadershipTips extends BaseClass{
 		this.seoDescription.sendKeys(desc);
 		this.seoKeywords.clear();
 		this.seoKeywords.sendKeys(key);
-		this.tipContent.clear();
+		//this.tipContent.clear();
 		this.tipContent.sendKeys(content);
 	}
 	catch (Exception e) {

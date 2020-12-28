@@ -268,9 +268,7 @@ public class RoleManagementPage extends BaseClass {
 				dashboardObj.roleManagement.click();
 				waitForElementToLoad(roleManagementObj.addButton);
 				roleManagementObj.roleManagement(testdata[0], testdata[1]);
-				//driver.findElement(By.xpath(" //td[contains(text(),'" + testdata[1] + "')]/following::")).click();
-				driver.findElement(By.xpath("//td[contains(text(),'"+ testdata[1] +"')]/following::td[contains(@value, 'Delete Role')]")).click();
-				//driver.findElement(By.xpath("//tbody/tr[20]/td[8]/input[1]")).click();
+				driver.findElement(By.xpath("//td[contains(text(),'" + testdata[1] + "')]//following::input[2]")).click();
 				driver.switchTo().alert().accept();
 				
 		}

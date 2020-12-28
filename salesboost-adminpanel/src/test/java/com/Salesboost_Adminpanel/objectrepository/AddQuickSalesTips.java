@@ -17,8 +17,9 @@ public class AddQuickSalesTips extends BaseClass{
 	@FindBy(xpath ="//input[@id='QuickSalesTip_SEOMetaDescription']") public WebElement seoDescription;
 	@FindBy(xpath ="//input[@id='QuickSalesTip_SEOMetaKeywords']") public WebElement seoKeyboard;
 	@FindBy(xpath ="//input[@id='QuickSalesTip_IsActive']") public WebElement postActive;
-	@FindBy(css ="html") public WebElement postContent;
+	@FindBy(xpath ="//div[@id='mceu_41-0']") public WebElement postContent;
 	@FindBy(xpath ="//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement addButton;
+	@FindBy(xpath ="//div[@id='mceu_41-0']") public WebElement para;
 	
 	public AddQuickSalesTips (WebDriver driver) {
 		this.driver = driver;
@@ -36,7 +37,9 @@ public class AddQuickSalesTips extends BaseClass{
 			this.seoTitle.sendKeys(seoTitle);
 			this.seoDescription.sendKeys(des);
 			this.seoKeyboard.sendKeys(key);
-			this.postContent.clear();
+			this.para.click();
+
+			//this.postContent.click();
 			this.postContent.sendKeys(content);
 		}
 		catch(Exception e ) {

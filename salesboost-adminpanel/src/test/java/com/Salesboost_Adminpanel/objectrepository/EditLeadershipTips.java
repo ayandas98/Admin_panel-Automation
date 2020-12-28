@@ -1,5 +1,6 @@
 package com.Salesboost_Adminpanel.objectrepository;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,9 +18,9 @@ public class EditLeadershipTips extends BaseClass{
 	@FindBy(xpath = "//input[@id='LeadershipTip_SEOMetaDescription']") public WebElement seoDescription;
 	@FindBy(xpath = "//input[@id='LeadershipTip_SEOMetaKeywords']") public WebElement seoKeys;
 	@FindBy(xpath = "//input[@id='LeadershipTip_IsActive']") public WebElement tipActive;
-	@FindBy(xpath = "//tbody/tr[9]/td[2]/ul[1]/li[1]") public WebElement tipTags;
+	@FindBy(xpath = "//td[contains(text(),'Tags')]/following::td//input") public WebElement tipTags;
 	@FindBy(xpath = "//tbody/tr[10]/td[2]/ul[1]/li[1]/input[1]") public WebElement tipPosts;
-	@FindBy(xpath = "//iframe[@id='LeadershipTip_Content_ifr']") public WebElement tipContent;
+	@FindBy(xpath = "//div[@id='mceu_41-0']") public WebElement tipContent;
 	@FindBy(xpath = "//body/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/input[1]") public WebElement updateButton;
 	@FindBy(xpath = "//input[@id='deleteButton']") public WebElement deleteButton;
 	
@@ -44,11 +45,12 @@ public class EditLeadershipTips extends BaseClass{
 			this.seoDescription.sendKeys(des);
 			this.seoKeys.clear();
 			this.seoKeys.sendKeys(key);
-			this.tipTags.clear();
-			this.tipTags.sendKeys(tag);
-			this.tipPosts.clear();
+			//waitForElementToLoad(tipTags);
+			//this.tipTags.sendKeys(tag);
+			//this.tipTags.sendKeys(Keys.RETURN);
+			//this.tipPosts.click();
 			this.tipPosts.sendKeys(post);
-			this.tipContent.clear();
+			this.tipContent.click();
 			this.tipContent.sendKeys(cont);
 		}
 		catch (Exception e) {

@@ -92,7 +92,7 @@ public class TracksPage extends BaseClass{
 		}
 	}
 	*/
-	/*
+	
 	@Test(priority = 2)
 	public void validEditTrack () {
 		try {
@@ -102,7 +102,7 @@ public class TracksPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update track");
 				eTest.assignCategory("tracks");
-		/*		
+			
 				// add track	
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddTrackData(tdImport);
@@ -114,7 +114,7 @@ public class TracksPage extends BaseClass{
 				
 				addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
 				waitForElementToLoad (addTracksObj.addTrackButton);
-				addTracksObj.addTrackButton.click();	
+				//addTracksObj.addTrackButton.click();	
 				Thread.sleep(2000);
 					
 				//search track from tracks list as there is no specified search button this step integrated with edit
@@ -147,8 +147,8 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
-	*/
 	
+	/*
 	@Test(priority = 3)
 	public void validtrackdelete () {
 		try {
@@ -180,7 +180,7 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
 	@BeforeClass
 	public void initialize() {
 		try {

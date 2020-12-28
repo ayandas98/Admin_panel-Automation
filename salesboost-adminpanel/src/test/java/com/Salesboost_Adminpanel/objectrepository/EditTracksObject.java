@@ -24,6 +24,7 @@ public class EditTracksObject extends BaseClass {
 	@FindBy (xpath = "//input[@id='CertifiedTrack'] ") public WebElement trackCertified;
 	@FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1] ") public WebElement trackUpdateButton ;
 	@FindBy (xpath = "//input[@id='deleteButton']") public WebElement trackDelete;
+	@FindBy (xpath ="//tbody/tr[10]/td[2]/input[1]") public WebElement trackPost;
 	
 	public EditTracksObject (WebDriver driver) {
 		this.driver = driver;
@@ -44,11 +45,11 @@ public class EditTracksObject extends BaseClass {
 			this.trackTags.click();
 			this.trackTags.sendKeys(tag);
 			waitForElementToLoad(this.trackCourses);
-			this.trackCourses.click();
 			this.trackCourses.sendKeys(course);
-			driver.findElement(By.id("Value")).sendKeys(Keys.RETURN);
+			this.trackCourses.sendKeys(Keys.RETURN);
+			this.trackPost.sendKeys("D:/salesboost admin/role management/add role/download.png");
 			this.trackCertified.click();
-			wait(1000);
+			
 		}
 		catch (Exception e) {
 			e.printStackTrace();

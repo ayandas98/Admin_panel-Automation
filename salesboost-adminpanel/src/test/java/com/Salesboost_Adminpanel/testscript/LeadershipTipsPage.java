@@ -170,7 +170,6 @@ public class LeadershipTipsPage extends BaseClass{
 				testdata = leadershipTipsData2.getEditLeadershipTipsData(tdImport);
 			
 				editLeadershipTips.editTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7], testdata[8]);
-				Thread.sleep(2000);
 				waitForElementToLoad (editLeadershipTips.tipActive);
 				waitForElementToLoad (editLeadershipTips.updateButton);
 				editLeadershipTips.tipActive.click();

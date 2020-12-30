@@ -45,10 +45,10 @@ public class EditLeadershipTips extends BaseClass{
 			this.seoDescription.sendKeys(des);
 			this.seoKeys.clear();
 			this.seoKeys.sendKeys(key);
-			//waitForElementToLoad(tipTags);
-			//this.tipTags.sendKeys(tag);
-			//this.tipTags.sendKeys(Keys.RETURN);
-			//this.tipPosts.click();
+			waitForElementToLoad(tipTags);
+			this.tipTags.sendKeys(tag);
+			this.tipTags.sendKeys(Keys.RETURN);
+			this.tipPosts.click();
 			this.tipPosts.sendKeys(post);
 			this.tipContent.click();
 			this.tipContent.sendKeys(cont);

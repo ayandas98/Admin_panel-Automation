@@ -34,7 +34,7 @@ public class AddRolesObject extends BaseClass {
 			this.roleActive.click();
 			this.roleDescription.clear();
 			this.roleDescription.sendKeys(description);
-			
+			this.imageUpload.sendKeys("D:/salesboost admin/role management/add role/download.png");
 		}
 		catch (Exception e) {
 			e.printStackTrace();

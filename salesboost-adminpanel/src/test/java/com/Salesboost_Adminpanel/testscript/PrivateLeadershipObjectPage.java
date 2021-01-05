@@ -15,7 +15,6 @@ import com.Salesboost_Adminpanel.objectrepository.LeadershipToolObject;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
 import com.Salesboost_Adminpanel.testdata.LeadershipToolData;
 import com.Salesboost_Adminpanel.testdata.TestDataImport;
-import com.Salesboost_Adminpanel.testdata.TracksData;
 import com.aventstack.extentreports.Status;
 
 public class PrivateLeadershipObjectPage extends BaseClass{
@@ -30,7 +29,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validAddTools () {
 		try {
@@ -62,6 +61,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
+	
 	
 	@Test(priority = 1)
 	public void validActiveStatusAddTools () {
@@ -139,7 +139,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
 	@Test(priority = 3)
 	public void validEditTools () {
 		try {
@@ -177,16 +177,13 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				dashboardObj.leadershipTools.click();
 				waitForElementToLoad(leadershipObj.addButton);
 				leadershipObj.leadershipTools(testdata[0], testdata[1]);
-				wait(1000);
+				
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				
 				//update the tool if found
-				TracksData tracksData2 = new TracksData();
-				testdata = tracksData2.getEditPrivateTrackData(tdImport);
-				expectedArray.add(testdata[0]);
-				expectedArray.add(testdata[1]);
-				expectedArray.add(testdata[2]);
+				LeadershipToolData leadershipData2 = new LeadershipToolData();
+				testdata = leadershipData2.getEditPrivateLeadershipToolsData(tdImport);
 				
 				editPrivateObj.editleadershipTool(testdata[0], testdata[1], testdata[2], testdata[3]);
 				Thread.sleep(2000);
@@ -201,6 +198,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 		}	
 	} 
 	
+	/*
 	@Test(priority = 4)
 	public void validToolDelete () {
 		try {
@@ -209,10 +207,10 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify delete");
 				eTest.assignCategory("pvt leadership tip");
-
+				
 				// add tool
 				LeadershipToolData leadershipData = new LeadershipToolData();
-				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
+				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
 				dashboardObj.leadershipTools.click();
@@ -226,7 +224,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				waitForElementToLoad (addPrivateObj.addButton);
 				addPrivateObj.kitStatus.click();
 				addPrivateObj.addButton.click();	
-				Thread.sleep(2000);
+				Thread.sleep(2000);   
 				// search tool
 				LeadershipToolData leadershipData1 = new LeadershipToolData();
 				testdata = leadershipData1.getLeadershipToolsData(tdImport);
@@ -235,16 +233,14 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				dashboardObj.leadershipTools.click();
 				waitForElementToLoad(leadershipObj.addButton);
 				leadershipObj.leadershipTools(testdata[0], testdata[1]);
-				wait(1000);
+				Thread.sleep(1000);
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
 				
 				// valid tracks selection then once selected delete
 				Thread.sleep(1000);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
 				waitForElementToLoad(editPrivateObj.deleteButton);
 				editPrivateObj.deleteButton.click();
+				driver.switchTo().alert().accept();
 				Thread.sleep(1000);
 		}
 		catch (Exception e) {
@@ -253,7 +249,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
 	@BeforeClass
 	public void initialize() {
 		try {

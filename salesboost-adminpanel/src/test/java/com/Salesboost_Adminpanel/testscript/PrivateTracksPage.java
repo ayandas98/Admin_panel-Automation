@@ -29,7 +29,7 @@ public class PrivateTracksPage extends BaseClass {
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validaddtracks () {
 		try {
@@ -41,10 +41,6 @@ public class PrivateTracksPage extends BaseClass {
 				
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
-				expectedArray.add(testdata[0]); //name
-				expectedArray.add(testdata[1]); //slug 
-				expectedArray.add(testdata[2]); //list
-				expectedArray.add(testdata[2]); //description
 				
 				dashboardObj.contentTab.click();
 				dashboardObj.tracks.click();
@@ -91,7 +87,7 @@ public class PrivateTracksPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void validEditTrack () {
 		try {
@@ -150,7 +146,7 @@ public class PrivateTracksPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	/*
 	@Test(priority = 3)
 	public void validtrackdelete () {
 		try {
@@ -173,6 +169,7 @@ public class PrivateTracksPage extends BaseClass {
 				System.out.println(testdata[1]);
 				waitForElementToLoad(editPrivateTracksObj.trackDelete);
 				editPrivateTracksObj.trackDelete.click();
+				driver.switchTo().alert().accept();
 				Thread.sleep(1000);
 		}
 		catch (Exception e) {
@@ -181,7 +178,7 @@ public class PrivateTracksPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	
+	*/
 	@BeforeClass
 	public void initialize() {
 		try {

@@ -16,7 +16,6 @@ import com.Salesboost_Adminpanel.objectrepository.LeadershipToolObject;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
 import com.Salesboost_Adminpanel.testdata.LeadershipToolData;
 import com.Salesboost_Adminpanel.testdata.TestDataImport;
-import com.Salesboost_Adminpanel.testdata.TracksData;
 import com.aventstack.extentreports.Status;
 
 public class LeadershipObjectPage extends BaseClass{

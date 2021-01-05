@@ -1,6 +1,5 @@
 package com.Salesboost_Adminpanel.objectrepository;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,12 +44,11 @@ public class EditPrivateTracksObject extends BaseClass {
 			//this.trackFocus.click();
 			this.trackDescription.clear();
 			this.trackDescription.sendKeys(description);
-			this.trackTags.click();
 			this.trackTags.sendKeys(tag);
-			driver.findElement(By.id("Value")).sendKeys(Keys.RETURN);
+			this.trackTags.sendKeys(Keys.RETURN);
 			this.trackCourses.click();
 			this.trackCourses.sendKeys(course);
-			driver.findElement(By.id("Value")).sendKeys(Keys.RETURN);
+			this.trackCourses.sendKeys(Keys.RETURN);
 			this.trackCertified.click();
 			waitForElementToLoad(this.trackUpdateButton);
 			this.trackUpdateButton.click();

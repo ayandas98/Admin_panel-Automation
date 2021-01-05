@@ -47,7 +47,7 @@ public class AddPrivateTracksObject extends BaseClass {
 			this.trackDescription.sendKeys(description);
 			this.trackImage.click();
 			Thread.sleep(1000);
-			this.addTrackButton.click();
+			//this.addTrackButton.click();
 		}
 		catch (Exception e) {
 			e.printStackTrace();

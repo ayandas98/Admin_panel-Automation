@@ -36,21 +36,21 @@ public class TracksData extends BaseClass{
 	
 	public String[] getAddPrivateTrackData(TestDataImport tdImport) {
 		testdata = new String[4];
-		testdata[0] = tdImport.getValue(12, 0);
-		testdata[1] = tdImport.getValue(12, 1);
-		testdata[2] = tdImport.getValue(12, 2);
-		testdata[3] = tdImport.getValue(12, 3);
+		testdata[0] = tdImport.getValue(62, 1);
+		testdata[1] = tdImport.getValue(62, 2);
+		testdata[2] = tdImport.getValue(62, 3);
+		testdata[3] = tdImport.getValue(62, 4);
 		return testdata;
 	}
 	
 	public String[] getEditPrivateTrackData(TestDataImport tdImport) {
 		testdata = new String[6];
-		testdata[0] = tdImport.getValue(13, 0);
-		testdata[1] = tdImport.getValue(13, 1);
-		testdata[2] = tdImport.getValue(13, 2);
-		testdata[3] = tdImport.getValue(13, 3);
-		testdata[4] = tdImport.getValue(13, 4);
-		testdata[5] = tdImport.getValue(13, 5);
+		testdata[0] = tdImport.getValue(64, 1);
+		testdata[1] = tdImport.getValue(64, 2);
+		testdata[2] = tdImport.getValue(64, 3);
+		testdata[3] = tdImport.getValue(64, 4);
+		testdata[4] = tdImport.getValue(64, 5);
+		testdata[5] = tdImport.getValue(64, 6);
 		return testdata;
 	}
 	

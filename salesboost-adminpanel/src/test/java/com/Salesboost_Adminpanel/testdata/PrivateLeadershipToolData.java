@@ -4,20 +4,19 @@ import java.util.Locale;
 
 import com.Salesboost_Adminpanel.baseclass.BaseClass;
 
-public class AdministratorsData extends BaseClass {
+public class PrivateLeadershipToolData extends BaseClass {
 
 	Locale local = new Locale("en-IND");
-	//TestDataImport tdImport = new TestDataImport();
 	String[] testdata;
 	
-	public String[] getAdministratorPageData(TestDataImport tdImport) {
+	public String[] getPrivateLeadershipToolsData(TestDataImport tdImport) {
 		testdata = new String[2];
 		testdata[0] = tdImport.getValue(2, 0);
 		testdata[1] = tdImport.getValue(2, 1);
 		return testdata;
 	}
 	
-	public String[] getAddUserData(TestDataImport tdImport) {
+	public String[] getAddPrivateLeadershipToolsData(TestDataImport tdImport) {
 		testdata = new String[4];
 		testdata[0] = tdImport.getValue(2, 3);
 		testdata[1] = tdImport.getValue(2, 4);
@@ -26,7 +25,7 @@ public class AdministratorsData extends BaseClass {
 		return testdata;
 	}
 	
-	public String[] getEditUserData(TestDataImport tdImport) {
+	public String[] getEditPrivateLeadershipToolsData(TestDataImport tdImport) {
 		testdata = new String[4];
 		testdata[0] = tdImport.getValue(2, 8);
 		testdata[1] = tdImport.getValue(2, 9);

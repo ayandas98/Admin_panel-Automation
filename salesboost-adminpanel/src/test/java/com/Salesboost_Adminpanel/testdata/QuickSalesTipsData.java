@@ -11,31 +11,31 @@ public class QuickSalesTipsData extends BaseClass{
 	
 	public String[] getSalesTipsData(TestDataImport tdImport) {
 		testdata = new String[2];
-		testdata[0] = tdImport.getValue(32, 1);
-		testdata[1] = tdImport.getValue(32, 2);
+		testdata[0] = tdImport.getValue(2, 0);
+		testdata[1] = tdImport.getValue(2, 1);
 		return testdata;
 	}
 	
 	public String[] getAddSalesTipsData(TestDataImport tdImport) {
 		testdata = new String[6];
-		testdata[0] = tdImport.getValue(34, 1);
-		testdata[1] = tdImport.getValue(34, 2);
-		testdata[2] = tdImport.getValue(34, 3);
-		testdata[3] = tdImport.getValue(34, 4);
-		testdata[4] = tdImport.getValue(34, 5);
-		testdata[5] = tdImport.getValue(34, 6);
+		testdata[0] = tdImport.getValue(32, 0);
+		testdata[1] = tdImport.getValue(32, 1);
+		testdata[2] = tdImport.getValue(32, 2);
+		testdata[3] = tdImport.getValue(32, 3);
+		testdata[4] = tdImport.getValue(32, 4);
+		testdata[5] = tdImport.getValue(32, 5);
 		return testdata;
 	}
 	
 	public String[] getEditSalesTipsData(TestDataImport tdImport) {
 		testdata = new String[7];
-		testdata[0] = tdImport.getValue(36, 1);
-		testdata[1] = tdImport.getValue(36, 2);
-		testdata[2] = tdImport.getValue(36, 3);
-		testdata[3] = tdImport.getValue(36, 4);
-		testdata[4] = tdImport.getValue(36, 5);
-		testdata[5] = tdImport.getValue(36, 6);
-		testdata[6] = tdImport.getValue(36, 7);
+		testdata[0] = tdImport.getValue(67, 0);
+		testdata[1] = tdImport.getValue(67, 1);
+		testdata[2] = tdImport.getValue(67, 2);
+		testdata[3] = tdImport.getValue(67, 3);
+		testdata[4] = tdImport.getValue(67, 4);
+		testdata[5] = tdImport.getValue(67, 5);
+		testdata[6] = tdImport.getValue(67, 6);
 		return testdata;
 	}
 }

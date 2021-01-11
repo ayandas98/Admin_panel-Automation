@@ -300,7 +300,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 			systemAnnouncementsObj = new SystemAnnouncementsObject(driver);
 			editSystemAnnouncementsObj = new EditSystemAnnouncements(driver);
 			addSystemAnnouncementObj = new AddSystemAnnouncementsObject(driver);
-			tdImport.readExcel("LoginData");
+			tdImport.readExcel("SystemAnnouncementData");
 				
 		} 
 		catch (Exception e) {

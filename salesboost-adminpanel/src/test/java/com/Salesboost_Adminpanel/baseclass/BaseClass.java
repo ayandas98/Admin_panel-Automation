@@ -97,6 +97,7 @@ public class BaseClass {
 			log.info("Page loaded");
 		} catch (Exception e) {
 			e.printStackTrace();
+		
 		}
 	}
 

@@ -26,11 +26,9 @@ public class accountHoldersPage extends BaseClass{
 	EditAccount editAccountObj;
 	AccountHoldersData accountHoldersDataObj;
 	TestDataImport tdImport;
-	
 	String getTextboxData="";
 	String[] testdata;
 
-	/*
 	@Test(priority = 0)
 	public void validaddaccount () {
 		try {
@@ -68,9 +66,7 @@ public class accountHoldersPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	} 
-	
-	
-	
+		
 	@Test(priority = 1)
 	public void validsearch () {
 		try {
@@ -79,8 +75,7 @@ public class accountHoldersPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
-
-				
+	/*
 				// add user
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
@@ -92,8 +87,7 @@ public class accountHoldersPage extends BaseClass{
 				addNewAccountObj.addNewAccount(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
 				waitForElementToLoad (addNewAccountObj.addAccount);
 				addNewAccountObj.addAccount.click();	
-				
-				
+	*/							
 				// validate search by searching for added user
 				
 				AccountHoldersData accountHoldersDataObj1 = new AccountHoldersData();
@@ -114,10 +108,8 @@ public class accountHoldersPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
 	
-	
-	@Test(priority = 0)
+	@Test(priority = 2)
 	public void validUserUpdate () {
 		try {
 				log.info("valid edit/update user");
@@ -126,7 +118,7 @@ public class accountHoldersPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
-				/*
+	/*
 				// add user
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
@@ -138,7 +130,7 @@ public class accountHoldersPage extends BaseClass{
 				addNewAccountObj.addNewAccount(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
 				waitForElementToLoad (addNewAccountObj.addAccount);
 				addNewAccountObj.addAccount.click();
-				*/	
+	*/	
 				//search user
 				AccountHoldersData accountHoldersDataObj1 = new AccountHoldersData();
 				testdata = accountHoldersDataObj1.getAccountHoldersData(tdImport);
@@ -173,7 +165,6 @@ public class accountHoldersPage extends BaseClass{
 		}	
 	} 
 	
-	
 	@BeforeClass
 	public void initialize() {
 		try {
@@ -186,12 +177,10 @@ public class accountHoldersPage extends BaseClass{
 			accountHoldersObj = new AccountHoldersObject(driver);
 			addNewAccountObj = new AddNewAccountObject(driver);
 			editAccountObj = new EditAccount(driver);
-			tdImport.readExcel("LoginData");
-			
-			
+			tdImport.readExcel("AccountHoldersData");
+				
 		} catch (Exception e) {
-			e.printStackTrace();
-			
+			e.printStackTrace();		
 		}
 	}
 	
@@ -199,7 +188,7 @@ public class accountHoldersPage extends BaseClass{
 	public void logout() {
 		try {
 			log.info("Sign In: logout");
-			//waitForElementToLoad(dashboardObj.Admin);
+			waitForElementToLoad(dashboardObj.Admin);
 			waitIfElementClickIsIntercepted(dashboardObj.logOut, "click", "");
 		}catch (Exception e) {
 			e.printStackTrace();

@@ -303,7 +303,7 @@ public class LeadershipTipsPage extends BaseClass{
 			leadershipTipsObj = new LeadershipTipsObject(driver);
 			editLeadershipTips = new EditLeadershipTips(driver);
 			addLeadershipTips = new AddLeadershipTips(driver);
-			tdImport.readExcel("LoginData");
+			tdImport.readExcel("LeadershipTipData");
 				
 		} 
 		catch (Exception e) {

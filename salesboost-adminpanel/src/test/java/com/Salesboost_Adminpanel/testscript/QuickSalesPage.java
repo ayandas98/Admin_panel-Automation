@@ -309,7 +309,7 @@ public class QuickSalesPage extends BaseClass{
 			quickTipsObj = new QuickTipsObject(driver);
 			addQuickSalesTips = new AddQuickSalesTips(driver);
 			editQuickSalesTip = new EditQuickSalesTip(driver);
-			tdImport.readExcel("LoginData");
+			tdImport.readExcel("SalesData");
 				
 		} 
 		catch (Exception e) {

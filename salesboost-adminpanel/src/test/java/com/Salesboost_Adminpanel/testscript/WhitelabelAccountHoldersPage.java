@@ -1,4 +1,4 @@
-package com.Salesboost_Adminpanel.testscript;
+/*package com.Salesboost_Adminpanel.testscript;
 
 import java.util.ArrayList;
 
@@ -199,3 +199,4 @@ public class WhitelabelAccountHoldersPage extends BaseClass {
 		}		
 	}
 }
+*/

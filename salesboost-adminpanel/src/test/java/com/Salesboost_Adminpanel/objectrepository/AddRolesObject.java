@@ -25,7 +25,7 @@ public class AddRolesObject extends BaseClass {
 		PageFactory.initElements(this.driver, this);
 	}
 	
-	public void addRoles (String name, String description) {
+	public void addRoles (String name, String description, String img) {
 		try {
 			log.info("add role : roles management screen");
 			waitForElementToLoad(this.roleName);
@@ -34,7 +34,7 @@ public class AddRolesObject extends BaseClass {
 			this.roleActive.click();
 			this.roleDescription.clear();
 			this.roleDescription.sendKeys(description);
-			this.imageUpload.sendKeys("D:/salesboost admin/role management/add role/download.png");
+			this.imageUpload.sendKeys(img);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

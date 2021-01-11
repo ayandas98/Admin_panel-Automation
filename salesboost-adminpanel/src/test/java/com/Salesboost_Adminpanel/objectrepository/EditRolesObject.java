@@ -24,7 +24,7 @@ public class EditRolesObject extends BaseClass {
 		PageFactory.initElements(this.driver, this);
 	}
 	
-	public void editRoles (String name, String description, String list) {
+	public void editRoles (String name, String description, String img ,String list) {
 		try {
 			log.info("edit roles: role management screen");
 			//waitForElementToLoad(this.roleName);
@@ -32,7 +32,7 @@ public class EditRolesObject extends BaseClass {
 			this.roleName.sendKeys(name);
 			this.roleDescription.clear();
 			this.roleDescription.sendKeys(description);
-			this.imageUpload.sendKeys("D:/salesboost admin/role management/edit role/1.png");
+			this.imageUpload.sendKeys(img);
 			//this.roleList.clear();
 			//this.roleList.sendKeys(list);
 		}

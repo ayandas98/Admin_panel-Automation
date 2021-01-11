@@ -66,7 +66,7 @@ public class managePasswordScript extends BaseClass{
 			signInObject.signIn("balu.kr@experionglobal.com", "qI85Jx$3");
 			dashboardObj = new DashboardObject(driver);
 			managePassword = new ManagePassword(driver);
-			tdImport.readExcel("LoginData");
+			tdImport.readExcel("ManagePasswords");
 			
 			
 		} catch (Exception e) {

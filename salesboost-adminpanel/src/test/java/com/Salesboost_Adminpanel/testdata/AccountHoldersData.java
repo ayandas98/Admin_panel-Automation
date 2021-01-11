@@ -12,31 +12,32 @@ public class AccountHoldersData extends BaseClass {
 	
 	public String[] getAccountHoldersData(TestDataImport tdImport) {
 		testdata = new String[2];
-		testdata[0] = tdImport.getValue(10, 0);
-		testdata[1] = tdImport.getValue(10, 1);
+		testdata[0] = tdImport.getValue(2, 0);
+		testdata[1] = tdImport.getValue(2, 1);
 		return testdata;
 	}
 	
 	public String[] getAddAccountData(TestDataImport tdImport) {
 		testdata = new String[6];
-		testdata[0] = tdImport.getValue(12, 0);
-		testdata[1] = tdImport.getValue(12, 1);
-		testdata[2] = tdImport.getValue(12, 2);
-		testdata[3] = tdImport.getValue(12, 3);
-		testdata[4] = tdImport.getValue(12, 4);
-		testdata[5] = tdImport.getValue(12, 5);
+		testdata[0] = tdImport.getValue(2, 3);
+		testdata[1] = tdImport.getValue(2, 4);
+		testdata[2] = tdImport.getValue(2, 5);
+		testdata[3] = tdImport.getValue(2, 6);
+		testdata[4] = tdImport.getValue(2, 7);
+		testdata[5] = tdImport.getValue(2, 8);
 		return testdata;
 	}
 	
 	public String[] getEditAccountData(TestDataImport tdImport) {
 		testdata = new String[4];
-		testdata[0] = tdImport.getValue(14, 0);
-		testdata[1] = tdImport.getValue(14, 1);
-		testdata[2] = tdImport.getValue(14, 2);
-		testdata[3] = tdImport.getValue(14, 3);
+		testdata[0] = tdImport.getValue(2, 10);
+		testdata[1] = tdImport.getValue(2, 11);
+		testdata[2] = tdImport.getValue(2, 12);
+		testdata[3] = tdImport.getValue(2, 13);
 		return testdata;
 	}
-	
+}
+	/*
 	public String[] getAddWhitelabelAccountData(TestDataImport tdImport) {
 		testdata = new String[15];
 		testdata[0] = tdImport.getValue(16, 1);
@@ -75,3 +76,4 @@ public class AccountHoldersData extends BaseClass {
 		return testdata;
 	}	
 }
+*/

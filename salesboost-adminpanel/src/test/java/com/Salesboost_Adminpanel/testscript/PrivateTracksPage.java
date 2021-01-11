@@ -13,8 +13,8 @@ import com.Salesboost_Adminpanel.objectrepository.DashboardObject;
 import com.Salesboost_Adminpanel.objectrepository.EditPrivateTracksObject;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
 import com.Salesboost_Adminpanel.objectrepository.TracksObject;
+import com.Salesboost_Adminpanel.testdata.PrivateTracksData;
 import com.Salesboost_Adminpanel.testdata.TestDataImport;
-import com.Salesboost_Adminpanel.testdata.TracksData;
 import com.aventstack.extentreports.Status;
 
 public class PrivateTracksPage extends BaseClass {
@@ -24,12 +24,12 @@ public class PrivateTracksPage extends BaseClass {
 	TracksObject tracksObj;
 	AddPrivateTracksObject addPrivateTracksObj;
 	EditPrivateTracksObject editPrivateTracksObj;
-	TracksData tracksData;
+	PrivateTracksData tracksData;
 	TestDataImport tdImport;
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validaddtracks () {
 		try {
@@ -39,7 +39,7 @@ public class PrivateTracksPage extends BaseClass {
 				eTest = eReports.createTest("add account");
 				eTest.assignCategory("add account");
 				
-				TracksData tracksData = new TracksData();
+				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
 				
 				dashboardObj.contentTab.click();
@@ -73,8 +73,8 @@ public class PrivateTracksPage extends BaseClass {
 
 				// valid tracks selection for display based on active/inactive
 				
-				TracksData tracksData = new TracksData();
-				testdata = tracksData.getTracksData(tdImport);
+				PrivateTracksData tracksData = new PrivateTracksData();
+				testdata = tracksData.getPrivateTracksData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.tracks.click();
 				waitForElementToLoad(tracksObj.addTrackButton);
@@ -87,7 +87,7 @@ public class PrivateTracksPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	@Test(priority = 2)
 	public void validEditTrack () {
 		try {
@@ -99,7 +99,7 @@ public class PrivateTracksPage extends BaseClass {
 				eTest.assignCategory("update user");
 				
 				// add track	
-				TracksData tracksData = new TracksData();
+				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
 			
 				dashboardObj.contentTab.click();
@@ -115,8 +115,8 @@ public class PrivateTracksPage extends BaseClass {
 				Thread.sleep(2000);
 					
 				//search track from tracks list as there is no specified search button this step integrated with edit
-				TracksData tracksData1 = new TracksData();
-				testdata = tracksData1.getTracksData(tdImport);
+				PrivateTracksData tracksData1 = new PrivateTracksData();
+				testdata = tracksData1.getPrivateTracksData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.tracks.click();
 				waitForElementToLoad(tracksObj.addTrackButton);
@@ -125,7 +125,7 @@ public class PrivateTracksPage extends BaseClass {
 				System.out.println(testdata[1]);
 				
 				//update the track if user found
-				TracksData tracksData2 = new TracksData();
+				PrivateTracksData tracksData2 = new PrivateTracksData();
 				testdata = tracksData2.getEditPrivateTrackData(tdImport);
 				expectedArray.add(testdata[0]); //name
 				expectedArray.add(testdata[1]); //slug
@@ -146,7 +146,7 @@ public class PrivateTracksPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	/*
+	
 	@Test(priority = 3)
 	public void validtrackdelete () {
 		try {
@@ -158,8 +158,8 @@ public class PrivateTracksPage extends BaseClass {
 
 				// valid tracks selection then once selected delete
 				
-				TracksData tracksData = new TracksData();
-				testdata = tracksData.getTracksData(tdImport);
+				PrivateTracksData tracksData = new PrivateTracksData();
+				testdata = tracksData.getPrivateTracksData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.tracks.click();
 				waitForElementToLoad(tracksObj.addTrackButton);
@@ -178,7 +178,7 @@ public class PrivateTracksPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	@BeforeClass
 	public void initialize() {
 		try {
@@ -191,7 +191,7 @@ public class PrivateTracksPage extends BaseClass {
 			tracksObj = new TracksObject(driver);
 			addPrivateTracksObj = new AddPrivateTracksObject(driver);
 			editPrivateTracksObj = new EditPrivateTracksObject(driver);
-			tdImport.readExcel("LoginData");
+			tdImport.readExcel("PrivateTracksData");
 				
 		} 
 		catch (Exception e) {

@@ -27,17 +27,13 @@ public class administratorsPage extends BaseClass{
 	DashboardObject dashboardObj;
 	SignInObject signInObject;
 	AdministratorsData administratorsData;
-	
 	SearchData searchData;
 	TestDataImport tdImport;
-	
-	
 	String getTextboxData="";
 	String[] fullName = new String[2];
 	String[] testdata;
 	String[] testdata1;
 	
-	/*
 	@Test(priority = 0)
 	public void validadduser () {
 		try {
@@ -48,10 +44,6 @@ public class administratorsPage extends BaseClass{
 				eTest.assignCategory("add user");
 				AdministratorsData administratorsData = new AdministratorsData();
 				testdata = administratorsData.getAddUserData(tdImport);
-				expectedArray.add(testdata[0]);//email
-				expectedArray.add(testdata[1]);//first name 
-				expectedArray.add(testdata[2]);//last name
-				System.out.println(expectedArray);
 				
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
@@ -71,9 +63,7 @@ public class administratorsPage extends BaseClass{
 		}	
 	}
 	
-	
-	
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void validsearch () {
 		try {
 				log.info("valid search user");
@@ -82,9 +72,8 @@ public class administratorsPage extends BaseClass{
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
 				
-				
 				// add user 
-				/*
+	/*
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
 				AdministratorsData administratorsData = new AdministratorsData();
@@ -96,8 +85,7 @@ public class administratorsPage extends BaseClass{
 				addNewUserObject.addNewUser(testdata[0], testdata[1], testdata[2], testdata[3]);
 				waitForElementToLoad (addNewUserObject.addUser);
 				addNewUserObject.addUser.click();	
-				
-				
+	*/					
 				// validate search by searching for added user
 	
 				dashboardObj.usersTab.click();
@@ -117,10 +105,8 @@ public class administratorsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
 	
-	
-	@Test(priority = 0)
+	@Test(priority = 2)
 	public void validUserUpdate () {
 		try {
 				log.info("valid edit/update user");
@@ -155,7 +141,6 @@ public class administratorsPage extends BaseClass{
 				administratorsObject.searchButton.click();
 				Thread.sleep(2000);
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
 				//update the user if user found
 				
 				AdministratorsData administratorsData1 = new AdministratorsData();
@@ -166,14 +151,12 @@ public class administratorsPage extends BaseClass{
 //				editUserObject.updateUser.click();
 				Thread.sleep(2000);
 				
-				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		
 	} 
 	
 	@BeforeClass
@@ -186,19 +169,15 @@ public class administratorsPage extends BaseClass{
 			signInObject.signIn("balu.kr@experionglobal.com", "qI85Jx$3");
 			dashboardObj = new DashboardObject(driver);
 			administratorsObject = new AdministratorsObject(driver);
-			//addNewUserObject = new AddNewUserObject(driver);
+			addNewUserObject = new AddNewUserObject(driver);
 			editUserObject = new EditUserObject(driver);
-			tdImport.readExcel("LoginData");
-			
-			
+			tdImport.readExcel("UsersData");
 		} catch (Exception e) {
 			e.printStackTrace();
 			
 		}
 	}
 	
-	
-		
 	@AfterClass
 	public void logout() {
 		try {

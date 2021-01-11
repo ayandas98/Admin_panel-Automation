@@ -11,49 +11,31 @@ public class LeadershipToolData extends BaseClass{
 	
 	public String[] getLeadershipToolsData(TestDataImport tdImport) {
 		testdata = new String[2];
-		testdata[0] = tdImport.getValue(44, 1);
-		testdata[1] = tdImport.getValue(44, 2);
+		testdata[0] = tdImport.getValue(2, 0);
+		testdata[1] = tdImport.getValue(2, 1);
 		return testdata;
 	}
 	public String[] getAddLeadershipToolsData(TestDataImport tdImport) {
 		testdata = new String[3];
-		testdata[0] = tdImport.getValue(46, 1);
-		testdata[1] = tdImport.getValue(46, 2);
-		testdata[2] = tdImport.getValue(46, 3);
+		testdata[0] = tdImport.getValue(2, 3);
+		testdata[1] = tdImport.getValue(2, 4);
+		testdata[2] = tdImport.getValue(2, 5);
 		return testdata;
 	}
 	
 	public String[] getEditLeadershipToolsData(TestDataImport tdImport) {
 		testdata = new String[3];
-		testdata[0] = tdImport.getValue(48, 1);
-		testdata[1] = tdImport.getValue(48, 2);
-		testdata[2] = tdImport.getValue(48, 3);
+		testdata[0] = tdImport.getValue(2, 7);
+		testdata[1] = tdImport.getValue(2, 8);
+		testdata[2] = tdImport.getValue(2, 9);
 		return testdata;
 	}
-	
-	public String[] getAddPrivateLeadershipToolsData(TestDataImport tdImport) {
-		testdata = new String[4];
-		testdata[0] = tdImport.getValue(52, 1);
-		testdata[1] = tdImport.getValue(52, 2);
-		testdata[2] = tdImport.getValue(52, 3);
-		testdata[3] = tdImport.getValue(52, 4);
-		return testdata;
-	}
-	
-	public String[] getEditPrivateLeadershipToolsData(TestDataImport tdImport) {
-		testdata = new String[4];
-		testdata[0] = tdImport.getValue(54, 1);
-		testdata[1] = tdImport.getValue(54, 2);
-		testdata[2] = tdImport.getValue(54, 3);
-		testdata[3] = tdImport.getValue(54, 4);
-		return testdata;
-	}
-	
+
 	public String[] getDuplicateLeadershipToolData (TestDataImport tdImport) {
 		testdata = new String[3];
-		testdata[0] = tdImport.getValue(50, 1);
-		testdata[1] = tdImport.getValue(50, 2);
-		testdata[2] = tdImport.getValue(50, 3);
+		testdata[0] = tdImport.getValue(2, 11);
+		testdata[1] = tdImport.getValue(2, 12);
+		testdata[2] = tdImport.getValue(2, 13);
 		return testdata;
 	}
 }

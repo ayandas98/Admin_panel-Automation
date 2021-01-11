@@ -13,7 +13,7 @@ import com.Salesboost_Adminpanel.objectrepository.DashboardObject;
 import com.Salesboost_Adminpanel.objectrepository.EditPrivateLeadershipObject;
 import com.Salesboost_Adminpanel.objectrepository.LeadershipToolObject;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
-import com.Salesboost_Adminpanel.testdata.LeadershipToolData;
+import com.Salesboost_Adminpanel.testdata.PrivateLeadershipToolData;
 import com.Salesboost_Adminpanel.testdata.TestDataImport;
 import com.aventstack.extentreports.Status;
 
@@ -24,12 +24,12 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 	LeadershipToolObject leadershipObj;
 	AddPrivateLeadershipObject addPrivateObj;
 	EditPrivateLeadershipObject editPrivateObj;
-	LeadershipToolData leadershipData;
+	PrivateLeadershipToolData leadershipData;
 	TestDataImport tdImport;
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validAddTools () {
 		try {
@@ -39,7 +39,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				eTest = eReports.createTest("add tips");
 				eTest.assignCategory("pvt leadership tips");
 				
-				LeadershipToolData leadershipData = new LeadershipToolData();
+				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
@@ -72,7 +72,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				eTest = eReports.createTest("add tips");
 				eTest.assignCategory("pvt leadership tip");
 				
-				LeadershipToolData leadershipData = new LeadershipToolData();
+				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
@@ -107,7 +107,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				eTest.assignCategory("pvt leadership tip");
 
 				// add tool	
-				LeadershipToolData leadershipData = new LeadershipToolData();
+				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
@@ -124,8 +124,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				Thread.sleep(2000);
 				
 				// valid tools selection
-				LeadershipToolData leadershipData1 = new LeadershipToolData();
-				testdata = leadershipData1.getLeadershipToolsData(tdImport);
+				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
+				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
 				dashboardObj.leadershipTools.click();
@@ -139,7 +139,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	@Test(priority = 3)
 	public void validEditTools () {
 		try {
@@ -152,7 +152,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				
 				// add track	
 
-				LeadershipToolData leadershipData = new LeadershipToolData();
+				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
@@ -170,8 +170,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				Thread.sleep(2000);
 									
 				//search tool
-				LeadershipToolData leadershipData1 = new LeadershipToolData();
-				testdata = leadershipData1.getLeadershipToolsData(tdImport);
+				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
+				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
 				dashboardObj.leadershipTools.click();
@@ -182,7 +182,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				System.out.println(testdata[1]);
 				
 				//update the tool if found
-				LeadershipToolData leadershipData2 = new LeadershipToolData();
+				PrivateLeadershipToolData leadershipData2 = new PrivateLeadershipToolData();
 				testdata = leadershipData2.getEditPrivateLeadershipToolsData(tdImport);
 				
 				editPrivateObj.editleadershipTool(testdata[0], testdata[1], testdata[2], testdata[3]);
@@ -198,7 +198,6 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 		}	
 	} 
 	
-	/*
 	@Test(priority = 4)
 	public void validToolDelete () {
 		try {
@@ -209,7 +208,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				eTest.assignCategory("pvt leadership tip");
 				
 				// add tool
-				LeadershipToolData leadershipData = new LeadershipToolData();
+				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
@@ -226,8 +225,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				addPrivateObj.addButton.click();	
 				Thread.sleep(2000);   
 				// search tool
-				LeadershipToolData leadershipData1 = new LeadershipToolData();
-				testdata = leadershipData1.getLeadershipToolsData(tdImport);
+				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
+				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
 			
 				dashboardObj.contentTab.click();
 				dashboardObj.leadershipTools.click();
@@ -249,7 +248,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	@BeforeClass
 	public void initialize() {
 		try {
@@ -262,7 +261,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			leadershipObj = new LeadershipToolObject(driver);
 			addPrivateObj = new AddPrivateLeadershipObject(driver);
 			editPrivateObj = new EditPrivateLeadershipObject(driver);
-			tdImport.readExcel("LoginData");
+			tdImport.readExcel("PrivateLeadershipToolData");
 				
 		} 
 		catch (Exception e) {

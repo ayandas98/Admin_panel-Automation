@@ -38,9 +38,10 @@ public class EditPrivateTracksObject extends BaseClass {
 			this.trackName.sendKeys(name);
 			this.trackSlug.clear();
 			this.trackSlug.sendKeys(slug);
-			this.trackAccountSelect.click();
-			this.trackAccountSelect.sendKeys(list);
-			this.trackAccountSelect.click();
+			if(this.trackAccountSelect.isEnabled()) {
+				this.trackAccountSelect.click();
+				this.trackAccountSelect.sendKeys(list);
+			};
 			//this.trackFocus.click();
 			this.trackDescription.clear();
 			this.trackDescription.sendKeys(description);

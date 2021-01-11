@@ -63,7 +63,7 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+/*	
 	@Test(priority = 1)
 	public void validActiveStatusAddTools () {
 		try {
@@ -97,7 +97,7 @@ public class LeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void validtoolsselection () {
 		try {
@@ -106,7 +106,7 @@ public class LeadershipObjectPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("leadership tools");
-				
+		/*		
 				// add tool
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
@@ -122,7 +122,7 @@ public class LeadershipObjectPage extends BaseClass{
 				waitForElementToLoad (addToolObj.addButton);
 				addToolObj.addButton.click();	
 				Thread.sleep(2000);
-				
+			*/	
 				// valid tools selection
 				LeadershipToolData leadershipData1 = new LeadershipToolData();
 				testdata = leadershipData1.getLeadershipToolsData(tdImport);
@@ -149,7 +149,7 @@ public class LeadershipObjectPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("leadership tools");
-				
+			/*	
 				// add track	
 				LeadershipToolData leadershipData = new LeadershipToolData();
 				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
@@ -164,9 +164,8 @@ public class LeadershipObjectPage extends BaseClass{
 				addToolObj.addLeadershipTool(testdata[0], testdata[1], testdata[2]);
 				waitForElementToLoad (addToolObj.addButton);
 				addToolObj.addButton.click();	
-				Thread.sleep(2000);
-								
-					
+				Thread.sleep(2000);			
+				*/	
 				//search tool
 				LeadershipToolData leadershipData1 = new LeadershipToolData();
 				testdata = leadershipData1.getLeadershipToolsData(tdImport);

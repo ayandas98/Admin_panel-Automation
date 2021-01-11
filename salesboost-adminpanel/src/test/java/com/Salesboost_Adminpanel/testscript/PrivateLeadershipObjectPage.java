@@ -61,8 +61,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
-	
+	/*
 	@Test(priority = 1)
 	public void validActiveStatusAddTools () {
 		try {
@@ -96,7 +95,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void validtoolsselection () {
 		try {
@@ -149,7 +148,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update tip");
 				eTest.assignCategory("pvt leadership tip");
-				
+		/*		
 				// add track	
 
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
@@ -168,7 +167,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				addPrivateObj.kitStatus.click();
 				addPrivateObj.addButton.click();	
 				Thread.sleep(2000);
-									
+			*/						
 				//search tool
 				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
 				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);

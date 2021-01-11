@@ -29,7 +29,7 @@ public class LeadershipTipsPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validActivePostAddLeadershipTips () {
 		try {
@@ -63,7 +63,6 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
 	/*
 	@Test(priority = 1)
 	public void validInActivePostAddLeadershipTips () {
@@ -97,7 +96,6 @@ public class LeadershipTipsPage extends BaseClass{
 		}		
 	}
 	*/
-	/*
 	@Test(priority = 2)
 	public void validLeadershipTipsSelection () {
 		try {
@@ -124,7 +122,6 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
 	
 	@Test(priority = 3)
 	public void validActivePostEditLeadershipTip () {
@@ -135,7 +132,7 @@ public class LeadershipTipsPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update tips");
 				eTest.assignCategory("leadership tips");
-				
+	/*			
 				// add user	
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
 				testdata = leadershipTipsData.getAddLeadershipTipsData(tdImport);
@@ -151,7 +148,7 @@ public class LeadershipTipsPage extends BaseClass{
 				waitForElementToLoad (addLeadershipTips.addButton);
 				addLeadershipTips.addButton.click();	
 				Thread.sleep(2000);
-					
+		*/			
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				LeadershipTipsData leadershipTipsData1 = new LeadershipTipsData();
 				testdata = leadershipTipsData1.getLeadershipTipsData(tdImport);
@@ -238,7 +235,7 @@ public class LeadershipTipsPage extends BaseClass{
 		}	
 	}
 	*/
-	/*
+	
 	@Test(priority = 5)
 	public void validDeleteLeadershipTip () {
 		try {
@@ -290,7 +287,7 @@ public class LeadershipTipsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	*/
+	
 	@BeforeClass
 	public void initialize() {
 		try {

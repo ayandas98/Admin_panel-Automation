@@ -29,7 +29,7 @@ public class TracksPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validaddtracks () {
 		try {
@@ -64,8 +64,7 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
-	/*
+	
 	@Test(priority = 1)
 	public void validtracksselection () {
 		try {
@@ -91,7 +90,7 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	
 	@Test(priority = 2)
 	public void validEditTrack () {
@@ -102,7 +101,7 @@ public class TracksPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update track");
 				eTest.assignCategory("tracks");
-			
+	/*		
 				// add track	
 				TracksData tracksData = new TracksData();
 				testdata = tracksData.getAddTrackData(tdImport);
@@ -116,7 +115,7 @@ public class TracksPage extends BaseClass{
 				waitForElementToLoad (addTracksObj.addTrackButton);
 				//addTracksObj.addTrackButton.click();	
 				Thread.sleep(2000);
-					
+		*/			
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				TracksData tracksData1 = new TracksData();
 				testdata = tracksData1.getTracksData(tdImport);
@@ -148,7 +147,6 @@ public class TracksPage extends BaseClass{
 		}	
 	} 
 	
-	/*
 	@Test(priority = 3)
 	public void validtrackdelete () {
 		try {
@@ -157,11 +155,25 @@ public class TracksPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify delete");
 				eTest.assignCategory("tracks");
-
-				// valid tracks selection then once selected delete
 				
+				//add track
 				TracksData tracksData = new TracksData();
-				testdata = tracksData.getTracksData(tdImport);
+				testdata = tracksData.getAddTrackData(tdImport);				
+				dashboardObj.contentTab.click();
+				dashboardObj.tracks.click();
+				
+				waitForElementToLoad(tracksObj.addTrackButton);
+				tracksObj.addTrackButton.click();
+				waitForElementToLoad(addTracksObj.confText);
+				
+				addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
+				waitForElementToLoad (addTracksObj.addTrackButton);
+				addTracksObj.addTrackButton.click();	
+				Thread.sleep(2000);
+				
+				// valid tracks selection then once selected delete			
+				TracksData tracksData1 = new TracksData();
+				testdata = tracksData1.getTracksData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.tracks.click();
 				waitForElementToLoad(tracksObj.addTrackButton);
@@ -180,7 +192,7 @@ public class TracksPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	@BeforeClass
 	public void initialize() {
 		try {

@@ -97,7 +97,7 @@ public class PrivateTracksPage extends BaseClass {
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
 				eTest.assignCategory("update user");
-				
+		/*		
 				// add track	
 				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
@@ -113,7 +113,7 @@ public class PrivateTracksPage extends BaseClass {
 				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
 				addPrivateTracksObj.addTrackButton.click();	
 				Thread.sleep(2000);
-					
+		*/			
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				PrivateTracksData tracksData1 = new PrivateTracksData();
 				testdata = tracksData1.getPrivateTracksData(tdImport);
@@ -156,10 +156,24 @@ public class PrivateTracksPage extends BaseClass {
 				eTest = eReports.createTest("verify search");
 				eTest.assignCategory("search user");
 
-				// valid tracks selection then once selected delete
-				
+				//add track
 				PrivateTracksData tracksData = new PrivateTracksData();
-				testdata = tracksData.getPrivateTracksData(tdImport);
+				testdata = tracksData.getAddPrivateTrackData(tdImport);
+			
+				dashboardObj.contentTab.click();
+				dashboardObj.tracks.click();
+				
+				waitForElementToLoad(tracksObj.addTrackButton);
+				tracksObj.addTrackButton.click();
+				waitForElementToLoad(addPrivateTracksObj.confText);
+				
+				addPrivateTracksObj.addPrivateTracks(testdata[0], testdata[1], testdata[2], testdata[3]);
+				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
+				addPrivateTracksObj.addTrackButton.click();	
+				Thread.sleep(2000);
+				// valid tracks selection then once selected delete			
+				PrivateTracksData tracksData1 = new PrivateTracksData();
+				testdata = tracksData1.getPrivateTracksData(tdImport);
 				dashboardObj.contentTab.click();
 				dashboardObj.tracks.click();
 				waitForElementToLoad(tracksObj.addTrackButton);

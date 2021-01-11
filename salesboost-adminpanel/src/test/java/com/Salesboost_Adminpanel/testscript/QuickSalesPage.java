@@ -31,7 +31,7 @@ public class QuickSalesPage extends BaseClass{
 	String[] testdata;
 	String[] testdata1;
 	String[] testdata2;
-	/*
+	
 	@Test(priority = 0)
 	public void validActivePostAddSalesTips () {
 		try {
@@ -65,8 +65,7 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
-	/*
+/*		
 	@Test(priority = 1)
 	public void validInActivePostAddSalesTips () {
 		try {
@@ -98,8 +97,7 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
-	/*
+*/
 	@Test(priority = 2)
 	public void validSalesTipsSelection () {
 		try {
@@ -126,7 +124,7 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	
 	@Test(priority = 3)
 	public void validActivePostEditSalesTip () {
@@ -137,7 +135,7 @@ public class QuickSalesPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update sales tip");
 				eTest.assignCategory("quick sales");
-				
+		/*		
 				// add user	
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
 				testdata = 	quickSalesTipsData.getAddSalesTipsData(tdImport);
@@ -153,7 +151,7 @@ public class QuickSalesPage extends BaseClass{
 				waitForElementToLoad (addQuickSalesTips.addButton);
 				addQuickSalesTips.addButton.click();	
 				Thread.sleep(2000);
-					
+	*/				
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				QuickSalesTipsData 	quickSalesTipsData1 = new 	QuickSalesTipsData();
 				testdata1 = 	quickSalesTipsData1.getSalesTipsData(tdImport);
@@ -184,7 +182,6 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
 	/*
 	@Test(priority = 4)
 	public void validInActivePostEditSalesTip () {
@@ -243,7 +240,6 @@ public class QuickSalesPage extends BaseClass{
 		}	
 	}
 	*/
-	/*
 	@Test(priority = 5)
 	public void validInDeleteSalesTip () {
 		try {
@@ -296,7 +292,7 @@ public class QuickSalesPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
+	
 	@BeforeClass
 	public void initialize() {
 		try {

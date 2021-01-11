@@ -29,7 +29,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validActivePostAddSystemAnnouncements () {
 		try {
@@ -63,7 +63,6 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
 	}
-	*/
 	/*
 	@Test(priority = 1)
 	public void validInActivePostAddSystemAnnouncements () {
@@ -98,7 +97,6 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}		
 	}
 	*/
-	/*
 	@Test(priority = 2)
 	public void validSystemAnnouncementSelection () {
 		try {
@@ -124,8 +122,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
-	*/
-	/*
+	
 	@Test(priority = 3)
 	public void validActivePostEditTrack () {
 		try {
@@ -152,7 +149,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				waitForElementToLoad (addSystemAnnouncementObj.addButton);
 				addSystemAnnouncementObj.addButton.click();	
 				Thread.sleep(2000);
-					
+	*/				
 				//search post from list as there is no specified search button this step integrated with edit
 				SystemAnnouncementData systemAnnouncementData1 = new SystemAnnouncementData();
 				testdata = systemAnnouncementData1.getSystemAnnouncementData(tdImport);
@@ -180,7 +177,6 @@ public class SystemAnnouncementsPage extends BaseClass{
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
-	*/
 	/*
 	@Test(priority = 4)
 	public void validInActivePostEditTrack () {

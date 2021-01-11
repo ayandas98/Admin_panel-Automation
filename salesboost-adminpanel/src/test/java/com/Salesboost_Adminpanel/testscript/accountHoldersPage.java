@@ -74,7 +74,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("search account");
 	/*
 				// add user
 				dashboardObj.usersTab.click();
@@ -110,14 +110,14 @@ public class accountHoldersPage extends BaseClass{
 	}
 	
 	@Test(priority = 2)
-	public void validUserUpdate () {
+	public void validAccountUpdate () {
 		try {
 				log.info("valid edit/update user");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest.assignCategory("update account");
 	/*
 				// add user
 				dashboardObj.usersTab.click();

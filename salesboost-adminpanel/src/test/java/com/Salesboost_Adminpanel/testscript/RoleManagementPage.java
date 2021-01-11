@@ -135,7 +135,7 @@ public class RoleManagementPage extends BaseClass {
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update role");
 				eTest.assignCategory("role management");
-				
+				/*
 				// add role
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
@@ -151,7 +151,7 @@ public class RoleManagementPage extends BaseClass {
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
 				Thread.sleep(1000);
-				
+				*/
 				//search role from roles list as there is no specified search button this step integrated with edit
 				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
 				testdata = roleManagementDataObj1.getRolesData(tdImport);
@@ -178,7 +178,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	} 
-	
+	/*
 	@Test(priority = 4)
 	public void validCancelEditRoles () {
 		try {
@@ -237,7 +237,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	
+	*/
 	@Test(priority = 5)
 	public void validroledeletion () {
 		try {

@@ -14,6 +14,7 @@ public class ManagePassword extends BaseClass{
 	@FindBy (xpath ="//h1[contains(text(),'Generate Password')]") public WebElement text;
 	@FindBy (xpath ="//input[@id='UserEmail']") public WebElement Email;
 	@FindBy (xpath ="//button[@class='button action submit-form submit-password']") public WebElement button;
+	@FindBy (xpath ="//button[@id='copyTextBtn']") public WebElement valid;
 	
 	public ManagePassword(WebDriver driver) {
 		

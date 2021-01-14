@@ -1,6 +1,7 @@
 package com.Salesboost_Adminpanel.testscript;
 
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -40,20 +41,21 @@ public class managePasswordScript extends BaseClass{
 			testData = managePasswordData.getEmail(this.tdImport);
 			
 			waitForElementToLoad(managePassword.Email);
-
 			managePassword.managePassword(testData[0]);			
 			waitForElementToLoad(managePassword.text);
-			actualstring = managePassword.text.getText();
-			
+
 			waitForElementToLoad(managePassword.button);
-			managePassword.button.click();		
+			managePassword.button.click();
+			expectedstring = "Copy";
+			actualstring = managePassword.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("validEmailGeneratePassword Failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
 	@BeforeClass

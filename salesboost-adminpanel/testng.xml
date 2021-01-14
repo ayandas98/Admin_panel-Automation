@@ -1,29 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Suite">
+<suite name="Users-tab-Suite">
 <test name="Test" >
 <classes>
-  
- <!-- 
-<class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage">
+   
+<class name="com.Salesboost_Adminpanel.testscript.loginPage">
 <methods>
-<include name="validaddaccount"></include>
+<include name="validEmailValidPassword"></include>
 </methods>
 </class>
--->
-
-<!--  
- <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage">
+ 
+ 
+<class name="com.Salesboost_Adminpanel.testscript.managePasswordScript">
 <methods>
-<include name="validsearch"></include>
+<include name="validEmailGeneratePassword"></include>
+</methods>
+</class>
+
+ 
+<class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage">
+
+</class>
+ 
+ <class name="com.Salesboost_Adminpanel.testscript.administratorsPage">
+
+</class> 
+  
+<class name="com.Salesboost_Adminpanel.testscript.TracksPage">
+ <methods>
+<include name="validaddtracks"></include>
+<include name="validtracksselection"></include>
+<include name="validEditTrack"></include>
+</methods>
+</class>
+
+<class name="com.Salesboost_Adminpanel.testscript.PrivateTracksPage">
+<methods>
+<include name="validaddtracks"></include>
+<include name="validtracksselection"></include>
+<include name="validEditTrack"></include>
+</methods>
+</class>
+
+<class name="com.Salesboost_Adminpanel.testscript.RoleManagementPage">
+<methods>
+<include name="validaddroles"></include>
+<include name="validrolesselection"></include>
+<include name="validroledeletion"></include>
+<include name="validEditRoles"></include>
+</methods>
+</class>
+
+ <class name="com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage">
+<methods>
+<include name="validActivePostAddSystemAnnouncements"></include>
+<include name="validSystemAnnouncementSelection"></include>
+<include name="validDeleteAnnouncement"></include>
+<include name="validActivePostEditAnnouncement"></include>
 </methods>
 </class> 
--->
-<!-- <class name="com.Salesboost_Adminpanel.testscript.administratorsPage">
+
+<class name="com.Salesboost_Adminpanel.testscript.LeadershipTipsPage">
 <methods>
-<include name="validUserUpdate"></include>
+<include name="validActivePostAddLeadershipTips"></include>
+<include name="validLeadershipTipsSelection"></include>
+<include name="validDeleteLeadershipTip"></include>
+<include name="validActivePostEditLeadershipTip"></include>
 </methods>
-</class> -->
+</class>
+
+<class name="com.Salesboost_Adminpanel.testscript.QuickSalesPage">
+<methods>
+<include name="validActivePostAddSalesTips"></include>
+<include name="validSalesTipsSelection"></include>
+<include name="validInDeleteSalesTip"></include>
+<include name="validActivePostEditSalesTip"></include>
+</methods>
+</class>
+
+
+<class name="com.Salesboost_Adminpanel.testscript.LeadershipObjectPage">
+<methods>
+<include name="validAddTools"></include>
+<include name="validtoolsselection"></include>
+<include name="validToolDelete"></include>
+<include name="validEditTools"></include>
+<include name="validAddDuplicateTools"></include>
+</methods>
+</class>
+
+<class name="com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage">
+<methods>
+<include name="validAddTools"></include>
+<include name="validtoolsselection"></include>
+<include name="validEditTools"></include>
+<include name="validToolDelete"></include>
+</methods>
+</class>
 
 </classes>
 </test>

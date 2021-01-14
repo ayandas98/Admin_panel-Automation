@@ -3,6 +3,7 @@ package com.Salesboost_Adminpanel.testscript;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -35,18 +36,12 @@ public class accountHoldersPage extends BaseClass{
 				log.info("Account holders page-add new account");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
+				eTest = eReports.createTest("valid add account");
 				eTest.assignCategory("add account");
 				
 				AccountHoldersData accountHoldersDataObj = new AccountHoldersData();
 				testdata = accountHoldersDataObj.getAddAccountData(tdImport);
-				expectedArray.add(testdata[0]);//name
-				expectedArray.add(testdata[1]);//list 
-				expectedArray.add(testdata[2]);//choice
-				expectedArray.add(testdata[3]);//f name
-				expectedArray.add(testdata[4]);//l name
-				expectedArray.add(testdata[5]);// email
-				
+				 				
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
 				
@@ -58,13 +53,16 @@ public class accountHoldersPage extends BaseClass{
 				waitForElementToLoad (addNewAccountObj.addAccount);
 				addNewAccountObj.addAccount.click();	
 				Thread.sleep(2000);
-								
+				expectedstring = "Search";		
+				actualstring = accountHoldersObj.searchButton.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid account adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
+		}
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
 	} 
 		
 	@Test(priority = 1)
@@ -73,7 +71,7 @@ public class accountHoldersPage extends BaseClass{
 				log.info("valid search user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
+				eTest = eReports.createTest("valid search");
 				eTest.assignCategory("search account");
 	/*
 				// add user
@@ -112,11 +110,11 @@ public class accountHoldersPage extends BaseClass{
 	@Test(priority = 2)
 	public void validAccountUpdate () {
 		try {
-				log.info("valid edit/update user");
+				log.info("valid edit/update account");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
+				eTest = eReports.createTest("valid update account");
 				eTest.assignCategory("update account");
 	/*
 				// add user
@@ -148,21 +146,21 @@ public class accountHoldersPage extends BaseClass{
 				AccountHoldersData accountHoldersDataObj2 = new AccountHoldersData();
 				testdata = accountHoldersDataObj2.getEditAccountData(tdImport);
 				expectedArray.add(testdata[0]);
-				expectedArray.add(testdata[1]);
-				expectedArray.add(testdata[2]);
-				expectedArray.add(testdata[3]);
 				
 				editAccountObj.editAccount(testdata[0], testdata[1], testdata[2], testdata[3]);
 				Thread.sleep(2000);
 				waitForElementToLoad (editAccountObj.update);
 				editAccountObj.update.click();
+				actualArray.add(editAccountObj.accountName.getText());
 			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}	
+		}
+		System.out.println("Actual: "+actualArray+"\nExpcted: "+expectedArray);
+		Assert.assertEquals(actualArray , expectedArray);
 	} 
 	
 	@BeforeClass

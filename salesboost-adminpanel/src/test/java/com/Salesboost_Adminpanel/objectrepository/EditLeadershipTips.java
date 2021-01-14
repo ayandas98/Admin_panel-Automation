@@ -23,6 +23,7 @@ public class EditLeadershipTips extends BaseClass{
 	@FindBy(xpath = "//div[@id='mceu_41-0']") public WebElement tipContent;
 	@FindBy(xpath = "//body/div[1]/div[1]/form[1]/div[2]/div[1]/div[1]/input[1]") public WebElement updateButton;
 	@FindBy(xpath = "//input[@id='deleteButton']") public WebElement deleteButton;
+	@FindBy(xpath = "//h1[contains(text(),'Edit: ')]") public WebElement actualVerificationText;
 	
 	public EditLeadershipTips (WebDriver driver) {
 		this.driver = driver;

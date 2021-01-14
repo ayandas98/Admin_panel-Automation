@@ -3,6 +3,7 @@ package com.Salesboost_Adminpanel.testscript;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -36,7 +37,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("Tracks -add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add tips");
+				eTest = eReports.createTest("valid add private tips");
 				eTest.assignCategory("pvt leadership tips");
 				
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
@@ -53,13 +54,16 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				waitForElementToLoad (addPrivateObj.addButton);
 				addPrivateObj.addButton.click();	
 				Thread.sleep(2000);
-								
+				actualstring = addPrivateObj.actualVerificationText.getText();
+				expectedstring = testdata[0];				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid  private leadership tool adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	/*
 	@Test(priority = 1)
@@ -87,13 +91,16 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				addPrivateObj.kitStatus.click();
 				addPrivateObj.addButton.click();	
 				Thread.sleep(2000);
-								
+				actualstring = addPrivateObj.actualVerificationText.getText();
+				expectedstring = testdata[0];				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid active status private leadership tool adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));		
 	}
 	*/
 	@Test(priority = 2)
@@ -102,9 +109,9 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("valid tools selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
+				eTest = eReports.createTest("valid listing");
 				eTest.assignCategory("pvt leadership tip");
-
+				/*
 				// add tool	
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
@@ -121,7 +128,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				addPrivateObj.kitStatus.click();
 				addPrivateObj.addButton.click();	
 				Thread.sleep(2000);
-				
+				*/
 				// valid tools selection
 				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
 				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
@@ -140,16 +147,72 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 	}
 	
 	@Test(priority = 3)
+	public void validToolDelete () {
+		try {
+				log.info("valid tools delete");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("valid delete");
+				eTest.assignCategory("pvt leadership tip");
+		/*		
+				// add tool
+				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
+				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
+			
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();
+				
+				waitForElementToLoad(leadershipObj.addButton);
+				leadershipObj.addButton.click();
+				waitForElementToLoad(addPrivateObj.confText);
+				
+				addPrivateObj.addLeadershipTool(testdata[0], testdata[1], testdata[2], testdata[3]);
+				waitForElementToLoad (addPrivateObj.kitStatus);
+				waitForElementToLoad (addPrivateObj.addButton);
+				addPrivateObj.kitStatus.click();
+				addPrivateObj.addButton.click();	
+				Thread.sleep(2000);   
+			*/
+				// search tool
+				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
+				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
+			
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();
+				waitForElementToLoad(leadershipObj.addButton);
+				leadershipObj.leadershipTools(testdata[0], testdata[1]);
+				Thread.sleep(1000);
+				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
+				
+				// valid tracks selection then once selected delete
+				Thread.sleep(1000);
+				waitForElementToLoad(editPrivateObj.deleteButton);
+				editPrivateObj.deleteButton.click();
+				driver.switchTo().alert().accept();
+				Thread.sleep(1000);
+				expectedstring = "Add New Leadership Tool Kit";
+				actualstring = leadershipObj.addButton.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("valid delete failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 4)
 	public void validEditTools () {
 		try {
 				log.info("valid edit tools");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update tip");
+				eTest = eReports.createTest("valid update tip");
 				eTest.assignCategory("pvt leadership tip");
-		/*		
-				// add track	
+				
+				// add tool	
 
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
@@ -167,7 +230,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				addPrivateObj.kitStatus.click();
 				addPrivateObj.addButton.click();	
 				Thread.sleep(2000);
-			*/						
+								
 				//search tool
 				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
 				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
@@ -188,65 +251,19 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				Thread.sleep(2000);
 				waitForElementToLoad (editPrivateObj.updateButton);
 				editPrivateObj.updateButton.click();
-			
+				actualstring =editPrivateObj.actualVerificationText.getText();
+				expectedstring = testdata[0];
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
-	@Test(priority = 4)
-	public void validToolDelete () {
-		try {
-				log.info("valid tools delete");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete");
-				eTest.assignCategory("pvt leadership tip");
-				
-				// add tool
-				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
-				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTools.click();
-				
-				waitForElementToLoad(leadershipObj.addButton);
-				leadershipObj.addButton.click();
-				waitForElementToLoad(addPrivateObj.confText);
-				
-				addPrivateObj.addLeadershipTool(testdata[0], testdata[1], testdata[2], testdata[3]);
-				waitForElementToLoad (addPrivateObj.kitStatus);
-				waitForElementToLoad (addPrivateObj.addButton);
-				addPrivateObj.kitStatus.click();
-				addPrivateObj.addButton.click();	
-				Thread.sleep(2000);   
-				// search tool
-				PrivateLeadershipToolData leadershipData1 = new PrivateLeadershipToolData();
-				testdata = leadershipData1.getPrivateLeadershipToolsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTools.click();
-				waitForElementToLoad(leadershipObj.addButton);
-				leadershipObj.leadershipTools(testdata[0], testdata[1]);
-				Thread.sleep(1000);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				
-				// valid tracks selection then once selected delete
-				Thread.sleep(1000);
-				waitForElementToLoad(editPrivateObj.deleteButton);
-				editPrivateObj.deleteButton.click();
-				driver.switchTo().alert().accept();
-				Thread.sleep(1000);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid delete failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-	}
+	
 	
 	@BeforeClass
 	public void initialize() {

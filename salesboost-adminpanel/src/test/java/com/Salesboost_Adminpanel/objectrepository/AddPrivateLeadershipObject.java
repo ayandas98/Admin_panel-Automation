@@ -18,6 +18,7 @@ public class AddPrivateLeadershipObject extends BaseClass {
 	@FindBy(xpath = "//button[contains(text(),'Add New Leadership Tool Kit')]") public WebElement addButton;
 	@FindBy(xpath ="//input[@id='toolkitPrivate']") public WebElement kitPrivate;
 	@FindBy(xpath ="//select[@id='SelectedWhiteLabelAccountId']") public WebElement kitList;
+	@FindBy(xpath = "//h1[contains(text(),'Edit Leadership Tool Kit:')]") public WebElement actualVerificationText;
 	
 	public AddPrivateLeadershipObject (WebDriver driver) {
 		this.driver = driver;

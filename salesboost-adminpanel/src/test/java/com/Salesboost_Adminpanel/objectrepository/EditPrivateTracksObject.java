@@ -24,6 +24,7 @@ public class EditPrivateTracksObject extends BaseClass {
 	@FindBy (xpath = "//input[@id='CertifiedTrack'] ") public WebElement trackCertified;
 	@FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1] ") public WebElement trackUpdateButton ;
 	@FindBy (xpath = "//input[@id='deleteButton']") public WebElement trackDelete;
+	@FindBy (xpath = "//h1[contains(text(),'Edit Track')]") public WebElement actualTextVerification ;
 	
 	public EditPrivateTracksObject (WebDriver driver) {
 		this.driver = driver;

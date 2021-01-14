@@ -3,6 +3,7 @@ package com.Salesboost_Adminpanel.testscript;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -36,8 +37,8 @@ public class PrivateTracksPage extends BaseClass {
 				log.info("Tracks -add new private track");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add account");
-				eTest.assignCategory("add account");
+				eTest = eReports.createTest("valid add track");
+				eTest.assignCategory("add tracks");
 				
 				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
@@ -53,13 +54,16 @@ public class PrivateTracksPage extends BaseClass {
 				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
 				addPrivateTracksObj.addTrackButton.click();	
 				Thread.sleep(2000);
-								
+				expectedstring = testdata[0];
+				actualstring =addPrivateTracksObj.actualVerificationText.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid account adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
+		}	
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
 	@Test(priority = 1)
@@ -68,8 +72,8 @@ public class PrivateTracksPage extends BaseClass {
 				log.info("valid tracks selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest = eReports.createTest("verify selection");
+				eTest.assignCategory("tracks listing");
 
 				// valid tracks selection for display based on active/inactive
 				
@@ -95,8 +99,8 @@ public class PrivateTracksPage extends BaseClass {
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
-				eTest.assignCategory("update user");
+				eTest = eReports.createTest("verify update track");
+				eTest.assignCategory("update track");
 		/*		
 				// add track	
 				PrivateTracksData tracksData = new PrivateTracksData();
@@ -127,24 +131,21 @@ public class PrivateTracksPage extends BaseClass {
 				//update the track if user found
 				PrivateTracksData tracksData2 = new PrivateTracksData();
 				testdata = tracksData2.getEditPrivateTrackData(tdImport);
-				expectedArray.add(testdata[0]); //name
-				expectedArray.add(testdata[1]); //slug
-				expectedArray.add(testdata[2]); //list
-				expectedArray.add(testdata[3]); //description
-				expectedArray.add(testdata[4]); //tag
-				expectedArray.add(testdata[5]); //course
 				
 				editPrivateTracksObj.editPrivateTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
 				Thread.sleep(2000);
 				waitForElementToLoad (editPrivateTracksObj.trackUpdateButton);
 				editPrivateTracksObj.trackUpdateButton.click();
-			
+				actualstring = editPrivateTracksObj.actualTextVerification.getText();
+				expectedstring = testdata[0];
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}	
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
 	@Test(priority = 3)
@@ -153,8 +154,8 @@ public class PrivateTracksPage extends BaseClass {
 				log.info("valid tracks selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
-				eTest.assignCategory("search user");
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("delete track");
 
 				//add track
 				PrivateTracksData tracksData = new PrivateTracksData();
@@ -185,12 +186,16 @@ public class PrivateTracksPage extends BaseClass {
 				editPrivateTracksObj.trackDelete.click();
 				driver.switchTo().alert().accept();
 				Thread.sleep(1000);
+				expectedstring = "Add New Track";
+				actualstring = tracksObj.addTrackButton.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid delete failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
 	@BeforeClass

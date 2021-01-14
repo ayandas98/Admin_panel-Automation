@@ -1,5 +1,6 @@
 package com.Salesboost_Adminpanel.objectrepository;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,12 +22,13 @@ public class EditSystemAnnouncements extends BaseClass{
 	@FindBy(xpath = "//input[@id='BlogPost_SEOMetaKeywords']") public WebElement seoKeywords;
 	@FindBy(xpath = "//select[@id='author-id']") public WebElement postAuthor;
 	@FindBy(xpath = "//input[@id='BlogPost_IsActive']") public WebElement postActive;
-	@FindBy(xpath = "//tbody/tr[11]/td[2]/ul[1]/li[1]/input[1]") public WebElement postTags;
+	@FindBy(xpath = "//td[contains(text(),'Tags')]/following::td//input") public WebElement postTags;
 	@FindBy(xpath = "//tbody/tr[12]/td[2]/ul[1]/li[1]/input[1]") public WebElement postRelated;
 	@FindBy(xpath = "//tbody/tr[13]/td[2]/ul[1]/li[1]") public WebElement postCourses;
-	@FindBy(xpath = "//iframe[@id='BlogPost_Content_ifr']") public WebElement postContent;
+	@FindBy(xpath = "//div[@id='mceu_41-0']") public WebElement postContent;
 	@FindBy(xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement updateButton;
 	@FindBy(xpath = "//input[@id='deleteButton']") public WebElement deleteButton;
+	@FindBy(xpath = "//h1[contains(text(),'Edit: ')]") public WebElement actualVerificationText;
 	
 	public EditSystemAnnouncements (WebDriver driver) {
 		this.driver = driver;
@@ -51,12 +53,12 @@ public class EditSystemAnnouncements extends BaseClass{
 			this.seoKeywords.sendKeys(key);
 			this.postAuthor.clear();
 			this.postAuthor.sendKeys(author);
-			this.postTags.clear();
 			this.postTags.sendKeys(tags);
-			this.postRelated.clear();
+			this.postTags.sendKeys(Keys.RETURN);
 			this.postRelated.sendKeys(rel);
-			this.postCourses.clear();
+			this.postRelated.sendKeys(Keys.RETURN);
 			this.postCourses.sendKeys(course);
+			this.postCourses.sendKeys(Keys.RETURN);
 			this.postContent.clear();
 			this.postContent.sendKeys(content);
 		}

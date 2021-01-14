@@ -20,6 +20,7 @@ public class AddQuickSalesTips extends BaseClass{
 	@FindBy(xpath ="//div[@id='mceu_41-0']") public WebElement postContent;
 	@FindBy(xpath ="//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement addButton;
 	@FindBy(xpath ="//div[@id='mceu_41-0']") public WebElement para;
+	@FindBy(xpath ="//h1[contains(text(),'Edit: ')]") public WebElement actualVerificationText;
 	
 	public AddQuickSalesTips (WebDriver driver) {
 		this.driver = driver;

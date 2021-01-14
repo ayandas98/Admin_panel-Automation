@@ -22,6 +22,7 @@ public class EditQuickSalesTip extends BaseClass{
 	@FindBy (xpath ="//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement updateButton;
 	@FindBy (xpath ="//input[@id='deleteButton']") public WebElement deleteButton;
 	@FindBy (xpath ="//div[@id='mceu_41-0']") public WebElement cont;
+	@FindBy(xpath ="//h1[contains(text(),'Edit: ')]") public WebElement actualVerificationText;
 	
 	public EditQuickSalesTip (WebDriver driver) {
 		this.driver = driver;

@@ -3,6 +3,7 @@ package com.Salesboost_Adminpanel.testscript;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -54,13 +55,17 @@ public class administratorsPage extends BaseClass{
 				addNewUserObject.addNewUser(testdata[0], testdata[1], testdata[2], testdata[3]);
 				waitForElementToLoad (addNewUserObject.addUser);
 				Thread.sleep(1000);
-				addNewUserObject.addUser.click();								
+				addNewUserObject.addUser.click();
+				expectedstring = "testdata[1]"+" "+"testdata[2]";
+				actualstring =addNewUserObject.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid account adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
 	@Test(priority = 1)
@@ -69,7 +74,7 @@ public class administratorsPage extends BaseClass{
 				log.info("valid search user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
+				eTest = eReports.createTest("valid search");
 				eTest.assignCategory("search user");
 				
 				// add user 
@@ -113,11 +118,11 @@ public class administratorsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update user");
+				eTest = eReports.createTest("valid update user");
 				eTest.assignCategory("update user");
 				
-				// add user
-				/*
+		/*		// add user
+				
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
 				AdministratorsData administratorsData2 = new AdministratorsData();
@@ -128,8 +133,7 @@ public class administratorsPage extends BaseClass{
 				addNewUserObject.addNewUser(testdata[0], testdata[1], testdata[2], testdata[3]);
 				waitForElementToLoad (addNewUserObject.addUser);
 				addNewUserObject.addUser.click();	
-				*/
-				
+			*/	
 				//search user
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
@@ -150,13 +154,16 @@ public class administratorsPage extends BaseClass{
 				waitForElementToLoad (editUserObject.updateUser);
 //				editUserObject.updateUser.click();
 				Thread.sleep(2000);
-				
+				expectedArray.add(testdata[1]);
+				actualArray.add(editUserObject.firstName.getText());
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
+		System.out.println("Actual: "+actualArray+"\nExpcted: "+expectedArray);
+		Assert.assertEquals(actualArray , expectedArray);
 	} 
 	
 	@BeforeClass

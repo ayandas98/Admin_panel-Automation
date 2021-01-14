@@ -27,7 +27,6 @@ public class EditRolesObject extends BaseClass {
 	public void editRoles (String name, String description, String img ,String list) {
 		try {
 			log.info("edit roles: role management screen");
-			//waitForElementToLoad(this.roleName);
 			this.roleName.clear();
 			this.roleName.sendKeys(name);
 			this.roleDescription.clear();

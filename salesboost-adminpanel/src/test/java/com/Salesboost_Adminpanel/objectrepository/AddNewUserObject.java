@@ -18,6 +18,7 @@ public class AddNewUserObject extends BaseClass {
 	@FindBy(xpath ="//input[@id='User_LastName']") public WebElement lastName;
 	@FindBy(xpath ="//select[@id='SelectedRole']") public WebElement accessLevel;
 	@FindBy(xpath ="//input[@id='btnSubmit']") public WebElement addUser;
+	@FindBy(xpath ="//h1[contains(text(),'Edit User')]") public WebElement valid;
 	
 	public AddNewUserObject (WebDriver driver) {
 		this.driver = driver;

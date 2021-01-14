@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.Salesboost_Adminpanel.testscript.loginPage"/>
+      <class name="com.Salesboost_Adminpanel.testscript.managePasswordScript"/>
+     <!--  <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage"/>
+      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage"/> -->
+      <!-- <class name="com.Salesboost_Adminpanel.testscript.TracksPage"/> -->
+      <class name="com.Salesboost_Adminpanel.testscript.PrivateTracksPage"/>
+      <class name="com.Salesboost_Adminpanel.testscript.RoleManagementPage"/>
+       <class name="com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage"/>
+       <class name="com.Salesboost_Adminpanel.testscript.LeadershipTipsPage"/>
+       <class name="com.Salesboost_Adminpanel.testscript.QuickSalesPage"/>
+       <class name="com.Salesboost_Adminpanel.testscript.LeadershipObjectPage"/>
+       <class name="com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

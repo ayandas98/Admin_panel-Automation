@@ -20,7 +20,7 @@ public class RoleManagementData extends BaseClass {
 		testdata = new String[3];
 		testdata[0] = tdImport.getValue(2, 3);
 		testdata[1] = tdImport.getValue(2, 4);
-		testdata[2] = tdImport.getValue(2, 5);
+		testdata[2] = projectFolder + tdImport.getValue(2, 5);
 		return testdata;
 	}
 	
@@ -28,7 +28,7 @@ public class RoleManagementData extends BaseClass {
 		testdata = new String[4];
 		testdata[0] = tdImport.getValue(2, 7);
 		testdata[1] = tdImport.getValue(2, 8);
-		testdata[2] = tdImport.getValue(2, 9);
+		testdata[2] = projectFolder + tdImport.getValue(2, 9);
 		testdata[3] = tdImport.getValue(2, 10);
 		return testdata;
 	}

@@ -18,6 +18,7 @@ public class EditPrivateLeadershipObject extends BaseClass{
 	@FindBy(xpath ="//input[@id='deleteKitButton']") public WebElement deleteButton;
 	@FindBy(xpath ="//input[@id='toolkitPrivate']") public WebElement kitPrivate;
 	@FindBy(xpath ="//select[@id='SelectedWhiteLabelAccountId']") public WebElement kitList;
+	@FindBy(xpath = "//h1[contains(text(),'Edit Leadership Tool Kit:')]") public WebElement actualVerificationText;
 	
 	public EditPrivateLeadershipObject (WebDriver driver) {
 		this.driver = driver;

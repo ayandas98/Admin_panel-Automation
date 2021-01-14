@@ -23,7 +23,8 @@ public class AddPrivateTracksObject extends BaseClass {
 	@FindBy (xpath = "//tbody/tr[9]/td[1]/ul[1]/li[1]") public WebElement trackImage ;
 	//@FindBy (xpath = "//tbody/tr[9]/td[2]/label[1]") public WebElement trackImageUpload ;
 	@FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement addTrackButton ;
-
+	@FindBy (xpath ="//h1[contains(text(),'Add Track:')]") public WebElement actualVerificationText ;
+	
 	public AddPrivateTracksObject (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);

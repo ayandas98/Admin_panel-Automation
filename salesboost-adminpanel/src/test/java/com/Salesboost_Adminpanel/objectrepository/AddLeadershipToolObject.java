@@ -16,7 +16,7 @@ public class AddLeadershipToolObject extends BaseClass{
 	@FindBy(xpath = "//input[@id='Status']") public WebElement kitStatus;
 	@FindBy(xpath = "//textarea[@id='Description']") public WebElement kitDescription;
 	@FindBy(xpath = "//button[contains(text(),'Add New Leadership Tool Kit')]") public WebElement addButton;
-	
+	@FindBy(xpath = "//h1[contains(text(),'Edit Leadership Tool Kit:')]") public WebElement actualVerificationText;
 	
 	public AddLeadershipToolObject (WebDriver driver) {
 		this.driver = driver;

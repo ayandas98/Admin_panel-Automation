@@ -21,6 +21,7 @@ public class AddTracksObject extends BaseClass {
 	@FindBy (xpath = "//tbody/tr[9]/td[1]/ul[1]/li[1]") public WebElement trackImage ;
 	//@FindBy (xpath = "//tbody/tr[9]/td[2]/label[1]") public WebElement trackImageUpload ;
 	@FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement addTrackButton ;
+	@FindBy (xpath = "//h1[contains(text(),'Edit Track')]") public WebElement actualTextVerification ;
 	
 	public AddTracksObject (WebDriver driver) {
 		this.driver = driver;
@@ -40,7 +41,6 @@ public class AddTracksObject extends BaseClass {
 			this.trackDescription.clear();
 			this.trackDescription.sendKeys(description);
 			this.trackImage.click();
-			Thread.sleep(1000);
 			this.addTrackButton.click();
 		}
 		catch (Exception e) {

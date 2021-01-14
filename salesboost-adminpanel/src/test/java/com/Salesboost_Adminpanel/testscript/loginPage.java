@@ -27,32 +27,25 @@ public class loginPage extends BaseClass {
 	public void validEmailValidPassword() {
 		try {
 			log.info("Sign In: validEmailValidPassword");
-			driver.switchTo().alert().accept();
 			
 			actualstring=""; expectedstring="";
-			eTest = eReports.createTest("validEmailValidPassword");
+			eTest = eReports.createTest("validEmailValidPassword Login");
 			eTest.assignCategory("SignIn");
 			LoginData loginData = new LoginData();
-
 			testdata = loginData.getSignInData(this.tdImport);
-			 System.out.println(testdata);
-			
-			 
 			 
 			signInObject.signIn(testdata[0], testdata[1]);
-			log.info("dash"+(dashboardObj==null?"yes":"no"));
 			waitForElementToLoad(dashboardObj.Admin);
 			expectedstring = "SuperAdmin";
 			actualstring = dashboardObj.Admin.getText();
 			
-			waitForElementToLoad(dashboardObj.usersTab);
-			dashboardObj.logOut.click();
 		}
 			catch (Exception e) {
-			e.printStackTrace();
 			System.out.println("validEmailValidPassword Failed");
+			e.printStackTrace();
+			//log.info(e);
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
+		}	
 		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
@@ -69,7 +62,6 @@ public class loginPage extends BaseClass {
 	
 	} catch (Exception e) {
 	e.printStackTrace();
-	
 	}
 	}
 	
@@ -77,7 +69,6 @@ public class loginPage extends BaseClass {
 	public void logout() {
 		try {
 			log.info("Sign In: logout");
-			waitForElementToLoad(dashboardObj.Admin);
 			waitIfElementClickIsIntercepted(dashboardObj.logOut, "click", "");
 		}catch (Exception e) {
 			e.printStackTrace();

@@ -20,9 +20,10 @@ public class AddSystemAnnouncementsObject extends BaseClass {
 	@FindBy(xpath = "//input[@id='BlogPost_SEOMetaKeywords']") public WebElement seoKeyword;
 	@FindBy(xpath = "//select[@id='author-id']") public WebElement postAuthor;
 	@FindBy(xpath = "//input[@id='BlogPost_IsActive']") public WebElement postActive ;
-	@FindBy(xpath = "//iframe[@id='BlogPost_Content_ifr']") public WebElement postContent ;
+	@FindBy(xpath = "//div[@id='mceu_41-0']") public WebElement postContent ;
 	@FindBy(xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1]") public WebElement addButton ;
 	@FindBy(xpath = "//h1[contains(text(),'Add New System Announcement')]") public WebElement confText;
+	@FindBy(xpath = "//h1[contains(text(),'Edit: ')]") public WebElement actualVerificationText;
 	
 	public AddSystemAnnouncementsObject (WebDriver driver) {
 		this.driver = driver;

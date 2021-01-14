@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -35,16 +37,14 @@ public class RoleManagementPage extends BaseClass {
 	@Test(priority = 0)
 	public void validaddroles () {
 		try {
-				log.info("Tracks -cancel add new role");
+				log.info("add new role");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add role");
+				eTest = eReports.createTest("valid add role");
 				eTest.assignCategory("role management");
 				
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
-				expectedArray.add(testdata[0]); //name
-				expectedArray.add(testdata[1]); //description 
 				
 				dashboardObj.contentTab.click();
 				dashboardObj.roleManagement.click();
@@ -57,19 +57,22 @@ public class RoleManagementPage extends BaseClass {
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
 				Thread.sleep(2000);
-								
+				actualstring = rolesNameText(testdata[0]).getText();
+				expectedstring = testdata[0];				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid role adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
+		}	
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
+	/*
 	@Test(priority = 1)
 	public void validcanceladdroles () {
 		try {
-				log.info("Tracks - cancel add new role");
+				log.info("cancel add new role");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("cancel add role");
@@ -99,7 +102,7 @@ public class RoleManagementPage extends BaseClass {
 			System.out.println("valid cancel role adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
-	}
+	}		*/
 	
 	@Test(priority = 2)
 	public void validrolesselection () {
@@ -107,7 +110,7 @@ public class RoleManagementPage extends BaseClass {
 				log.info("valid roles selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify search");
+				eTest = eReports.createTest("valid listing");
 				eTest.assignCategory("role management");
 
 				// valid roles selection in display page based on active/inactive 
@@ -127,6 +130,53 @@ public class RoleManagementPage extends BaseClass {
 	}
 	
 	@Test(priority = 3)
+	public void validroledeletion () {
+		try {
+				log.info("valid roles selection and delete");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify delete");
+				eTest.assignCategory("role management");
+		/*		
+				RoleManagementData roleManagementDataObj = new RoleManagementData();
+				testdata = roleManagementDataObj.getAddRolesData(tdImport);
+				expectedArray.add(testdata[0]); //name
+				expectedArray.add(testdata[1]); //description 
+				expectedArray.add(testdata[2]); //list
+				
+				dashboardObj.contentTab.click();
+				dashboardObj.roleManagement.click();
+				
+				waitForElementToLoad(roleManagementObj.addButton);
+				roleManagementObj.addButton.click();
+				waitForElementToLoad(addRolesObj.roleName);
+				
+				addRolesObj.addRoles(testdata[0], testdata[1], testdata[2]);
+				waitForElementToLoad (addRolesObj.addRoleButton);
+				addRolesObj.addRoleButton.click();
+		*/		
+				// valid roles deletion once selected
+				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
+				testdata = roleManagementDataObj1.getRolesData(tdImport);
+				dashboardObj.contentTab.click();
+				dashboardObj.roleManagement.click();
+				waitForElementToLoad(roleManagementObj.addButton);
+				roleManagementObj.roleManagement(testdata[0], testdata[1]);
+				driver.findElement(By.xpath("//td[contains(text(),'" + testdata[1] + "')]//following::input[2]")).click();
+				driver.switchTo().alert().accept();
+				expectedstring = "Add Role";
+				actualstring = roleManagementObj.addButton.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("valid deletion failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 4)
 	public void validEditRoles () {
 		try {
 				log.info("valid edit role");
@@ -135,7 +185,7 @@ public class RoleManagementPage extends BaseClass {
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update role");
 				eTest.assignCategory("role management");
-				/*
+				
 				// add role
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
 				testdata = roleManagementDataObj.getAddRolesData(tdImport);
@@ -151,7 +201,7 @@ public class RoleManagementPage extends BaseClass {
 				waitForElementToLoad (addRolesObj.addRoleButton);
 				addRolesObj.addRoleButton.click();	
 				Thread.sleep(1000);
-				*/
+				
 				//search role from roles list as there is no specified search button this step integrated with edit
 				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
 				testdata = roleManagementDataObj1.getRolesData(tdImport);
@@ -170,13 +220,16 @@ public class RoleManagementPage extends BaseClass {
 				editRolesObj.editRoles(testdata2[0], testdata2[1], testdata2[2], testdata2[3]);
 				waitForElementToLoad (editRolesObj.updateRoleButton);
 				editRolesObj.updateRoleButton.click();
-			
+				expectedstring = testdata[0];
+				actualstring = rolesNameText(testdata[0]).getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	/*
 	@Test(priority = 4)
@@ -238,51 +291,14 @@ public class RoleManagementPage extends BaseClass {
 		}	
 	}
 	*/
-	@Test(priority = 5)
-	public void validroledeletion () {
-		try {
-				log.info("valid roles selection and delete");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete");
-				eTest.assignCategory("role management");
-				
-				RoleManagementData roleManagementDataObj = new RoleManagementData();
-				testdata = roleManagementDataObj.getAddRolesData(tdImport);
-				expectedArray.add(testdata[0]); //name
-				expectedArray.add(testdata[1]); //description 
-				expectedArray.add(testdata[2]); //list
-				
-				dashboardObj.contentTab.click();
-				dashboardObj.roleManagement.click();
-				
-				waitForElementToLoad(roleManagementObj.addButton);
-				roleManagementObj.addButton.click();
-				waitForElementToLoad(addRolesObj.roleName);
-				
-				addRolesObj.addRoles(testdata[0], testdata[1], testdata[2]);
-				waitForElementToLoad (addRolesObj.addRoleButton);
-				addRolesObj.addRoleButton.click();
-
-				// valid roles deletion once selected
-				RoleManagementData roleManagementDataObj1 = new RoleManagementData();
-				testdata = roleManagementDataObj1.getRolesData(tdImport);
-				dashboardObj.contentTab.click();
-				dashboardObj.roleManagement.click();
-				waitForElementToLoad(roleManagementObj.addButton);
-				roleManagementObj.roleManagement(testdata[0], testdata[1]);
-				driver.findElement(By.xpath("//td[contains(text(),'" + testdata[1] + "')]//following::input[2]")).click();
-				driver.switchTo().alert().accept();
-				
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid deletion failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
+	
+	public static WebElement rolesNameText(String rolesName)
+	{
+	    WebElement rolesVerificationText =  driver.findElement(By.xpath("//td[contains(text(),'"+rolesName+"')]"));
+	    return rolesVerificationText;
 	}
-
-	@BeforeClass
+	
+		@BeforeClass
 	public void initialize() {
 		try {
 			log.info("Entered initialize method");

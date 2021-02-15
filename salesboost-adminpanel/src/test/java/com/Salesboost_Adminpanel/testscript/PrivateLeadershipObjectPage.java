@@ -37,8 +37,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("Tracks -add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add private tips");
-				eTest.assignCategory("pvt leadership tips");
+				eTest = eReports.createTest("valid add private tools");
+				eTest.assignCategory("pvt leadership tool tips");
 				
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
 				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
@@ -109,8 +109,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("valid tools selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid listing");
-				eTest.assignCategory("pvt leadership tip");
+				eTest = eReports.createTest("valid tools listing");
+				eTest.assignCategory("pvt leadership tools tip");
 				/*
 				// add tool	
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
@@ -152,8 +152,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				log.info("valid tools delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid delete");
-				eTest.assignCategory("pvt leadership tip");
+				eTest = eReports.createTest("valid delete private tools");
+				eTest.assignCategory("pvt leadership tool tip");
 		/*		
 				// add tool
 				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
@@ -209,8 +209,8 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update tip");
-				eTest.assignCategory("pvt leadership tip");
+				eTest = eReports.createTest("valid update private tools");
+				eTest.assignCategory("pvt leadership tool tip");
 				
 				// add tool	
 

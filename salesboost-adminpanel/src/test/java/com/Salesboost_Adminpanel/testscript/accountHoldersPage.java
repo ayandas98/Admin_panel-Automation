@@ -53,8 +53,9 @@ public class accountHoldersPage extends BaseClass{
 				waitForElementToLoad (addNewAccountObj.addAccount);
 				addNewAccountObj.addAccount.click();	
 				Thread.sleep(2000);
-				expectedstring = "Search";		
-				actualstring = accountHoldersObj.searchButton.getText();
+				expectedstring = "Add New Account";
+				actualstring = accountHoldersObj.addNewAccount.getText();
+				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -138,20 +139,20 @@ public class accountHoldersPage extends BaseClass{
 				waitForElementToLoad(accountHoldersObj.searchButton);
 				accountHoldersObj.accountHolders(testdata[0], testdata[1]);
 				accountHoldersObj.searchButton.click();
-				
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
 				//update the user if user found
 				
 				AccountHoldersData accountHoldersDataObj2 = new AccountHoldersData();
 				testdata = accountHoldersDataObj2.getEditAccountData(tdImport);
-				expectedArray.add(testdata[0]);
-				
+
 				editAccountObj.editAccount(testdata[0], testdata[1], testdata[2], testdata[3]);
 				Thread.sleep(2000);
 				waitForElementToLoad (editAccountObj.update);
 				editAccountObj.update.click();
-				actualArray.add(editAccountObj.accountName.getText());
+				Thread.sleep(2000);
+				expectedstring = testdata[0];
+				actualstring = editAccountObj.valid.getText();
 			
 		}
 		catch (Exception e) {
@@ -159,8 +160,8 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualArray+"\nExpcted: "+expectedArray);
-		Assert.assertEquals(actualArray , expectedArray);
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
 	@BeforeClass

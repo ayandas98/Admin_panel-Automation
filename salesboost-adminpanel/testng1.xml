@@ -5,9 +5,9 @@
     <classes>
       <class name="com.Salesboost_Adminpanel.testscript.loginPage"/>
       <class name="com.Salesboost_Adminpanel.testscript.managePasswordScript"/>
-     <!--  <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage"/>
-      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage"/> -->
-      <!-- <class name="com.Salesboost_Adminpanel.testscript.TracksPage"/> -->
+     <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage"/>
+      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage"/> 
+       <class name="com.Salesboost_Adminpanel.testscript.TracksPage"/> 
       <class name="com.Salesboost_Adminpanel.testscript.PrivateTracksPage"/>
       <class name="com.Salesboost_Adminpanel.testscript.RoleManagementPage"/>
        <class name="com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage"/>

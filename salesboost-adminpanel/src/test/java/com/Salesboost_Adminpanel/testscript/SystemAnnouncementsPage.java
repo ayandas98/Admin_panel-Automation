@@ -37,7 +37,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				log.info("system announcement active posts add new system announcements");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add announcement");
+				eTest = eReports.createTest("valid add active announcement");
 				eTest.assignCategory("system announcement");
 				
 				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
@@ -110,7 +110,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				log.info("valid System announcements selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid listing");
+				eTest = eReports.createTest("valid announcement listing");
 				eTest.assignCategory("system announcement");
 
 				// valid posts selection
@@ -133,11 +133,11 @@ public class SystemAnnouncementsPage extends BaseClass{
 	@Test(priority = 3)
 	public void validDeleteAnnouncement () {
 		try {
-				log.info("valid Delete track");
+				log.info("valid Delete announcement");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete");
+				eTest = eReports.createTest("verify delete announcement");
 				eTest.assignCategory("system announcement");
 				/*
 				// add user	
@@ -186,13 +186,13 @@ public class SystemAnnouncementsPage extends BaseClass{
 	}
 	
 	@Test(priority = 4)
-	public void validActivePostEditAnnouncement () {
+	public void validInActivePostEditAnnouncement () {
 		try {
 				log.info("valid active edit system announcement post");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update announcement");
+				eTest = eReports.createTest("verify update Inactive announcement");
 				eTest.assignCategory("system announcement");
 							
 				// add post	
@@ -245,13 +245,13 @@ public class SystemAnnouncementsPage extends BaseClass{
 	} 
 	/*
 	@Test(priority = 4)
-	public void validInActivePostEditTrack () {
+	public void validActivePostEditTrack () {
 		try {
 				log.info("valid Inactive edit edit track");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update announcement");
+				eTest = eReports.createTest("verify update active announcement");
 				eTest.assignCategory("system announcement");
 				
 				// add post	

@@ -37,7 +37,7 @@ public class PrivateTracksPage extends BaseClass {
 				log.info("Tracks -add new private track");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add track");
+				eTest = eReports.createTest("valid add private track");
 				eTest.assignCategory("add tracks");
 				
 				PrivateTracksData tracksData = new PrivateTracksData();
@@ -72,7 +72,7 @@ public class PrivateTracksPage extends BaseClass {
 				log.info("valid tracks selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify selection");
+				eTest = eReports.createTest("verify tracks listing");
 				eTest.assignCategory("tracks listing");
 
 				// valid tracks selection for display based on active/inactive
@@ -99,7 +99,7 @@ public class PrivateTracksPage extends BaseClass {
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update track");
+				eTest = eReports.createTest("verify update private track");
 				eTest.assignCategory("update track");
 		/*		
 				// add track	
@@ -132,7 +132,7 @@ public class PrivateTracksPage extends BaseClass {
 				PrivateTracksData tracksData2 = new PrivateTracksData();
 				testdata = tracksData2.getEditPrivateTrackData(tdImport);
 				
-				editPrivateTracksObj.editPrivateTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
+				editPrivateTracksObj.editPrivateTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6]);
 				Thread.sleep(2000);
 				waitForElementToLoad (editPrivateTracksObj.trackUpdateButton);
 				editPrivateTracksObj.trackUpdateButton.click();
@@ -151,10 +151,10 @@ public class PrivateTracksPage extends BaseClass {
 	@Test(priority = 3)
 	public void validtrackdelete () {
 		try {
-				log.info("valid tracks selection");
+				log.info("valid tracks delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete");
+				eTest = eReports.createTest("verify delete private track");
 				eTest.assignCategory("delete track");
 
 				//add track

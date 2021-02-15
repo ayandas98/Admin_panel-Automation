@@ -37,7 +37,7 @@ public class LeadershipTipsPage extends BaseClass{
 				log.info("leadership tips active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add tips");
+				eTest = eReports.createTest("valid add leadership tip");
 				eTest.assignCategory("leadership tips");
 				
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
@@ -75,7 +75,7 @@ public class LeadershipTipsPage extends BaseClass{
 				log.info("leadership tips In-active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add tips");
+				eTest = eReports.createTest("valid add In-active leadership tip");
 				eTest.assignCategory("leadership tips");
 				
 				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
@@ -110,7 +110,7 @@ public class LeadershipTipsPage extends BaseClass{
 				log.info("valid leadership tips selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid listing");
+				eTest = eReports.createTest("valid leadership tip listing");
 				eTest.assignCategory("leadership tips");
 
 				// valid tracks selection
@@ -138,7 +138,7 @@ public class LeadershipTipsPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid delete tips");
+				eTest = eReports.createTest("valid delete leadership tip");
 				eTest.assignCategory("leadership tips");
 		/*		
 				// add user	
@@ -189,12 +189,12 @@ public class LeadershipTipsPage extends BaseClass{
 	}
 
 	@Test(priority = 4)
-	public void validActivePostEditLeadershipTip () {
+	public void validInActivePostEditLeadershipTip () {
 		try {
 				log.info("valid active edit leadership tip");				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update tips");
+				eTest = eReports.createTest("valid update leadership tip");
 				eTest.assignCategory("leadership tips");
 				
 				// add user	
@@ -249,7 +249,7 @@ public class LeadershipTipsPage extends BaseClass{
 	
 	/*
 	@Test(priority = 4)
-	public void validInActivePostEditLeadershipTip () {
+	public void validActivePostEditLeadershipTip () {
 		try {
 				log.info("valid In-active edit leadership tip");
 				

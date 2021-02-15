@@ -30,6 +30,7 @@ public class PrivateTracksData extends BaseClass{
 		testdata[3] = tdImport.getValue(2, 11);
 		testdata[4] = tdImport.getValue(2, 12);
 		testdata[5] = tdImport.getValue(2, 13);
+		testdata[6] = tdImport.getValue(2, 14);
 		return testdata;
 	}
 }

@@ -74,7 +74,7 @@ public class TracksPage extends BaseClass{
 				log.info("valid tracks selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid listings");
+				eTest = eReports.createTest("valid tracks listings");
 				eTest.assignCategory("tracks");
 
 				// valid tracks selection
@@ -100,7 +100,7 @@ public class TracksPage extends BaseClass{
 				log.info("valid tracks delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete");
+				eTest = eReports.createTest("verify delete track");
 				eTest.assignCategory("tracks");
 			/*	
 				//add track
@@ -181,7 +181,7 @@ public class TracksPage extends BaseClass{
 				TracksData tracksData2 = new TracksData();
 				testdata = tracksData2.getEditTrackData(tdImport);
 				
-				editTracksObj.editTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4]);
+				editTracksObj.editTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
 				Thread.sleep(1000);
 				waitForElementToLoad (editTracksObj.trackUpdateButton);
 				editTracksObj.trackUpdateButton.click();

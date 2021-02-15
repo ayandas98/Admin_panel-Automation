@@ -39,7 +39,7 @@ public class QuickSalesPage extends BaseClass{
 				log.info("sales tips active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add sales tip");
+				eTest = eReports.createTest("valid add active sales tip");
 				eTest.assignCategory("quick sales");
 				
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
@@ -76,7 +76,7 @@ public class QuickSalesPage extends BaseClass{
 				log.info("sales tips In-active posts add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add sales tip");
+				eTest = eReports.createTest("valid add inactive sales tip");
 				eTest.assignCategory("quick sales");
 				
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
@@ -111,7 +111,7 @@ public class QuickSalesPage extends BaseClass{
 				log.info("valid Sales tips selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid listing");
+				eTest = eReports.createTest("valid sales tip listing");
 				eTest.assignCategory("quick sales");
 
 				// valid tracks selection
@@ -139,7 +139,7 @@ public class QuickSalesPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete tip");
+				eTest = eReports.createTest("verify delete sales tip");
 				eTest.assignCategory("quick sales");
 /*				
 				// add user	
@@ -190,13 +190,13 @@ public class QuickSalesPage extends BaseClass{
 
 	
 	@Test(priority = 4)
-	public void validActivePostEditSalesTip () {
+	public void validInActivePostEditSalesTip () {
 		try {
 				log.info("valid active edit Sales tip");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update sales tip");
+				eTest = eReports.createTest("valid update in-active sales tip");
 				eTest.assignCategory("quick sales");
 			
 				// add user	
@@ -251,13 +251,13 @@ public class QuickSalesPage extends BaseClass{
 	}
 	/*
 	@Test(priority = 4)
-	public void validInActivePostEditSalesTip () {
+	public void validActivePostEditSalesTip () {
 		try {
 				log.info("valid In-active edit Sales tip");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update sales tip");
+				eTest = eReports.createTest("valid update active sales tip");
 				eTest.assignCategory("quick sales");
 				
 				// add user	

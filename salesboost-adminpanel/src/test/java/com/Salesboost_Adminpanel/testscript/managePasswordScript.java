@@ -46,7 +46,7 @@ public class managePasswordScript extends BaseClass{
 
 			waitForElementToLoad(managePassword.button);
 			managePassword.button.click();
-			expectedstring = "Copy";
+			expectedstring = "Generate Password";
 			actualstring = managePassword.valid.getText();
 		}
 		catch (Exception e) {
@@ -69,8 +69,7 @@ public class managePasswordScript extends BaseClass{
 			dashboardObj = new DashboardObject(driver);
 			managePassword = new ManagePassword(driver);
 			tdImport.readExcel("ManagePasswords");
-			
-			
+				
 		} catch (Exception e) {
 			e.printStackTrace();
 			

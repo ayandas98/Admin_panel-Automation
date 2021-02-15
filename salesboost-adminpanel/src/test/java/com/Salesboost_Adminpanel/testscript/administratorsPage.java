@@ -56,7 +56,7 @@ public class administratorsPage extends BaseClass{
 				waitForElementToLoad (addNewUserObject.addUser);
 				Thread.sleep(1000);
 				addNewUserObject.addUser.click();
-				expectedstring = "testdata[1]"+" "+"testdata[2]";
+				expectedstring = testdata[1]+" "+testdata[2];
 				actualstring =addNewUserObject.valid.getText();
 		}
 		catch (Exception e) {
@@ -154,16 +154,16 @@ public class administratorsPage extends BaseClass{
 				waitForElementToLoad (editUserObject.updateUser);
 //				editUserObject.updateUser.click();
 				Thread.sleep(2000);
-				expectedArray.add(testdata[1]);
-				actualArray.add(editUserObject.firstName.getText());
+				expectedstring = testdata[1];
+				actualstring = editUserObject.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualArray+"\nExpcted: "+expectedArray);
-		Assert.assertEquals(actualArray , expectedArray);
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
 	@BeforeClass

@@ -172,7 +172,7 @@ public class BaseClass {
 			esReporter.config().setTheme(Theme.STANDARD);
 			eReports = new ExtentReports();
 			eReports.attachReporter(esReporter);
-			eReports.setSystemInfo("Project Name", "salesBoost");
+			eReports.setSystemInfo("Project Name", "SalesBoost");
 			eReports.setSystemInfo("Platform", System.getProperty("os.name"));
 			eReports.setSystemInfo("Environment", "QA");
 			eReports.setSystemInfo("Browser", cap.getBrowserName().substring(0, 1).toUpperCase()+ cap.getBrowserName().substring(1).toLowerCase());

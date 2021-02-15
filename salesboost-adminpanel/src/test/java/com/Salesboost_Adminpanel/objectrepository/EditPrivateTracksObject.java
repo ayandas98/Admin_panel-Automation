@@ -25,13 +25,14 @@ public class EditPrivateTracksObject extends BaseClass {
 	@FindBy (xpath = "//body/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/input[1] ") public WebElement trackUpdateButton ;
 	@FindBy (xpath = "//input[@id='deleteButton']") public WebElement trackDelete;
 	@FindBy (xpath = "//h1[contains(text(),'Edit Track')]") public WebElement actualTextVerification ;
+	@FindBy (xpath = "//select[@id='selectwhitelabel']") public WebElement accountVer;
 	
 	public EditPrivateTracksObject (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
 	
-	public void editPrivateTrack (String name, String slug, String list , String description, String tag, String course) {
+	public void editPrivateTrack (String name, String slug, String list , String description, String tag, String course, String acc) {
 		try {
 			log.info("edit track");
 			waitForElementToLoad(this.confText);
@@ -51,9 +52,17 @@ public class EditPrivateTracksObject extends BaseClass {
 			this.trackCourses.click();
 			this.trackCourses.sendKeys(course);
 			this.trackCourses.sendKeys(Keys.RETURN);
-			this.trackCertified.click();
-			waitForElementToLoad(this.trackUpdateButton);
-			this.trackUpdateButton.click();
+			if(this.trackCertified.isSelected()) {
+				this.accountVer.sendKeys(acc);
+				waitForElementToLoad(this.trackUpdateButton);
+				this.trackUpdateButton.click();
+			}
+			else {
+				this.trackCertified.click();
+				this.accountVer.sendKeys(acc);
+				waitForElementToLoad(this.trackUpdateButton);
+				this.trackUpdateButton.click();
+			}
 		}
 		catch (Exception e) {
 			e.printStackTrace();

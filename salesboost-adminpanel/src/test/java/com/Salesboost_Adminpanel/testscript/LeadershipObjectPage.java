@@ -76,7 +76,7 @@ public class LeadershipObjectPage extends BaseClass{
 				log.info("Tracks - active status add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add tools");
+				eTest = eReports.createTest("valid add new tools");
 				eTest.assignCategory("leadership tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
@@ -155,7 +155,7 @@ public class LeadershipObjectPage extends BaseClass{
 				log.info("valid tools delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid delete");
+				eTest = eReports.createTest("valid delete tool");
 				eTest.assignCategory("leadership tools");
 				/*
 				// add tool
@@ -211,7 +211,7 @@ public class LeadershipObjectPage extends BaseClass{
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update user");
+				eTest = eReports.createTest("valid update tool");
 				eTest.assignCategory("leadership tools");
 				
 				// add track	
@@ -272,7 +272,7 @@ public class LeadershipObjectPage extends BaseClass{
 				log.info("new duplicate tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("duplicate tool");
+				eTest = eReports.createTest("add duplicate tool");
 				eTest.assignCategory("leadership tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();
@@ -307,7 +307,7 @@ public class LeadershipObjectPage extends BaseClass{
 				log.info("Tools -cancel add new duplicate tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("cancel duplicate tools");
+				eTest = eReports.createTest("cancel adding duplicate tools");
 				eTest.assignCategory("duplicate tools");
 				
 				LeadershipToolData leadershipData = new LeadershipToolData();

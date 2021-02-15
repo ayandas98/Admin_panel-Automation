@@ -12,12 +12,6 @@ public class EditAccount extends BaseClass {
 	WebDriver driver;
 	AccountHoldersObject accountHoldersObject;
 	
-	/*
-	@FindBy(xpath ="//li[@id='accountTab']") public WebElement edit ;
-	@FindBy(xpath ="//li[@id='directorsTab']") public WebElement levels  ;
-	@FindBy(xpath ="//li[@id='toolKitTab']") public WebElement toolkit  ;
-	*/
-	
 	@FindBy(xpath ="//input[@id='Account_Name']") public WebElement  accountName ;
 	@FindBy(xpath ="//select[@id='SelectedLevel']") public WebElement level ;
 	@FindBy(xpath ="//select[@id='SelectedType']") public WebElement accountType  ;
@@ -25,6 +19,7 @@ public class EditAccount extends BaseClass {
 	@FindBy(xpath ="//input[@id='IsWhiteLabel']") public WebElement whitelabel ;
 	@FindBy(xpath ="//input[@id='txtEmail']") public WebElement ownerEmail  ;
 	@FindBy(xpath ="//input[@id='btnSubmit']") public WebElement update;
+	@FindBy(xpath ="//h1[contains(text(),'Edit:')]")public WebElement valid;
 	
 	public EditAccount (WebDriver driver) {
 		this.driver = driver;

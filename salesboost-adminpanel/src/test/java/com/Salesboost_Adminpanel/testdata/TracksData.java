@@ -31,6 +31,7 @@ public class TracksData extends BaseClass{
 		testdata[2] = tdImport.getValue(2, 9);
 		testdata[3] = tdImport.getValue(2, 10);
 		testdata[4] = tdImport.getValue(2, 11);
+		testdata[5] = tdImport.getValue(2, 12);
 		return testdata;
 	}
 }

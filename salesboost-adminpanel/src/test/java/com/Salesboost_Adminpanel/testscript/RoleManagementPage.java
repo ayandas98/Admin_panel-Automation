@@ -110,7 +110,7 @@ public class RoleManagementPage extends BaseClass {
 				log.info("valid roles selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid listing");
+				eTest = eReports.createTest("valid roles listing");
 				eTest.assignCategory("role management");
 
 				// valid roles selection in display page based on active/inactive 
@@ -135,7 +135,7 @@ public class RoleManagementPage extends BaseClass {
 				log.info("valid roles selection and delete");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete");
+				eTest = eReports.createTest("verify delete role");
 				eTest.assignCategory("role management");
 		/*		
 				RoleManagementData roleManagementDataObj = new RoleManagementData();
@@ -239,7 +239,7 @@ public class RoleManagementPage extends BaseClass {
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update role");
+				eTest = eReports.createTest("verify cancel update role");
 				eTest.assignCategory("role management");
 				
 				// add role

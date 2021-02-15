@@ -19,6 +19,7 @@ public class EditUserObject extends BaseClass {
 	@FindBy (xpath ="//select[@id='SelectedRole']") public WebElement  role;
 	@FindBy (xpath ="//input[@id='btnSubmit']") public WebElement updateUser;
 	//@FindBy (xpath ="//input[@id='deleteButton']") public WebElement deleteUser ;
+	@FindBy (xpath ="//h1[contains(text(),'Edit User:')]")public WebElement valid;
 	
 	public EditUserObject (WebDriver driver) {
 		this.driver = driver;

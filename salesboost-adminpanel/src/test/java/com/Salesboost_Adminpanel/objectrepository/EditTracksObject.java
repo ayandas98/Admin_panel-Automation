@@ -25,13 +25,14 @@ public class EditTracksObject extends BaseClass {
 	@FindBy (xpath = "//input[@id='deleteButton']") public WebElement trackDelete;
 	@FindBy (xpath ="//tbody/tr[10]/td[2]/input[1]") public WebElement trackPost;
 	@FindBy (xpath = "//h1[contains(text(),'Edit Track')]") public WebElement actualTextVerification ;
+	@FindBy (xpath = "//select[@id='selectwhitelabel']") public WebElement accountVer;
 	
 	public EditTracksObject (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
 	
-	public void editTrack (String name, String slug, String description, String tag, String course) {
+	public void editTrack (String name, String slug, String description, String tag, String course , String acc) {
 		try {
 			log.info("edit track");
 			//waitForElementToLoad(this.confText);
@@ -47,9 +48,16 @@ public class EditTracksObject extends BaseClass {
 			waitForElementToLoad(this.trackCourses);
 			this.trackCourses.sendKeys(course);
 			this.trackCourses.sendKeys(Keys.RETURN);
-			this.trackPost.sendKeys("D:/salesboost admin/role management/add role/download.png");
+			//this.trackPost.sendKeys("D:/salesboost admin/role management/add role/download.png");
+			if(this.trackCertified.isSelected()) {
+				this.accountVer.sendKeys(acc);
+				this.trackUpdateButton.click();
+			}
+			else {
 			this.trackCertified.click();
-			
+			this.accountVer.sendKeys(acc);
+			this.trackUpdateButton.click();
+			}
 		}
 		catch (Exception e) {
 			e.printStackTrace();

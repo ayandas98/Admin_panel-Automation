@@ -12,6 +12,7 @@ import com.Salesboost_Adminpanel.baseclass.BaseClass;
 import com.Salesboost_Adminpanel.objectrepository.AddPrivateTracksObject;
 import com.Salesboost_Adminpanel.objectrepository.DashboardObject;
 import com.Salesboost_Adminpanel.objectrepository.EditPrivateTracksObject;
+import com.Salesboost_Adminpanel.objectrepository.PrivateTrackDelete;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
 import com.Salesboost_Adminpanel.objectrepository.TracksObject;
 import com.Salesboost_Adminpanel.testdata.PrivateTracksData;
@@ -27,6 +28,7 @@ public class PrivateTracksPage extends BaseClass {
 	EditPrivateTracksObject editPrivateTracksObj;
 	PrivateTracksData tracksData;
 	TestDataImport tdImport;
+	PrivateTrackDelete deleteTrack;
 	
 	String getTextboxData="";
 	String[] testdata;
@@ -53,9 +55,10 @@ public class PrivateTracksPage extends BaseClass {
 				addPrivateTracksObj.addPrivateTracks(testdata[0], testdata[1], testdata[2], testdata[3]);
 				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
 				addPrivateTracksObj.addTrackButton.click();	
-				Thread.sleep(2000);
+				Thread.sleep(1000);
+				actualstring = addPrivateTracksObj.actualVerificationText.getText();
 				expectedstring = testdata[0];
-				actualstring =addPrivateTracksObj.actualVerificationText.getText();
+
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -101,7 +104,7 @@ public class PrivateTracksPage extends BaseClass {
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update private track");
 				eTest.assignCategory("update track");
-		/*		
+				/*
 				// add track	
 				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
@@ -117,7 +120,7 @@ public class PrivateTracksPage extends BaseClass {
 				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
 				addPrivateTracksObj.addTrackButton.click();	
 				Thread.sleep(2000);
-		*/			
+				*/	
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				PrivateTracksData tracksData1 = new PrivateTracksData();
 				testdata = tracksData1.getPrivateTracksData(tdImport);
@@ -134,8 +137,6 @@ public class PrivateTracksPage extends BaseClass {
 				
 				editPrivateTracksObj.editPrivateTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6]);
 				Thread.sleep(2000);
-				waitForElementToLoad (editPrivateTracksObj.trackUpdateButton);
-				editPrivateTracksObj.trackUpdateButton.click();
 				actualstring = editPrivateTracksObj.actualTextVerification.getText();
 				expectedstring = testdata[0];
 		}
@@ -156,7 +157,7 @@ public class PrivateTracksPage extends BaseClass {
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify delete private track");
 				eTest.assignCategory("delete track");
-
+				/*
 				//add track
 				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
@@ -172,6 +173,7 @@ public class PrivateTracksPage extends BaseClass {
 				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
 				addPrivateTracksObj.addTrackButton.click();	
 				Thread.sleep(2000);
+				*/
 				// valid tracks selection then once selected delete			
 				PrivateTracksData tracksData1 = new PrivateTracksData();
 				testdata = tracksData1.getPrivateTracksData(tdImport);
@@ -182,12 +184,15 @@ public class PrivateTracksPage extends BaseClass {
 				Thread.sleep(1000);
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
-				waitForElementToLoad(editPrivateTracksObj.trackDelete);
-				editPrivateTracksObj.trackDelete.click();
-				driver.switchTo().alert().accept();
+				PrivateTracksData tracksData2 = new PrivateTracksData();
+				testdata = tracksData2.getDeletePrivateTrackData(tdImport);
+				deleteTrack.delTracks(testdata[0]);
+				waitForElementToLoad(deleteTrack.trackDelete);
+				deleteTrack.trackDelete.click();
+				driver.switchTo().alert().accept(); 
 				Thread.sleep(1000);
-				expectedstring = "Add New Track";
-				actualstring = tracksObj.addTrackButton.getText();
+				expectedstring = "Track Name";
+				actualstring = tracksObj.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -211,7 +216,7 @@ public class PrivateTracksPage extends BaseClass {
 			addPrivateTracksObj = new AddPrivateTracksObject(driver);
 			editPrivateTracksObj = new EditPrivateTracksObject(driver);
 			tdImport.readExcel("PrivateTracksData");
-				
+			deleteTrack = new PrivateTrackDelete(driver);	
 		} 
 		catch (Exception e) {
 			e.printStackTrace();	

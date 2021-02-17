@@ -192,8 +192,9 @@ public class LeadershipObjectPage extends BaseClass{
 				waitForElementToLoad(editToolObj.deleteButton);
 				editToolObj.deleteButton.click();
 				driver.switchTo().alert().accept();
-				expectedstring = "Add New Leadership Tool Kit";
-				actualstring = leadershipObj.addButton.getText();
+				Thread.sleep(1000);
+				expectedstring = "Tool Kit Name";
+				actualstring = leadershipObj.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -252,8 +253,9 @@ public class LeadershipObjectPage extends BaseClass{
 				Thread.sleep(2000);
 				waitForElementToLoad (editToolObj.updateButton);
 				editToolObj.updateButton.click();
-				actualstring =editToolObj.actualVerificationText.getText();
+				Thread.sleep(1000);
 				expectedstring = testdata[0];
+				actualstring =editToolObj.actualVerificationText.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();

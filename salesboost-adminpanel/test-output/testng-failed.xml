@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage">
+      <class name="com.Salesboost_Adminpanel.testscript.PrivateTracksPage">
         <methods>
           <include name="logout"/>
           <include name="precondition"/>
-          <include name="validUserUpdate"/>
-          <include name="testReportResult"/>
+          <include name="validaddtracks"/>
           <include name="initialize"/>
+          <include name="testReportResult"/>
           <include name="endSuite"/>
         </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.administratorsPage -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.PrivateTracksPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

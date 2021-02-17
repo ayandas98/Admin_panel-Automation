@@ -16,6 +16,7 @@ public class LeadershipToolObject extends BaseClass{
 	@FindBy(xpath ="//body/div[1]/div[1]/div[1]/form[2]/input[2]") public WebElement searchButton;
 	@FindBy(xpath ="//a[contains(text(),'Add New Leadership Tool Kit')]") public WebElement addButton;
 	@FindBy(xpath ="//a[@id='duplicateKit']") public WebElement duplicateButton;
+	@FindBy(xpath = "//th[contains(text(),'Tool Kit Name')]") public WebElement valid;
 	
 	public LeadershipToolObject (WebDriver driver) {
 		this.driver = driver;

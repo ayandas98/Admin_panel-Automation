@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.Salesboost_Adminpanel.baseclass.BaseClass;
 import com.Salesboost_Adminpanel.objectrepository.AddTracksObject;
 import com.Salesboost_Adminpanel.objectrepository.DashboardObject;
+import com.Salesboost_Adminpanel.objectrepository.DeleteTrack;
 import com.Salesboost_Adminpanel.objectrepository.EditTracksObject;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
 import com.Salesboost_Adminpanel.objectrepository.TracksObject;
@@ -27,6 +28,7 @@ public class TracksPage extends BaseClass{
 	EditTracksObject editTracksObj;
 	TracksData tracksData;
 	TestDataImport tdImport;
+	DeleteTrack deleteTrack;
 	
 	String getTextboxData="";
 	String[] testdata;
@@ -52,7 +54,7 @@ public class TracksPage extends BaseClass{
 
 				addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
 				waitForElementToLoad(addTracksObj.addTrackButton);
-				addTracksObj.addTrackButton.click();
+				//addTracksObj.addTrackButton.click();
 				Thread.sleep(2000);
 				actualstring = addTracksObj.actualTextVerification.getText();
 				expectedstring = testdata[0];
@@ -128,12 +130,15 @@ public class TracksPage extends BaseClass{
 				Thread.sleep(1000);
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
 				System.out.println(testdata[1]);
-				waitForElementToLoad(editTracksObj.trackDelete);
-				editTracksObj.trackDelete.click();
+				TracksData tracksData2 = new TracksData();
+				testdata = tracksData2.getDeleteTrackData(tdImport);
+				deleteTrack.delTracks(testdata[0]);
+				waitForElementToLoad(deleteTrack.trackDelete);
+				deleteTrack.trackDelete.click();
 				driver.switchTo().alert().accept(); 
-				Thread.sleep(1000);
-				expectedstring = "Add New Track";
-				actualstring = tracksObj.addTrackButton.getText();
+				Thread.sleep(1000);				
+				expectedstring = "Track Name";
+				actualstring = tracksObj.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -153,21 +158,19 @@ public class TracksPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update track");
 				eTest.assignCategory("tracks");
-			
-				// add track	
-				TracksData tracksData = new TracksData();
-				testdata = tracksData.getAddTrackData(tdImport);
+			/*
+				  // add track 
+				TracksData tracksData = new TracksData(); 
+				testdata =tracksData.getAddTrackData(tdImport); 
 				dashboardObj.contentTab.click();
-				dashboardObj.tracks.click();				
-				waitForElementToLoad(tracksObj.addTrackButton);
-				tracksObj.addTrackButton.click();
-				waitForElementToLoad(addTracksObj.confText);
-				
-				addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
-				waitForElementToLoad (addTracksObj.addTrackButton);
-				addTracksObj.addTrackButton.click();	
-				Thread.sleep(2000);
-					
+				  dashboardObj.tracks.click(); 
+				  waitForElementToLoad(tracksObj.addTrackButton);
+				  tracksObj.addTrackButton.click();
+				  waitForElementToLoad(addTracksObj.confText);
+				  
+				  addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
+				  Thread.sleep(2000);
+			*/	 
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				TracksData tracksData1 = new TracksData();
 				testdata = tracksData1.getTracksData(tdImport);
@@ -176,17 +179,15 @@ public class TracksPage extends BaseClass{
 				waitForElementToLoad(tracksObj.addTrackButton);
 				tracksObj.tracks(testdata[0], testdata[1]);
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				
+				Thread.sleep(1000);
 				//update the track if found
 				TracksData tracksData2 = new TracksData();
 				testdata = tracksData2.getEditTrackData(tdImport);
-				
 				editTracksObj.editTrack(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
 				Thread.sleep(1000);
-				waitForElementToLoad (editTracksObj.trackUpdateButton);
-				editTracksObj.trackUpdateButton.click();
-				actualstring = editTracksObj.actualTextVerification.getText();
 				expectedstring = testdata[0];
+				actualstring = editTracksObj.actualTextVerification.getText();
+				
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -209,6 +210,7 @@ public class TracksPage extends BaseClass{
 			tracksObj = new TracksObject(driver);
 			addTracksObj = new AddTracksObject(driver);
 			editTracksObj = new EditTracksObject(driver);
+			deleteTrack = new DeleteTrack(driver);
 			tdImport.readExcel("TracksData");
 				
 		} 

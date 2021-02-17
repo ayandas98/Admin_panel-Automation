@@ -164,8 +164,8 @@ public class RoleManagementPage extends BaseClass {
 				roleManagementObj.roleManagement(testdata[0], testdata[1]);
 				driver.findElement(By.xpath("//td[contains(text(),'" + testdata[1] + "')]//following::input[2]")).click();
 				driver.switchTo().alert().accept();
-				expectedstring = "Add Role";
-				actualstring = roleManagementObj.addButton.getText();
+				expectedstring = "Role Name";
+				actualstring = roleManagementObj.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();

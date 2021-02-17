@@ -25,13 +25,19 @@ public class TracksData extends BaseClass{
 	}
 	
 	public String[] getEditTrackData(TestDataImport tdImport) {
-		testdata = new String[5];
+		testdata = new String[6];
 		testdata[0] = tdImport.getValue(2, 7);
 		testdata[1] = tdImport.getValue(2, 8);
 		testdata[2] = tdImport.getValue(2, 9);
 		testdata[3] = tdImport.getValue(2, 10);
 		testdata[4] = tdImport.getValue(2, 11);
 		testdata[5] = tdImport.getValue(2, 12);
+		return testdata;
+	}
+	
+	public String[] getDeleteTrackData(TestDataImport tdImport) {
+		testdata = new String[1];
+		testdata[0] = tdImport.getValue(2, 14);
 		return testdata;
 	}
 }

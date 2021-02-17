@@ -36,6 +36,8 @@ public class EditTracksObject extends BaseClass {
 		try {
 			log.info("edit track");
 			//waitForElementToLoad(this.confText);
+			this.accountVer.sendKeys(acc);
+			Thread.sleep(3000);
 			this.trackName.clear();
 			this.trackName.sendKeys(name);
 			this.trackSlug.clear();
@@ -48,14 +50,11 @@ public class EditTracksObject extends BaseClass {
 			waitForElementToLoad(this.trackCourses);
 			this.trackCourses.sendKeys(course);
 			this.trackCourses.sendKeys(Keys.RETURN);
-			//this.trackPost.sendKeys("D:/salesboost admin/role management/add role/download.png");
 			if(this.trackCertified.isSelected()) {
-				this.accountVer.sendKeys(acc);
 				this.trackUpdateButton.click();
 			}
 			else {
 			this.trackCertified.click();
-			this.accountVer.sendKeys(acc);
 			this.trackUpdateButton.click();
 			}
 		}

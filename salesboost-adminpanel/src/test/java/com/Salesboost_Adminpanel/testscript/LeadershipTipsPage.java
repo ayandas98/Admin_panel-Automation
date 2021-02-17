@@ -176,8 +176,8 @@ public class LeadershipTipsPage extends BaseClass{
 				editLeadershipTips.deleteButton.click();	
 				driver.switchTo().alert().accept();
 				Thread.sleep(1000);
-				expectedstring = "Add New Leadership Tips";
-				actualstring = leadershipTipsObj.addTips.getText();
+				expectedstring = "Leadership Tips Title";
+				actualstring = leadershipTipsObj.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -235,8 +235,9 @@ public class LeadershipTipsPage extends BaseClass{
 				waitForElementToLoad (editLeadershipTips.updateButton);
 				editLeadershipTips.tipActive.click();
 				editLeadershipTips.updateButton.click();
-				actualstring = editLeadershipTips.actualVerificationText.getText();
+				Thread.sleep(1000);
 				expectedstring = testdata[0];
+				actualstring = editLeadershipTips.actualVerificationText.getText();				
 		}
 		catch (Exception e) {
 			e.printStackTrace();

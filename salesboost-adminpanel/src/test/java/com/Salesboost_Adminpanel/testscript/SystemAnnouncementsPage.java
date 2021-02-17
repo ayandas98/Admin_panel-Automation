@@ -169,12 +169,13 @@ public class SystemAnnouncementsPage extends BaseClass{
 				
 				//delete the user if user found
 				
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 				waitForElementToLoad (editSystemAnnouncementsObj.deleteButton);
 				editSystemAnnouncementsObj.deleteButton.click();
 				driver.switchTo().alert().accept();
-				expectedstring = "Add New System Announcement Post";
-				actualstring = systemAnnouncementsObj.addPost.getText();
+				Thread.sleep(1000);
+				expectedstring = "Post Title";
+				actualstring = systemAnnouncementsObj.valid.getText();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -232,6 +233,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 				waitForElementToLoad (editSystemAnnouncementsObj.updateButton);
 				editSystemAnnouncementsObj.postActive.click();
 				editSystemAnnouncementsObj.updateButton.click();
+				Thread.sleep(1000);
 				actualstring = editSystemAnnouncementsObj.actualVerificationText.getText() ;
 				expectedstring = testdata[0];
 		}

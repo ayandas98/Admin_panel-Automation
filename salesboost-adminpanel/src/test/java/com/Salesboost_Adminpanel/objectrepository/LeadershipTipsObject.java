@@ -15,6 +15,7 @@ public class LeadershipTipsObject extends BaseClass{
 	@FindBy(xpath = "//th[contains(text(),'Leadership Tips Title')]") public WebElement confText;
 	@FindBy(xpath = "//select[@id='filterList']") public WebElement leadershipList;
 	@FindBy(xpath = "//a[contains(text(),'Add New Leadership Tips')]") public WebElement addTips;
+	@FindBy(xpath = "//th[contains(text(),'Leadership Tips Title')]") public WebElement valid;
 	
 	public LeadershipTipsObject (WebDriver driver) {
 		this.driver = driver;

@@ -35,7 +35,9 @@ public class EditPrivateTracksObject extends BaseClass {
 	public void editPrivateTrack (String name, String slug, String list , String description, String tag, String course, String acc) {
 		try {
 			log.info("edit track");
-			waitForElementToLoad(this.confText);
+			//waitForElementToLoad(this.confText);
+			this.accountVer.sendKeys(acc);
+			Thread.sleep(1000);
 			this.trackName.clear();
 			this.trackName.sendKeys(name);
 			this.trackSlug.clear();
@@ -43,7 +45,7 @@ public class EditPrivateTracksObject extends BaseClass {
 			if(this.trackAccountSelect.isEnabled()) {
 				this.trackAccountSelect.click();
 				this.trackAccountSelect.sendKeys(list);
-			};
+			}
 			//this.trackFocus.click();
 			this.trackDescription.clear();
 			this.trackDescription.sendKeys(description);
@@ -53,13 +55,11 @@ public class EditPrivateTracksObject extends BaseClass {
 			this.trackCourses.sendKeys(course);
 			this.trackCourses.sendKeys(Keys.RETURN);
 			if(this.trackCertified.isSelected()) {
-				this.accountVer.sendKeys(acc);
 				waitForElementToLoad(this.trackUpdateButton);
 				this.trackUpdateButton.click();
 			}
 			else {
 				this.trackCertified.click();
-				this.accountVer.sendKeys(acc);
 				waitForElementToLoad(this.trackUpdateButton);
 				this.trackUpdateButton.click();
 			}

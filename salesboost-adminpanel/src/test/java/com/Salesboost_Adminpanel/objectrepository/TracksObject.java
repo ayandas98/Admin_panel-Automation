@@ -14,6 +14,7 @@ public class TracksObject  extends BaseClass{
 	@FindBy (xpath ="//select[@id='filterList']") public WebElement select ;
 	@FindBy (xpath ="//th[contains(text(),'Track Name')]") public WebElement page ;
 	@FindBy (xpath ="//a[contains(text(),'Add New Track')]") public WebElement addTrackButton ;
+	@FindBy (xpath ="//th[contains(text(),'Track Name')]") public WebElement valid;
 	
 	public TracksObject (WebDriver driver) {
 		this.driver = driver;

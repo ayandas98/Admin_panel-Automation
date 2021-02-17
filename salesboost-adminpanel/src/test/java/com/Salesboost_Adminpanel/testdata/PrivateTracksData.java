@@ -23,7 +23,7 @@ public class PrivateTracksData extends BaseClass{
 	}
 	
 	public String[] getEditPrivateTrackData(TestDataImport tdImport) {
-		testdata = new String[6];
+		testdata = new String[7];
 		testdata[0] = tdImport.getValue(2, 8);
 		testdata[1] = tdImport.getValue(2, 9);
 		testdata[2] = tdImport.getValue(2, 10);
@@ -33,4 +33,11 @@ public class PrivateTracksData extends BaseClass{
 		testdata[6] = tdImport.getValue(2, 14);
 		return testdata;
 	}
+	
+	public String[] getDeletePrivateTrackData(TestDataImport tdImport) {
+		testdata = new String[1];
+		testdata[0] = tdImport.getValue(2, 16);
+		return testdata;
+	}
+	
 }

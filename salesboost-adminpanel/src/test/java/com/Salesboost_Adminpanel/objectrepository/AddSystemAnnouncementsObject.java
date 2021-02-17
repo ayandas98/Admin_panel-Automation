@@ -46,9 +46,10 @@ public class AddSystemAnnouncementsObject extends BaseClass {
 			this.seoDescription.sendKeys(seodescription);
 			this.seoKeyword.clear();
 			this.seoKeyword.sendKeys(seokeyword);
-			this.postAuthor.clear();
+			//this.postAuthor.clear();
 			this.postAuthor.sendKeys(postauthor);
-			this.postContent.clear();
+			waitForElementToLoad(this.postContent);
+			//this.postContent.click();
 			this.postContent.sendKeys(postcontent);
 			
 		}

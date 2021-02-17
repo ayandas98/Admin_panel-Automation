@@ -51,7 +51,7 @@ public class EditSystemAnnouncements extends BaseClass{
 			this.seoDescription.sendKeys(desc);
 			this.seoKeywords.clear();
 			this.seoKeywords.sendKeys(key);
-			this.postAuthor.clear();
+			//this.postAuthor.clear();
 			this.postAuthor.sendKeys(author);
 			this.postTags.sendKeys(tags);
 			this.postTags.sendKeys(Keys.RETURN);
@@ -59,7 +59,7 @@ public class EditSystemAnnouncements extends BaseClass{
 			this.postRelated.sendKeys(Keys.RETURN);
 			this.postCourses.sendKeys(course);
 			this.postCourses.sendKeys(Keys.RETURN);
-			this.postContent.clear();
+			//this.postContent.clear();
 			this.postContent.sendKeys(content);
 		}
 		catch (Exception e) {

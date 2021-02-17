@@ -15,7 +15,8 @@ public class RoleManagementObject extends BaseClass {
 	@FindBy (xpath = "//select[@id='filterList']") public WebElement filterList ;
 	@FindBy (xpath = "//th[contains(text(),'Role Name')] ") public WebElement confText ;
 	@FindBy (xpath = "//body/div[1]/div[1]/div[1]/div[1]/input[1] ") public WebElement addButton ;
-
+	@FindBy (xpath = "//th[contains(text(),'Role Name')]") public WebElement valid;
+	
 	public RoleManagementObject (WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);

@@ -15,6 +15,7 @@ public class SystemAnnouncementsObject extends BaseClass {
 	@FindBy(xpath = "//th[contains(text(),'Post Title')]") public WebElement confText;
 	@FindBy(xpath = "//select[@id='filterList']") public WebElement postSelect;
 	@FindBy(xpath = "//a[contains(text(),'Add New System Announcement Post')]") public WebElement addPost;
+	@FindBy(xpath = "//th[contains(text(),'Post Title')]") public WebElement valid;
 	
 	public SystemAnnouncementsObject (WebDriver driver) {
 		this.driver= driver ;

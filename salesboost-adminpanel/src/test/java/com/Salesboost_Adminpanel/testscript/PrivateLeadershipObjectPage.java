@@ -251,8 +251,10 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 				Thread.sleep(2000);
 				waitForElementToLoad (editPrivateObj.updateButton);
 				editPrivateObj.updateButton.click();
-				actualstring =editPrivateObj.actualVerificationText.getText();
+				Thread.sleep(2000);
 				expectedstring = testdata[0];
+				actualstring =editPrivateObj.actualVerificationText.getText();
+				
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -15,6 +15,14 @@
        <class name="com.Salesboost_Adminpanel.testscript.QuickSalesPage"/>
        <class name="com.Salesboost_Adminpanel.testscript.LeadershipObjectPage"/>
        <class name="com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage"/>
+       
+     <class name="com.Salesboost_Adminpanel.testscript.AddCourseTest"/> 
+      <class name="com.Salesboost_Adminpanel.testscript.LATTest"/>
+       <class name="com.Salesboost_Adminpanel.testscript.PVOTest"/>
+       <class name="com.Salesboost_Adminpanel.testscript.ATATest"/>
+       <class name="com.Salesboost_Adminpanel.testscript.FAQTest"/>
+       <class name="com.Salesboost_Adminpanel.testscript.AssociatedFilesTest"/>
+       <class name="com.Salesboost_Adminpanel.testscript.AwardsTest"/> 
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 

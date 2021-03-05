@@ -66,4 +66,15 @@ public class EditSystemAnnouncements extends BaseClass{
 			e.printStackTrace();
 		}
 	}
+	
+	public void deleteAnnouncement() {
+		try {
+		log.info("Edit system announcements");
+		waitForElementToLoad(this.confText);
+		deleteButton.click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

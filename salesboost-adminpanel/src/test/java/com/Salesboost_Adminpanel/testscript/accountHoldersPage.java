@@ -147,12 +147,10 @@ public class accountHoldersPage extends BaseClass{
 				testdata = accountHoldersDataObj2.getEditAccountData(tdImport);
 
 				editAccountObj.editAccount(testdata[0], testdata[1], testdata[2], testdata[3]);
-				Thread.sleep(2000);
-				waitForElementToLoad (editAccountObj.update);
-				editAccountObj.update.click();
-				Thread.sleep(2000);
-				expectedstring = testdata[0];
+				Thread.sleep(3000);
 				actualstring = editAccountObj.valid.getText();
+				expectedstring = testdata[0];
+				
 			
 		}
 		catch (Exception e) {

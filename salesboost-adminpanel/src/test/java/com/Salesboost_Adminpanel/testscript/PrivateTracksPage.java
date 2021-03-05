@@ -96,6 +96,59 @@ public class PrivateTracksPage extends BaseClass {
 	}
 	
 	@Test(priority = 2)
+	public void validtrackdelete () {
+		try {
+				log.info("valid tracks delete");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify delete private track");
+				eTest.assignCategory("delete track");
+				/*
+				//add track
+				PrivateTracksData tracksData = new PrivateTracksData();
+				testdata = tracksData.getAddPrivateTrackData(tdImport);
+			
+				dashboardObj.contentTab.click();
+				dashboardObj.tracks.click();
+				
+				waitForElementToLoad(tracksObj.addTrackButton);
+				tracksObj.addTrackButton.click();
+				waitForElementToLoad(addPrivateTracksObj.confText);
+				
+				addPrivateTracksObj.addPrivateTracks(testdata[0], testdata[1], testdata[2], testdata[3]);
+				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
+				addPrivateTracksObj.addTrackButton.click();	
+				Thread.sleep(2000);
+				*/
+				// valid tracks selection then once selected delete			
+				PrivateTracksData tracksData1 = new PrivateTracksData();
+				testdata = tracksData1.getPrivateTracksData(tdImport);
+				dashboardObj.contentTab.click();
+				dashboardObj.tracks.click();
+				waitForElementToLoad(tracksObj.addTrackButton);
+				tracksObj.tracks(testdata[0], testdata[1]);
+				Thread.sleep(1000);
+				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
+				System.out.println(testdata[1]);
+				PrivateTracksData tracksData2 = new PrivateTracksData();
+				testdata = tracksData2.getDeletePrivateTrackData(tdImport);
+				deleteTrack.delTracks(testdata[0]);
+				deleteTrack.trackDelete.click();
+				driver.switchTo().alert().accept(); 
+				Thread.sleep(2000);
+				expectedstring = "Track Name";
+				actualstring = tracksObj.valid.getAttribute("value");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("valid delete failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 3)
 	public void validEditTrack () {
 		try {
 				log.info("valid edit private track");
@@ -148,61 +201,7 @@ public class PrivateTracksPage extends BaseClass {
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
-	@Test(priority = 3)
-	public void validtrackdelete () {
-		try {
-				log.info("valid tracks delete");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify delete private track");
-				eTest.assignCategory("delete track");
-				/*
-				//add track
-				PrivateTracksData tracksData = new PrivateTracksData();
-				testdata = tracksData.getAddPrivateTrackData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.tracks.click();
-				
-				waitForElementToLoad(tracksObj.addTrackButton);
-				tracksObj.addTrackButton.click();
-				waitForElementToLoad(addPrivateTracksObj.confText);
-				
-				addPrivateTracksObj.addPrivateTracks(testdata[0], testdata[1], testdata[2], testdata[3]);
-				waitForElementToLoad (addPrivateTracksObj.addTrackButton);
-				addPrivateTracksObj.addTrackButton.click();	
-				Thread.sleep(2000);
-				*/
-				// valid tracks selection then once selected delete			
-				PrivateTracksData tracksData1 = new PrivateTracksData();
-				testdata = tracksData1.getPrivateTracksData(tdImport);
-				dashboardObj.contentTab.click();
-				dashboardObj.tracks.click();
-				waitForElementToLoad(tracksObj.addTrackButton);
-				tracksObj.tracks(testdata[0], testdata[1]);
-				Thread.sleep(1000);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
-				PrivateTracksData tracksData2 = new PrivateTracksData();
-				testdata = tracksData2.getDeletePrivateTrackData(tdImport);
-				deleteTrack.delTracks(testdata[0]);
-				waitForElementToLoad(deleteTrack.trackDelete);
-				deleteTrack.trackDelete.click();
-				driver.switchTo().alert().accept(); 
-				Thread.sleep(1000);
-				expectedstring = "Track Name";
-				actualstring = tracksObj.valid.getText();
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid delete failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertEquals(actualstring , expectedstring);
-	}
-	
+		
 	@BeforeClass
 	public void initialize() {
 		try {

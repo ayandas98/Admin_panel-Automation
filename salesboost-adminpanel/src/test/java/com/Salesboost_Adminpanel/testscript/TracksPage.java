@@ -3,6 +3,7 @@ package com.Salesboost_Adminpanel.testscript;
 import java.util.ArrayList;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -53,8 +54,6 @@ public class TracksPage extends BaseClass{
 				waitForElementToLoad(addTracksObj.confText);
 
 				addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
-				waitForElementToLoad(addTracksObj.addTrackButton);
-				//addTracksObj.addTrackButton.click();
 				Thread.sleep(2000);
 				actualstring = addTracksObj.actualTextVerification.getText();
 				expectedstring = testdata[0];
@@ -128,8 +127,9 @@ public class TracksPage extends BaseClass{
 				waitForElementToLoad(tracksObj.addTrackButton);
 				tracksObj.tracks(testdata[0], testdata[1]);
 				Thread.sleep(1000);
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", driver.findElement(By.xpath("//a[contains(text(),'" +testdata[1] +"')]")));
 				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
+				
 				TracksData tracksData2 = new TracksData();
 				testdata = tracksData2.getDeleteTrackData(tdImport);
 				deleteTrack.delTracks(testdata[0]);
@@ -158,7 +158,7 @@ public class TracksPage extends BaseClass{
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update track");
 				eTest.assignCategory("tracks");
-			/*
+			
 				  // add track 
 				TracksData tracksData = new TracksData(); 
 				testdata =tracksData.getAddTrackData(tdImport); 
@@ -170,7 +170,7 @@ public class TracksPage extends BaseClass{
 				  
 				  addTracksObj.addTrack(testdata[0], testdata[1], testdata[2]);
 				  Thread.sleep(2000);
-			*/	 
+				 
 				//search track from tracks list as there is no specified search button this step integrated with edit
 				TracksData tracksData1 = new TracksData();
 				testdata = tracksData1.getTracksData(tdImport);

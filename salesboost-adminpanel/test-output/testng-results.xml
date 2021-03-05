@@ -1,17 +1,439 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
+<testng-results skipped="0" failed="4" ignored="36" total="92" passed="52">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="86954" started-at="2021-02-17T12:38:21 IST" finished-at="2021-02-17T12:39:48 IST">
+  <suite name="Suite" duration-ms="1175664" started-at="2021-03-05T11:14:43 IST" finished-at="2021-03-05T11:34:19 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="86954" started-at="2021-02-17T12:38:21 IST" finished-at="2021-02-17T12:39:48 IST">
-      <class name="com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage">
-        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1]" name="precondition" is-config="true" duration-ms="14192" started-at="2021-02-17T12:38:07 IST" finished-at="2021-02-17T12:38:21 IST">
+    <test name="Test" duration-ms="1175664" started-at="2021-03-05T11:14:43 IST" finished-at="2021-03-05T11:34:19 IST">
+      <class name="com.Salesboost_Adminpanel.testscript.TracksPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="initialize" is-config="true" duration-ms="4830" started-at="2021-03-05T11:15:52 IST" finished-at="2021-03-05T11:15:57 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validaddtracks()[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="validaddtracks" duration-ms="8451" started-at="2021-03-05T11:15:57 IST" finished-at="2021-03-05T11:16:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validaddtracks -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:16:05 IST" finished-at="2021-03-05T11:16:05 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3e1a3801]]>
+                <![CDATA[[TestResult name=validaddtracks status=SUCCESS method=TracksPage.validaddtracks()[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validtracksselection()[pri:1, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="validtracksselection" duration-ms="1880" started-at="2021-03-05T11:16:05 IST" finished-at="2021-03-05T11:16:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validtracksselection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:16:07 IST" finished-at="2021-03-05T11:16:07 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validtracksselection status=SUCCESS method=TracksPage.validtracksselection()[pri:1, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validEditTrack()[pri:2, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="validEditTrack" duration-ms="17823" started-at="2021-03-05T11:16:07 IST" finished-at="2021-03-05T11:16:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEditTrack -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:16:25 IST" finished-at="2021-03-05T11:16:25 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEditTrack status=SUCCESS method=TracksPage.validEditTrack()[pri:2, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="FAIL" signature="validtrackdelete()[pri:2, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="validtrackdelete" duration-ms="1808" started-at="2021-03-05T11:16:25 IST" finished-at="2021-03-05T11:16:27 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at com.Salesboost_Adminpanel.testscript.TracksPage.validtrackdelete(TracksPage.java:149)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validtrackdelete -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="testReportResult" is-config="true" duration-ms="18" started-at="2021-03-05T11:16:27 IST" finished-at="2021-03-05T11:16:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validtrackdelete status=FAILURE method=TracksPage.validtrackdelete()[pri:2, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.TracksPage@2a556333]" name="logout" is-config="true" duration-ms="1166" started-at="2021-03-05T11:16:27 IST" finished-at="2021-03-05T11:16:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.TracksPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.AwardsTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.AwardsTest@2353b3e6]" name="initialize" is-config="true" duration-ms="24190" started-at="2021-03-05T11:29:18 IST" finished-at="2021-03-05T11:29:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="addAwardDataTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.AwardsTest@2353b3e6]" name="addAwardDataTest" duration-ms="24055" started-at="2021-03-05T11:29:42 IST" finished-at="2021-03-05T11:30:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addAwardDataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.AwardsTest@2353b3e6]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:30:06 IST" finished-at="2021-03-05T11:30:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addAwardDataTest status=SUCCESS method=AwardsTest.addAwardDataTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.AwardsTest@2353b3e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.AwardsTest@2353b3e6]" name="logout" is-config="true" duration-ms="252567" started-at="2021-03-05T11:30:06 IST" finished-at="2021-03-05T11:34:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.AwardsTest -->
+      <class name="com.Salesboost_Adminpanel.testscript.LeadershipTipsPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="initialize" is-config="true" duration-ms="4441" started-at="2021-03-05T11:19:23 IST" finished-at="2021-03-05T11:19:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validActivePostAddLeadershipTips()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="validActivePostAddLeadershipTips" duration-ms="5668" started-at="2021-03-05T11:19:27 IST" finished-at="2021-03-05T11:19:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validActivePostAddLeadershipTips -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:19:33 IST" finished-at="2021-03-05T11:19:33 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validActivePostAddLeadershipTips status=SUCCESS method=LeadershipTipsPage.validActivePostAddLeadershipTips()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validLeadershipTipsSelection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="validLeadershipTipsSelection" duration-ms="1702" started-at="2021-03-05T11:19:33 IST" finished-at="2021-03-05T11:19:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLeadershipTipsSelection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:19:34 IST" finished-at="2021-03-05T11:19:34 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validLeadershipTipsSelection status=SUCCESS method=LeadershipTipsPage.validLeadershipTipsSelection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validDeleteLeadershipTip()[pri:3, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="validDeleteLeadershipTip" duration-ms="4631" started-at="2021-03-05T11:19:34 IST" finished-at="2021-03-05T11:19:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validDeleteLeadershipTip -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:19:39 IST" finished-at="2021-03-05T11:19:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validDeleteLeadershipTip status=SUCCESS method=LeadershipTipsPage.validDeleteLeadershipTip()[pri:3, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validInActivePostEditLeadershipTip()[pri:4, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="validInActivePostEditLeadershipTip" duration-ms="10688" started-at="2021-03-05T11:19:39 IST" finished-at="2021-03-05T11:19:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validInActivePostEditLeadershipTip -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:19:50 IST" finished-at="2021-03-05T11:19:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validInActivePostEditLeadershipTip status=SUCCESS method=LeadershipTipsPage.validInActivePostEditLeadershipTip()[pri:4, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipTipsPage@3dfc5fb8]" name="logout" is-config="true" duration-ms="1448" started-at="2021-03-05T11:19:50 IST" finished-at="2021-03-05T11:19:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.LeadershipTipsPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.managePasswordScript">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.managePasswordScript@69a3d1d]" name="initialize" is-config="true" duration-ms="5048" started-at="2021-03-05T11:14:56 IST" finished-at="2021-03-05T11:15:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validEmailGeneratePassword()[pri:0, instance:com.Salesboost_Adminpanel.testscript.managePasswordScript@69a3d1d]" name="validEmailGeneratePassword" duration-ms="1732" started-at="2021-03-05T11:15:01 IST" finished-at="2021-03-05T11:15:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEmailGeneratePassword -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.managePasswordScript@69a3d1d]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:15:02 IST" finished-at="2021-03-05T11:15:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEmailGeneratePassword status=SUCCESS method=managePasswordScript.validEmailGeneratePassword()[pri:0, instance:com.Salesboost_Adminpanel.testscript.managePasswordScript@69a3d1d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.managePasswordScript@69a3d1d]" name="logout" is-config="true" duration-ms="273" started-at="2021-03-05T11:15:02 IST" finished-at="2021-03-05T11:15:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.managePasswordScript -->
+      <class name="com.Salesboost_Adminpanel.testscript.ATATest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3]" name="initialize" is-config="true" duration-ms="4267" started-at="2021-03-05T11:22:36 IST" finished-at="2021-03-05T11:22:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="addATADataTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3]" name="addATADataTest" duration-ms="7430" started-at="2021-03-05T11:22:40 IST" finished-at="2021-03-05T11:22:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addATADataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:22:48 IST" finished-at="2021-03-05T11:22:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addATADataTest status=SUCCESS method=ATATest.addATADataTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="addSnippetPageTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3]" name="addSnippetPageTest" duration-ms="5807" started-at="2021-03-05T11:22:48 IST" finished-at="2021-03-05T11:22:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addSnippetPageTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:22:54 IST" finished-at="2021-03-05T11:22:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addSnippetPageTest status=SUCCESS method=ATATest.addSnippetPageTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.ATATest@6f195bc3]" name="logout" is-config="true" duration-ms="912" started-at="2021-03-05T11:22:54 IST" finished-at="2021-03-05T11:22:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.ATATest -->
+      <class name="com.Salesboost_Adminpanel.testscript.AddCourseTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9]" name="initialize" is-config="true" duration-ms="5072" started-at="2021-03-05T11:21:18 IST" finished-at="2021-03-05T11:21:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="addCourseTestIncompleteDetails()[pri:1, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9]" name="addCourseTestIncompleteDetails" duration-ms="4286" started-at="2021-03-05T11:21:23 IST" finished-at="2021-03-05T11:21:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCourseTestIncompleteDetails -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:21:27 IST" finished-at="2021-03-05T11:21:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCourseTestIncompleteDetails status=SUCCESS method=AddCourseTest.addCourseTestIncompleteDetails()[pri:1, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="addCourseTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9]" name="addCourseTest" duration-ms="5442" started-at="2021-03-05T11:21:27 IST" finished-at="2021-03-05T11:21:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCourseTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:21:33 IST" finished-at="2021-03-05T11:21:33 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addCourseTest status=SUCCESS method=AddCourseTest.addCourseTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.AddCourseTest@2173f6d9]" name="logout" is-config="true" duration-ms="923" started-at="2021-03-05T11:21:33 IST" finished-at="2021-03-05T11:21:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.AddCourseTest -->
+      <class name="com.Salesboost_Adminpanel.testscript.FAQTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7]" name="initialize" is-config="true" duration-ms="4962" started-at="2021-03-05T11:22:55 IST" finished-at="2021-03-05T11:23:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="FAQUpdateTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7]" name="FAQUpdateTest" duration-ms="3074" started-at="2021-03-05T11:23:00 IST" finished-at="2021-03-05T11:23:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FAQUpdateTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:23:03 IST" finished-at="2021-03-05T11:23:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FAQUpdateTest status=SUCCESS method=FAQTest.FAQUpdateTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="FAQDeleteTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7]" name="FAQDeleteTest" duration-ms="6405" started-at="2021-03-05T11:23:03 IST" finished-at="2021-03-05T11:23:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FAQDeleteTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:23:09 IST" finished-at="2021-03-05T11:23:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=FAQDeleteTest status=SUCCESS method=FAQTest.FAQDeleteTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.FAQTest@51e2adc7]" name="logout" is-config="true" duration-ms="1067" started-at="2021-03-05T11:23:09 IST" finished-at="2021-03-05T11:23:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.FAQTest -->
+      <class name="com.Salesboost_Adminpanel.testscript.RoleManagementPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="initialize" is-config="true" duration-ms="4646" started-at="2021-03-05T11:16:49 IST" finished-at="2021-03-05T11:16:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validaddroles()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="validaddroles" duration-ms="4348" started-at="2021-03-05T11:16:54 IST" finished-at="2021-03-05T11:16:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validaddroles -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:16:58 IST" finished-at="2021-03-05T11:16:58 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validaddroles status=SUCCESS method=RoleManagementPage.validaddroles()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validrolesselection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="validrolesselection" duration-ms="1910" started-at="2021-03-05T11:16:58 IST" finished-at="2021-03-05T11:17:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validrolesselection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:17:00 IST" finished-at="2021-03-05T11:17:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validrolesselection status=SUCCESS method=RoleManagementPage.validrolesselection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validroledeletion()[pri:3, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="validroledeletion" duration-ms="1986" started-at="2021-03-05T11:17:00 IST" finished-at="2021-03-05T11:17:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validroledeletion -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:17:02 IST" finished-at="2021-03-05T11:17:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validroledeletion status=SUCCESS method=RoleManagementPage.validroledeletion()[pri:3, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validEditRoles()[pri:4, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="validEditRoles" duration-ms="6381" started-at="2021-03-05T11:17:02 IST" finished-at="2021-03-05T11:17:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEditRoles -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:17:08 IST" finished-at="2021-03-05T11:17:08 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEditRoles status=SUCCESS method=RoleManagementPage.validEditRoles()[pri:4, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.RoleManagementPage@2a742aa2]" name="logout" is-config="true" duration-ms="1940" started-at="2021-03-05T11:17:08 IST" finished-at="2021-03-05T11:17:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.RoleManagementPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.loginPage">
+        <test-method status="PASS" signature="precondition(org.testng.ITestContext, java.lang.String)[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26]" name="precondition" is-config="true" duration-ms="15009" started-at="2021-03-05T11:14:28 IST" finished-at="2021-03-05T11:14:43 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6e858790]]>
               </value>
             </param>
             <param index="1">
@@ -23,34 +445,787 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- precondition -->
-        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1]" name="initialize" is-config="true" duration-ms="6013" started-at="2021-02-17T12:38:21 IST" finished-at="2021-02-17T12:38:27 IST">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26]" name="initialize" is-config="true" duration-ms="1364" started-at="2021-03-05T11:14:43 IST" finished-at="2021-03-05T11:14:44 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="validInActivePostEditAnnouncement()[pri:4, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1]" name="validInActivePostEditAnnouncement" duration-ms="78311" started-at="2021-02-17T12:38:27 IST" finished-at="2021-02-17T12:39:45 IST">
+        <test-method status="PASS" signature="validEmailValidPassword()[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26]" name="validEmailValidPassword" duration-ms="5934" started-at="2021-03-05T11:14:44 IST" finished-at="2021-03-05T11:14:50 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validInActivePostEditAnnouncement -->
-        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-02-17T12:39:45 IST" finished-at="2021-02-17T12:39:45 IST">
+        </test-method> <!-- validEmailValidPassword -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26]" name="testReportResult" is-config="true" duration-ms="5" started-at="2021-03-05T11:14:50 IST" finished-at="2021-03-05T11:14:50 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validInActivePostEditAnnouncement status=SUCCESS method=SystemAnnouncementsPage.validInActivePostEditAnnouncement()[pri:4, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1] output={null}]]]>
+                <![CDATA[[TestResult name=validEmailValidPassword status=SUCCESS method=loginPage.validEmailValidPassword()[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReportResult -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1]" name="logout" is-config="true" duration-ms="2581" started-at="2021-02-17T12:39:45 IST" finished-at="2021-02-17T12:39:48 IST">
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26]" name="logout" is-config="true" duration-ms="5446" started-at="2021-03-05T11:14:50 IST" finished-at="2021-03-05T11:14:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@5faeada1]" name="endSuite" is-config="true" duration-ms="1641" started-at="2021-02-17T12:39:48 IST" finished-at="2021-02-17T12:39:49 IST">
+        <test-method status="PASS" signature="endSuite()[pri:0, instance:com.Salesboost_Adminpanel.testscript.loginPage@4b553d26]" name="endSuite" is-config="true" duration-ms="1414" started-at="2021-03-05T11:34:19 IST" finished-at="2021-03-05T11:34:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endSuite -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.loginPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.AssociatedFilesTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="initialize" is-config="true" duration-ms="4594" started-at="2021-03-05T11:23:10 IST" finished-at="2021-03-05T11:23:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="AssociatedPageAddFileDataTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="AssociatedPageAddFileDataTest" duration-ms="5161" started-at="2021-03-05T11:23:15 IST" finished-at="2021-03-05T11:23:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssociatedPageAddFileDataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:23:20 IST" finished-at="2021-03-05T11:23:20 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AssociatedPageAddFileDataTest status=SUCCESS method=AssociatedFilesTest.AssociatedPageAddFileDataTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="AssociatedPageAddIncompleteFileDataTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="AssociatedPageAddIncompleteFileDataTest" duration-ms="5788" started-at="2021-03-05T11:23:20 IST" finished-at="2021-03-05T11:23:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssociatedPageAddIncompleteFileDataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:23:26 IST" finished-at="2021-03-05T11:23:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AssociatedPageAddIncompleteFileDataTest status=SUCCESS method=AssociatedFilesTest.AssociatedPageAddIncompleteFileDataTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="AssociatedPageEditFileDataTest()[pri:3, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="AssociatedPageEditFileDataTest" duration-ms="1031" started-at="2021-03-05T11:23:26 IST" finished-at="2021-03-05T11:23:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssociatedPageEditFileDataTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:23:27 IST" finished-at="2021-03-05T11:23:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AssociatedPageEditFileDataTest status=SUCCESS method=AssociatedFilesTest.AssociatedPageEditFileDataTest()[pri:3, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.AssociatedFilesTest@1a8a8f7c]" name="logout" is-config="true" duration-ms="350999" started-at="2021-03-05T11:23:27 IST" finished-at="2021-03-05T11:29:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.AssociatedFilesTest -->
+      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="initialize" is-config="true" duration-ms="5039" started-at="2021-03-05T11:15:28 IST" finished-at="2021-03-05T11:15:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validadduser()[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="validadduser" duration-ms="4132" started-at="2021-03-05T11:15:33 IST" finished-at="2021-03-05T11:15:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validadduser -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:15:37 IST" finished-at="2021-03-05T11:15:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validadduser status=SUCCESS method=administratorsPage.validadduser()[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validsearch()[pri:1, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="validsearch" duration-ms="1986" started-at="2021-03-05T11:15:37 IST" finished-at="2021-03-05T11:15:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validsearch -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:15:39 IST" finished-at="2021-03-05T11:15:39 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validsearch status=SUCCESS method=administratorsPage.validsearch()[pri:1, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validUserUpdate()[pri:2, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="validUserUpdate" duration-ms="11597" started-at="2021-03-05T11:15:39 IST" finished-at="2021-03-05T11:15:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validUserUpdate -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:15:51 IST" finished-at="2021-03-05T11:15:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validUserUpdate status=SUCCESS method=administratorsPage.validUserUpdate()[pri:2, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.administratorsPage@480bdb19]" name="logout" is-config="true" duration-ms="1123" started-at="2021-03-05T11:15:51 IST" finished-at="2021-03-05T11:15:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.administratorsPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.LATTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="initialize" is-config="true" duration-ms="4664" started-at="2021-03-05T11:21:34 IST" finished-at="2021-03-05T11:21:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="addLATTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="addLATTest" duration-ms="7395" started-at="2021-03-05T11:21:38 IST" finished-at="2021-03-05T11:21:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLATTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:21:46 IST" finished-at="2021-03-05T11:21:46 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLATTest status=SUCCESS method=LATTest.addLATTest()[pri:1, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="addLATIncorrectDetails()[pri:2, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="addLATIncorrectDetails" duration-ms="5056" started-at="2021-03-05T11:21:46 IST" finished-at="2021-03-05T11:21:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLATIncorrectDetails -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:21:51 IST" finished-at="2021-03-05T11:21:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addLATIncorrectDetails status=SUCCESS method=LATTest.addLATIncorrectDetails()[pri:2, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="deleteLAT()[pri:3, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="deleteLAT" duration-ms="8673" started-at="2021-03-05T11:21:51 IST" finished-at="2021-03-05T11:22:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLAT -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:22:00 IST" finished-at="2021-03-05T11:22:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteLAT status=SUCCESS method=LATTest.deleteLAT()[pri:3, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LATTest@307f6b8c]" name="logout" is-config="true" duration-ms="3485" started-at="2021-03-05T11:22:00 IST" finished-at="2021-03-05T11:22:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.LATTest -->
+      <class name="com.Salesboost_Adminpanel.testscript.PrivateTracksPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="initialize" is-config="true" duration-ms="4650" started-at="2021-03-05T11:16:28 IST" finished-at="2021-03-05T11:16:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validaddtracks()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="validaddtracks" duration-ms="5325" started-at="2021-03-05T11:16:33 IST" finished-at="2021-03-05T11:16:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validaddtracks -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:16:38 IST" finished-at="2021-03-05T11:16:38 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validaddtracks status=SUCCESS method=PrivateTracksPage.validaddtracks()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validtracksselection()[pri:1, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="validtracksselection" duration-ms="1764" started-at="2021-03-05T11:16:38 IST" finished-at="2021-03-05T11:16:40 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validtracksselection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:16:40 IST" finished-at="2021-03-05T11:16:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validtracksselection status=SUCCESS method=PrivateTracksPage.validtracksselection()[pri:1, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="FAIL" signature="validtrackdelete()[pri:2, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="validtrackdelete" duration-ms="7115" started-at="2021-03-05T11:16:40 IST" finished-at="2021-03-05T11:16:47 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Track Name] but found [null]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Track Name] but found [null]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertEqualsImpl(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at org.testng.Assert.assertEquals(Assert.java:585)
+at com.Salesboost_Adminpanel.testscript.PrivateTracksPage.validtrackdelete(PrivateTracksPage.java:148)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validtrackdelete -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:16:47 IST" finished-at="2021-03-05T11:16:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validtrackdelete status=FAILURE method=PrivateTracksPage.validtrackdelete()[pri:2, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="FAIL" signature="validEditTrack()[pri:3, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="validEditTrack" duration-ms="1029" started-at="2021-03-05T11:16:47 IST" finished-at="2021-03-05T11:16:48 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at com.Salesboost_Adminpanel.testscript.PrivateTracksPage.validEditTrack(PrivateTracksPage.java:202)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEditTrack -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:16:48 IST" finished-at="2021-03-05T11:16:48 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEditTrack status=FAILURE method=PrivateTracksPage.validEditTrack()[pri:3, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateTracksPage@7d70d1b1]" name="logout" is-config="true" duration-ms="1041" started-at="2021-03-05T11:16:48 IST" finished-at="2021-03-05T11:16:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.PrivateTracksPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="initialize" is-config="true" duration-ms="4785" started-at="2021-03-05T11:17:10 IST" finished-at="2021-03-05T11:17:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validActivePostAddSystemAnnouncements()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="validActivePostAddSystemAnnouncements" duration-ms="29157" started-at="2021-03-05T11:17:15 IST" finished-at="2021-03-05T11:17:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validActivePostAddSystemAnnouncements -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:17:44 IST" finished-at="2021-03-05T11:17:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validActivePostAddSystemAnnouncements status=SUCCESS method=SystemAnnouncementsPage.validActivePostAddSystemAnnouncements()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validSystemAnnouncementSelection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="validSystemAnnouncementSelection" duration-ms="1797" started-at="2021-03-05T11:17:44 IST" finished-at="2021-03-05T11:17:46 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSystemAnnouncementSelection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:17:46 IST" finished-at="2021-03-05T11:17:46 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validSystemAnnouncementSelection status=SUCCESS method=SystemAnnouncementsPage.validSystemAnnouncementSelection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validDeleteAnnouncement()[pri:3, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="validDeleteAnnouncement" duration-ms="15629" started-at="2021-03-05T11:17:46 IST" finished-at="2021-03-05T11:18:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validDeleteAnnouncement -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:18:02 IST" finished-at="2021-03-05T11:18:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validDeleteAnnouncement status=SUCCESS method=SystemAnnouncementsPage.validDeleteAnnouncement()[pri:3, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validInActivePostEditAnnouncement()[pri:4, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="validInActivePostEditAnnouncement" duration-ms="73445" started-at="2021-03-05T11:18:02 IST" finished-at="2021-03-05T11:19:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validInActivePostEditAnnouncement -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:19:15 IST" finished-at="2021-03-05T11:19:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validInActivePostEditAnnouncement status=SUCCESS method=SystemAnnouncementsPage.validInActivePostEditAnnouncement()[pri:4, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage@3cb1ffe6]" name="logout" is-config="true" duration-ms="7461" started-at="2021-03-05T11:19:15 IST" finished-at="2021-03-05T11:19:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
       </class> <!-- com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="initialize" is-config="true" duration-ms="4451" started-at="2021-03-05T11:20:51 IST" finished-at="2021-03-05T11:20:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validAddTools()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="validAddTools" duration-ms="3931" started-at="2021-03-05T11:20:56 IST" finished-at="2021-03-05T11:21:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validAddTools -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:21:00 IST" finished-at="2021-03-05T11:21:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validAddTools status=SUCCESS method=PrivateLeadershipObjectPage.validAddTools()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validtoolsselection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="validtoolsselection" duration-ms="1701" started-at="2021-03-05T11:21:00 IST" finished-at="2021-03-05T11:21:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validtoolsselection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:21:02 IST" finished-at="2021-03-05T11:21:02 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validtoolsselection status=SUCCESS method=PrivateLeadershipObjectPage.validtoolsselection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validToolDelete()[pri:3, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="validToolDelete" duration-ms="5151" started-at="2021-03-05T11:21:02 IST" finished-at="2021-03-05T11:21:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validToolDelete -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:21:07 IST" finished-at="2021-03-05T11:21:07 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validToolDelete status=SUCCESS method=PrivateLeadershipObjectPage.validToolDelete()[pri:3, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validEditTools()[pri:4, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="validEditTools" duration-ms="10496" started-at="2021-03-05T11:21:07 IST" finished-at="2021-03-05T11:21:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEditTools -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:21:17 IST" finished-at="2021-03-05T11:21:17 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEditTools status=SUCCESS method=PrivateLeadershipObjectPage.validEditTools()[pri:4, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage@7e2d773b]" name="logout" is-config="true" duration-ms="882" started-at="2021-03-05T11:21:17 IST" finished-at="2021-03-05T11:21:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.QuickSalesPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="initialize" is-config="true" duration-ms="4792" started-at="2021-03-05T11:19:51 IST" finished-at="2021-03-05T11:19:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validActivePostAddSalesTips()[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="validActivePostAddSalesTips" duration-ms="3632" started-at="2021-03-05T11:19:56 IST" finished-at="2021-03-05T11:20:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validActivePostAddSalesTips -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:20:00 IST" finished-at="2021-03-05T11:20:00 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validActivePostAddSalesTips status=SUCCESS method=QuickSalesPage.validActivePostAddSalesTips()[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validSalesTipsSelection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="validSalesTipsSelection" duration-ms="1689" started-at="2021-03-05T11:20:00 IST" finished-at="2021-03-05T11:20:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSalesTipsSelection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:20:01 IST" finished-at="2021-03-05T11:20:01 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validSalesTipsSelection status=SUCCESS method=QuickSalesPage.validSalesTipsSelection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validInDeleteSalesTip()[pri:3, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="validInDeleteSalesTip" duration-ms="4243" started-at="2021-03-05T11:20:01 IST" finished-at="2021-03-05T11:20:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validInDeleteSalesTip -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:20:06 IST" finished-at="2021-03-05T11:20:06 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validInDeleteSalesTip status=SUCCESS method=QuickSalesPage.validInDeleteSalesTip()[pri:3, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="FAIL" signature="validEditSalesTip()[pri:4, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="validEditSalesTip" duration-ms="12270" started-at="2021-03-05T11:20:06 IST" finished-at="2021-03-05T11:20:18 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at org.testng.Assert.assertTrue(Assert.java:53)
+at com.Salesboost_Adminpanel.testscript.QuickSalesPage.validEditSalesTip(QuickSalesPage.java:250)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1214)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1136)
+at org.testng.TestNG.runSuites(TestNG.java:1066)
+at org.testng.TestNG.run(TestNG.java:1034)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEditSalesTip -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:20:18 IST" finished-at="2021-03-05T11:20:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEditSalesTip status=FAILURE method=QuickSalesPage.validEditSalesTip()[pri:4, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.QuickSalesPage@467aecef]" name="logout" is-config="true" duration-ms="2594" started-at="2021-03-05T11:20:18 IST" finished-at="2021-03-05T11:20:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.QuickSalesPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.LeadershipObjectPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="initialize" is-config="true" duration-ms="4613" started-at="2021-03-05T11:20:20 IST" finished-at="2021-03-05T11:20:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validActiveStatusAddTools()[pri:1, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="validActiveStatusAddTools" duration-ms="3765" started-at="2021-03-05T11:20:25 IST" finished-at="2021-03-05T11:20:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validActiveStatusAddTools -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:20:29 IST" finished-at="2021-03-05T11:20:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validActiveStatusAddTools status=SUCCESS method=LeadershipObjectPage.validActiveStatusAddTools()[pri:1, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validtoolsselection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="validtoolsselection" duration-ms="2139" started-at="2021-03-05T11:20:29 IST" finished-at="2021-03-05T11:20:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validtoolsselection -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:20:31 IST" finished-at="2021-03-05T11:20:31 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validtoolsselection status=SUCCESS method=LeadershipObjectPage.validtoolsselection()[pri:2, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validToolDelete()[pri:3, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="validToolDelete" duration-ms="4159" started-at="2021-03-05T11:20:31 IST" finished-at="2021-03-05T11:20:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validToolDelete -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:20:35 IST" finished-at="2021-03-05T11:20:35 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validToolDelete status=SUCCESS method=LeadershipObjectPage.validToolDelete()[pri:3, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validEditTools()[pri:4, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="validEditTools" duration-ms="9044" started-at="2021-03-05T11:20:35 IST" finished-at="2021-03-05T11:20:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validEditTools -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:20:44 IST" finished-at="2021-03-05T11:20:44 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validEditTools status=SUCCESS method=LeadershipObjectPage.validEditTools()[pri:4, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validAddDuplicateTools()[pri:5, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="validAddDuplicateTools" duration-ms="3230" started-at="2021-03-05T11:20:44 IST" finished-at="2021-03-05T11:20:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validAddDuplicateTools -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:20:47 IST" finished-at="2021-03-05T11:20:47 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validAddDuplicateTools status=SUCCESS method=LeadershipObjectPage.validAddDuplicateTools()[pri:5, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validCancelAddDuplicateTools()[pri:6, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="validCancelAddDuplicateTools" duration-ms="3155" started-at="2021-03-05T11:20:47 IST" finished-at="2021-03-05T11:20:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validCancelAddDuplicateTools -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:20:51 IST" finished-at="2021-03-05T11:20:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validCancelAddDuplicateTools status=SUCCESS method=LeadershipObjectPage.validCancelAddDuplicateTools()[pri:6, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.LeadershipObjectPage@4d50efb8]" name="logout" is-config="true" duration-ms="956" started-at="2021-03-05T11:20:51 IST" finished-at="2021-03-05T11:20:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.LeadershipObjectPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="initialize" is-config="true" duration-ms="5971" started-at="2021-03-05T11:15:03 IST" finished-at="2021-03-05T11:15:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="validaddaccount()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="validaddaccount" duration-ms="6748" started-at="2021-03-05T11:15:09 IST" finished-at="2021-03-05T11:15:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validaddaccount -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="testReportResult" is-config="true" duration-ms="1" started-at="2021-03-05T11:15:15 IST" finished-at="2021-03-05T11:15:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validaddaccount status=SUCCESS method=accountHoldersPage.validaddaccount()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validsearch()[pri:1, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="validsearch" duration-ms="3448" started-at="2021-03-05T11:15:15 IST" finished-at="2021-03-05T11:15:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validsearch -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="testReportResult" is-config="true" duration-ms="16" started-at="2021-03-05T11:15:19 IST" finished-at="2021-03-05T11:15:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validsearch status=SUCCESS method=accountHoldersPage.validsearch()[pri:1, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="validAccountUpdate()[pri:2, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="validAccountUpdate" duration-ms="8296" started-at="2021-03-05T11:15:19 IST" finished-at="2021-03-05T11:15:27 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validAccountUpdate -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="testReportResult" is-config="true" duration-ms="2" started-at="2021-03-05T11:15:27 IST" finished-at="2021-03-05T11:15:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validAccountUpdate status=SUCCESS method=accountHoldersPage.validAccountUpdate()[pri:2, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.accountHoldersPage@86be70a]" name="logout" is-config="true" duration-ms="998" started-at="2021-03-05T11:15:27 IST" finished-at="2021-03-05T11:15:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.accountHoldersPage -->
+      <class name="com.Salesboost_Adminpanel.testscript.PVOTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PVOTest@7a187f14]" name="initialize" is-config="true" duration-ms="4797" started-at="2021-03-05T11:22:03 IST" finished-at="2021-03-05T11:22:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="addPVOScoreBasedTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.PVOTest@7a187f14]" name="addPVOScoreBasedTest" duration-ms="25881" started-at="2021-03-05T11:22:08 IST" finished-at="2021-03-05T11:22:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPVOScoreBasedTest -->
+        <test-method status="PASS" signature="testReportResult(org.testng.ITestResult)[pri:0, instance:com.Salesboost_Adminpanel.testscript.PVOTest@7a187f14]" name="testReportResult" is-config="true" duration-ms="0" started-at="2021-03-05T11:22:34 IST" finished-at="2021-03-05T11:22:34 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addPVOScoreBasedTest status=SUCCESS method=PVOTest.addPVOScoreBasedTest()[pri:2, instance:com.Salesboost_Adminpanel.testscript.PVOTest@7a187f14] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReportResult -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:com.Salesboost_Adminpanel.testscript.PVOTest@7a187f14]" name="logout" is-config="true" duration-ms="2442" started-at="2021-03-05T11:22:34 IST" finished-at="2021-03-05T11:22:36 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+      </class> <!-- com.Salesboost_Adminpanel.testscript.PVOTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

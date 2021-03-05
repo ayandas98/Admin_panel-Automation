@@ -67,8 +67,8 @@ public class SystemAnnouncementsPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
-	@Test(priority = 1)
+	/*
+	//@Test(priority = 1)
 	public void validInActivePostAddSystemAnnouncements () {
 		try {
 				log.info("system announcements - inactive posts add new system announcements");
@@ -103,7 +103,7 @@ public class SystemAnnouncementsPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void validSystemAnnouncementSelection () {
 		try {

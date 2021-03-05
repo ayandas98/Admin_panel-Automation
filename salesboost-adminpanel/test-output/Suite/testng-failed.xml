@@ -3,42 +3,6 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.Salesboost_Adminpanel.testscript.LeadershipTipsPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="validInActivePostEditLeadershipTip"/>
-          <include name="validActivePostAddLeadershipTips"/>
-          <include name="validDeleteLeadershipTip"/>
-          <include name="precondition"/>
-          <include name="logout"/>
-          <include name="validInActivePostAddLeadershipTips"/>
-          <include name="testReportResult"/>
-          <include name="endSuite"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.LeadershipTipsPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.RoleManagementPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="validEditRoles"/>
-          <include name="precondition"/>
-          <include name="validaddroles"/>
-          <include name="testReportResult"/>
-          <include name="endSuite"/>
-          <include name="logout"/>
-          <include name="validroledeletion"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.RoleManagementPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.administratorsPage">
-        <methods>
-          <include name="logout"/>
-          <include name="validadduser"/>
-          <include name="precondition"/>
-          <include name="validUserUpdate"/>
-          <include name="testReportResult"/>
-          <include name="initialize"/>
-          <include name="endSuite"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.administratorsPage -->
       <class name="com.Salesboost_Adminpanel.testscript.PrivateTracksPage">
         <methods>
           <include name="validtrackdelete"/>
@@ -50,26 +14,13 @@
           <include name="endSuite"/>
         </methods>
       </class> <!-- com.Salesboost_Adminpanel.testscript.PrivateTracksPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.managePasswordScript">
-        <methods>
-          <include name="precondition"/>
-          <include name="logout"/>
-          <include name="testReportResult"/>
-          <include name="endSuite"/>
-          <include name="validEmailGeneratePassword"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.managePasswordScript -->
       <class name="com.Salesboost_Adminpanel.testscript.QuickSalesPage">
         <methods>
-          <include name="validActivePostAddSalesTips"/>
           <include name="logout"/>
           <include name="precondition"/>
-          <include name="validInActivePostEditSalesTip"/>
           <include name="testReportResult"/>
-          <include name="validInDeleteSalesTip"/>
+          <include name="validEditSalesTip"/>
           <include name="endSuite"/>
-          <include name="validInActivePostAddSalesTips"/>
           <include name="initialize"/>
         </methods>
       </class> <!-- com.Salesboost_Adminpanel.testscript.QuickSalesPage -->
@@ -77,63 +28,12 @@
         <methods>
           <include name="logout"/>
           <include name="validtrackdelete"/>
-          <include name="validEditTrack"/>
           <include name="precondition"/>
-          <include name="validaddtracks"/>
           <include name="initialize"/>
           <include name="testReportResult"/>
           <include name="endSuite"/>
         </methods>
       </class> <!-- com.Salesboost_Adminpanel.testscript.TracksPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.LeadershipObjectPage">
-        <methods>
-          <include name="validAddTools"/>
-          <include name="validEditTools"/>
-          <include name="initialize"/>
-          <include name="precondition"/>
-          <include name="testReportResult"/>
-          <include name="logout"/>
-          <include name="endSuite"/>
-          <include name="validActiveStatusAddTools"/>
-          <include name="validAddDuplicateTools"/>
-          <include name="validToolDelete"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.LeadershipObjectPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage">
-        <methods>
-          <include name="logout"/>
-          <include name="validInActivePostEditAnnouncement"/>
-          <include name="validActivePostAddSystemAnnouncements"/>
-          <include name="precondition"/>
-          <include name="validDeleteAnnouncement"/>
-          <include name="validInActivePostAddSystemAnnouncements"/>
-          <include name="testReportResult"/>
-          <include name="endSuite"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.SystemAnnouncementsPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.accountHoldersPage">
-        <methods>
-          <include name="initialize"/>
-          <include name="precondition"/>
-          <include name="logout"/>
-          <include name="testReportResult"/>
-          <include name="validaddaccount"/>
-          <include name="endSuite"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.accountHoldersPage -->
-      <class name="com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage">
-        <methods>
-          <include name="validToolDelete"/>
-          <include name="logout"/>
-          <include name="precondition"/>
-          <include name="initialize"/>
-          <include name="validEditTools"/>
-          <include name="testReportResult"/>
-          <include name="endSuite"/>
-          <include name="validAddTools"/>
-        </methods>
-      </class> <!-- com.Salesboost_Adminpanel.testscript.PrivateLeadershipObjectPage -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

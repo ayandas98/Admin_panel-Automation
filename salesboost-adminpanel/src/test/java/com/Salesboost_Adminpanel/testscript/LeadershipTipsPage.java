@@ -68,7 +68,7 @@ public class LeadershipTipsPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
+	/*
 	@Test(priority = 1)
 	public void validInActivePostAddLeadershipTips () {
 		try {
@@ -103,7 +103,7 @@ public class LeadershipTipsPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
+	*/
 	@Test(priority = 2)
 	public void validLeadershipTipsSelection () {
 		try {

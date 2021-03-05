@@ -34,14 +34,16 @@ public class AddTracksObject extends BaseClass {
 			waitForElementToLoad (this.confText);
 			this.trackName.clear();
 			this.trackName.sendKeys(name);
-			this.trackSlug.clear();
-			this.trackSlug.sendKeys(slug);
+			//this.trackSlug.clear();
+			//this.trackSlug.sendKeys(slug);
 			//this.trackFocus.click();
 			this.trackStatus.click();
 			this.trackDescription.clear();
 			this.trackDescription.sendKeys(description);
 			this.trackImage.click();
+			Thread.sleep(1000);
 			this.addTrackButton.click();
+
 		}
 		catch (Exception e) {
 			e.printStackTrace();

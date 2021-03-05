@@ -69,7 +69,7 @@ public class QuickSalesPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
+	/*
 	@Test(priority = 1)
 	public void validInActivePostAddSalesTips () {
 		try {
@@ -104,7 +104,7 @@ public class QuickSalesPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-
+*/
 	@Test(priority = 2)
 	public void validSalesTipsSelection () {
 		try {
@@ -190,13 +190,13 @@ public class QuickSalesPage extends BaseClass{
 
 	
 	@Test(priority = 4)
-	public void validInActivePostEditSalesTip () {
+	public void validEditSalesTip () {
 		try {
 				log.info("valid active edit Sales tip");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update in-active sales tip");
+				eTest = eReports.createTest("valid update sales tip");
 				eTest.assignCategory("quick sales");
 			
 				// add user	

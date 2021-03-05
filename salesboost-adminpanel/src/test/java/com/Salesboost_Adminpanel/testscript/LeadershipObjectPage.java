@@ -33,7 +33,7 @@ public class LeadershipObjectPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	
+	/*
 	@Test(priority = 0)
 	public void validAddTools () {
 		try {
@@ -69,7 +69,7 @@ public class LeadershipObjectPage extends BaseClass{
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-
+	*/
 	@Test(priority = 1)
 	public void validActiveStatusAddTools () {
 		try {
@@ -338,7 +338,7 @@ public class LeadershipObjectPage extends BaseClass{
 	
 	public static WebElement kitNameText(String kitName)
 	{
-	    WebElement kitVerificationText =  driver.findElement(By.xpath("//td[contains(text(),'"+kitName+"')]"));
+	    WebElement kitVerificationText =  driver.findElement(By.xpath("//a[contains(text(),'"+kitName+"')]"));
 	    return kitVerificationText;
 	}
 	

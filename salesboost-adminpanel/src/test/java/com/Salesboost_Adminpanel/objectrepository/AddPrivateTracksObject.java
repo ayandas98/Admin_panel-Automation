@@ -36,8 +36,8 @@ public class AddPrivateTracksObject extends BaseClass {
 			waitForElementToLoad (this.confText);
 			this.trackName.clear();
 			this.trackName.sendKeys(name);
-			this.trackSlug.clear();
-			this.trackSlug.sendKeys(slug);
+			//this.trackSlug.clear();
+			//this.trackSlug.sendKeys(slug);
 			this.trackPrivate.click();
 			this.trackAccountSelect.click();
 			this.trackAccountSelect.sendKeys(list);

@@ -20,6 +20,8 @@ public class EditAccount extends BaseClass {
 	@FindBy(xpath ="//input[@id='txtEmail']") public WebElement ownerEmail  ;
 	@FindBy(xpath ="//input[@id='btnSubmit']") public WebElement update;
 	@FindBy(xpath ="//h1[contains(text(),'Edit:')]")public WebElement valid;
+	@FindBy(xpath ="//span[@id='spanEmail']") public WebElement conf1;
+	@FindBy(xpath ="//span[contains(text(),'Email Already Exist !')]") public WebElement conf2;
 	
 	public EditAccount (WebDriver driver) {
 		this.driver = driver;
@@ -47,6 +49,56 @@ public class EditAccount extends BaseClass {
 			e.printStackTrace();
 		}
 		
+	}
+
+	public void editAccountWithoutData () {
+		try {
+			log.info("update account");
+			this.level.click();
+			this.level.sendKeys("B");
+			this.accountType.click();
+			this.accountType.sendKeys("O");
+			this.active.click();
+			Thread.sleep(1000);
+			this.update.click();			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void editAccountInvalidEmail () {
+		try {
+			log.info("update account");
+			this.ownerEmail.clear();
+			this.ownerEmail.sendKeys("abc12");
+			Thread.sleep(1000);
+		
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}		
+	}
+	
+	public void editAccountExistingEmail () {
+		try {
+			log.info("update account");
+			this.accountName.clear();
+			this.accountName.sendKeys("name");
+			this.level.click();
+			this.level.sendKeys("B");
+			this.accountType.click();
+			this.accountType.sendKeys("I");
+			this.active.click();
+			//this.whitelabel.click();
+			this.ownerEmail.clear();
+			this.ownerEmail.sendKeys("aytesting0+452@gmail.com");
+			Thread.sleep(1000);
+			this.update.click();			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}		
 	}
 	
 }

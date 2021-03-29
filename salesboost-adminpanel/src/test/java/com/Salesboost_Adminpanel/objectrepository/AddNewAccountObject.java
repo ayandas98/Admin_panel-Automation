@@ -22,9 +22,10 @@ public class AddNewAccountObject extends BaseClass {
 	@FindBy(xpath ="//td[4]//input[1]") public WebElement ownerLastName ;
 	@FindBy(xpath ="//input[@id='txtEmail']") public WebElement ownerEmail;
 	@FindBy(xpath ="//input[@id='btnSubmit']") public WebElement addAccount ;
-
-	public AddNewAccountObject (WebDriver driver) {
-		
+	@FindBy(xpath ="//label[@id='txtEmail-error']" ) public WebElement conf1;
+	@FindBy(xpath ="//span[@id='spanEmail']") public WebElement conf2;
+	
+	public AddNewAccountObject (WebDriver driver) {		
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
@@ -56,4 +57,61 @@ public class AddNewAccountObject extends BaseClass {
 			e.printStackTrace();
 		}
 	}
+
+	public void addAccountWithoutData () {
+		try { 
+		log.info("add new account");
+		this.levelSelect.sendKeys("B");
+		this.typeSelect.click();
+		waitForElementToLoad(typeSelect);
+		this.typeSelect.sendKeys("I");
+		waitForElementToLoad(activeAccount);
+		this.activeAccount.click();
+		this.ownerLastName.clear();
+		this.ownerLastName.sendKeys("lastname");
+		waitForElementToLoad(addAccount);
+		this.addAccount.click();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void addAccountInvalidEmail () {
+		try { 
+		log.info("add new account with invalid email");
+		this.ownerEmail.clear();
+		this.ownerEmail.sendKeys("email");
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void addAccountExistingUsernameEmail () {
+		try { 
+		log.info("add new account");
+		this.name.clear();
+		this.name.sendKeys("name");
+		this.levelSelect.click();
+		this.levelSelect.sendKeys("P");
+		this.typeSelect.click();
+		waitForElementToLoad(typeSelect);
+		this.typeSelect.sendKeys("I");
+		waitForElementToLoad(activeAccount);
+		this.activeAccount.click();
+		//this.whiteLabel.click();
+		this.ownerFirstName.clear();
+		this.ownerFirstName.sendKeys("firstname");
+		this.ownerLastName.clear();
+		this.ownerLastName.sendKeys("lastname");
+		this.ownerEmail.clear();
+		this.ownerEmail.sendKeys("ayantesting0+451@gmail.com");
+		waitForElementToLoad(addAccount);
+		this.addAccount.click();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}	
 }

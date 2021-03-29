@@ -16,7 +16,7 @@ public class AdministratorsData extends BaseClass {
 		testdata[1] = tdImport.getValue(2, 1);
 		return testdata;
 	}
-	
+
 	public String[] getAddUserData(TestDataImport tdImport) {
 		testdata = new String[4];
 		testdata[0] = tdImport.getValue(2, 3);
@@ -25,7 +25,7 @@ public class AdministratorsData extends BaseClass {
 		testdata[3] = tdImport.getValue(2, 6);
 		return testdata;
 	}
-	
+
 	public String[] getEditUserData(TestDataImport tdImport) {
 		testdata = new String[4];
 		testdata[0] = tdImport.getValue(2, 8);

@@ -38,4 +38,18 @@ public class AdministratorsObject extends BaseClass {
 			e.printStackTrace();
 		}
 	}
+
+	public void invalidSearch(String name ) {
+		
+		try {
+			log.info("adinstrator");
+			waitForElementToLoad(Username);
+			this.Username.clear();
+			this.Username.sendKeys(name);
+					
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

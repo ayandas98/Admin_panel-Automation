@@ -38,4 +38,19 @@ public class AddLeadershipToolObject extends BaseClass{
 			e.printStackTrace();
 		}
 	}
+	
+	public void addLeadershipToolWithoutData () {
+		try {
+			log.info("add leadership tool object");
+			waitForElementToLoad(this.confText);
+			this.kitSname.sendKeys("sname");
+			this.kitDescription.click();
+			this.kitDescription.sendKeys("desc");
+			this.addButton.click();			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

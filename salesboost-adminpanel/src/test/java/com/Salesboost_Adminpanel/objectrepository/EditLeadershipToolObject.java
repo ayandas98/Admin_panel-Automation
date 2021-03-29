@@ -17,6 +17,7 @@ public class EditLeadershipToolObject extends BaseClass{
 	@FindBy(xpath ="//button[contains(text(),'Update Leadership Tool Kit')]") public WebElement updateButton;
 	@FindBy(xpath ="//input[@id='deleteKitButton']") public WebElement deleteButton;
 	@FindBy(xpath = "//h1[contains(text(),'Edit Leadership Tool Kit:')]") public WebElement actualVerificationText;
+	@FindBy(xpath = "//body/div[1]/div[1]/form[1]/div[1]/ul[1]/li[2]/a[1]") public WebElement tool;
 	
 	public EditLeadershipToolObject (WebDriver driver) {
 		this.driver = driver;
@@ -32,6 +33,20 @@ public class EditLeadershipToolObject extends BaseClass{
 			this.kitSname.sendKeys(sname);
 			this.kitDescription.clear();
 			this.kitDescription.sendKeys(desc);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void editleadershipToolWithoutData() {
+		try {
+			log.info("edit leadership tool");
+			this.kitSname.clear();
+			this.kitSname.sendKeys("sname");
+			this.kitDescription.clear();
+			this.kitDescription.sendKeys("desc");
+			this.updateButton.click();
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -16,7 +16,7 @@ public class AccountHoldersData extends BaseClass {
 		testdata[1] = tdImport.getValue(2, 1);
 		return testdata;
 	}
-	
+
 	public String[] getAddAccountData(TestDataImport tdImport) {
 		testdata = new String[6];
 		testdata[0] = tdImport.getValue(2, 3);
@@ -27,7 +27,7 @@ public class AccountHoldersData extends BaseClass {
 		testdata[5] = tdImport.getValue(2, 8);
 		return testdata;
 	}
-	
+
 	public String[] getEditAccountData(TestDataImport tdImport) {
 		testdata = new String[4];
 		testdata[0] = tdImport.getValue(2, 10);

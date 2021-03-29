@@ -19,6 +19,7 @@ import com.Salesboost_Adminpanel.testdata.AdministratorsData;
 import com.Salesboost_Adminpanel.testdata.SearchData;
 import com.Salesboost_Adminpanel.testdata.TestDataImport;
 import com.aventstack.extentreports.Status;
+//import org.openqa.selenium.interactions.Actions;
 
 public class administratorsPage extends BaseClass{
 
@@ -165,6 +166,174 @@ public class administratorsPage extends BaseClass{
 		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
+	
+	@Test(priority = 0)
+	public void addUserInvalidEmail () {
+		try {
+				log.info("Administrator page-add new user");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify add user invalid email");
+				eTest.assignCategory("add user");
+							
+				dashboardObj.usersTab.click();
+				dashboardObj.administrator.click();
+				waitForElementToLoad(administratorsObject.addNewUserButton);
+				administratorsObject.addNewUserButton.click();
+				waitForElementToLoad(addNewUserObject.header);
+				
+				addNewUserObject.userInvalidMail();
+				expectedstring = "Invalid email";
+				actualstring =addNewUserObject.conf1.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("invalid Email verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 0)
+	public void addUserExistingEmail () {
+		try {
+				log.info("Administrator page-add new user");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify add user with Existing Email");
+				eTest.assignCategory("add user");
+							
+				dashboardObj.usersTab.click();
+				dashboardObj.administrator.click();
+				waitForElementToLoad(administratorsObject.addNewUserButton);
+				administratorsObject.addNewUserButton.click();
+				waitForElementToLoad(addNewUserObject.header);
+				
+				addNewUserObject.addUserExistingMail();
+				expectedstring = "Account already exists";
+				actualstring =addNewUserObject.conf2.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Existing Email verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	}
+	
+	@Test(priority = 0)
+	public void addUserWithoutMandatoryData () {
+		try {
+				log.info("Administrator page-add new user");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify add user without mandatory data");
+				eTest.assignCategory("add user");
+							
+				dashboardObj.usersTab.click();
+				dashboardObj.administrator.click();
+				waitForElementToLoad(administratorsObject.addNewUserButton);
+				administratorsObject.addNewUserButton.click();
+				waitForElementToLoad(addNewUserObject.header);
+				
+				addNewUserObject.addUserWithoutData();;
+				expectedstring = "Invalid email";
+				actualstring =addNewUserObject.conf1.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("add user without mandatory data verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 0)
+	public void editUserInvalidEmail () {
+		try {
+			log.info("Administrator page-add edit user");
+			actualstring ="";
+			actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+			eTest = eReports.createTest("verify edit user invalid email");
+			eTest.assignCategory("edit user");
+			//search user
+			dashboardObj.usersTab.click();
+			dashboardObj.administrator.click();
+			waitForElementToLoad(administratorsObject.Username);
+			driver.findElement(By.xpath("//a[contains(text(),'exp')]")).click();
+			Thread.sleep(1000);
+			//update the user if user found
+			editUserObject.editUserInvalidMail();		
+			expectedstring = "Invalid email";
+			actualstring =editUserObject.conf1.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("invalid Email verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+
+	@Test(priority = 0)
+	public void editUserExistingEmail () {
+		try {
+			log.info("Administrator page-edit user");
+			actualstring ="";
+			actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+			eTest = eReports.createTest("verify edit user with existing mail");
+			eTest.assignCategory("edit user");
+			//search user
+			dashboardObj.usersTab.click();
+			dashboardObj.administrator.click();
+			waitForElementToLoad(administratorsObject.Username);
+			driver.findElement(By.xpath("//a[contains(text(),'exp')]")).click();
+			Thread.sleep(1000);
+			//update the user if user found
+			editUserObject.editUserExistingMail();		
+			expectedstring = "Failed";
+			actualstring =editUserObject.conf1.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("existing Email verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	}
+	
+	@Test(priority = 0)
+	public void editUserWithoutReqData () {
+		try {
+				log.info("Administrator page-edit user");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify edit user without mandatory data");
+				eTest.assignCategory("edit user");
+							
+				dashboardObj.usersTab.click();
+				dashboardObj.administrator.click();
+				waitForElementToLoad(administratorsObject.addNewUserButton);
+				waitForElementToLoad(administratorsObject.Username);
+				driver.findElement(By.xpath("//a[contains(text(),'exp')]")).click();
+				Thread.sleep(1000);
+				editUserObject.editUserWithoutMandatoryData(); 
+				expectedstring = "Invalid email";
+				actualstring =editUserObject.conf1.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("invalid Edit without required data verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}	
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
 	
 	@BeforeClass
 	public void initialize() {

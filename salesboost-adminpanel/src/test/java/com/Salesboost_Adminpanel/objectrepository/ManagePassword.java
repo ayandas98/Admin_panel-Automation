@@ -15,6 +15,7 @@ public class ManagePassword extends BaseClass{
 	@FindBy (xpath ="//input[@id='UserEmail']") public WebElement Email;
 	@FindBy (xpath ="//button[@class='button action submit-form submit-password']") public WebElement button;
 	@FindBy (xpath ="//h1[contains(text(),'Generate Password')]") public WebElement valid;
+	@FindBy (xpath ="//span[@id='spanEmail']") public WebElement conf1;
 	
 	public ManagePassword(WebDriver driver) {
 		
@@ -30,6 +31,34 @@ public class ManagePassword extends BaseClass{
 		this.Email.sendKeys(email);
 		waitForElementToLoad(button);
 		button.click();
+		Thread.sleep(500);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void manageInvalidMail () {
+		
+		try {
+		
+		this.Email.clear();
+		this.Email.sendKeys("email@yopmail.com");
+		waitForElementToLoad(button);
+		this.button.click();
+		Thread.sleep(500);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void manageTextMail () {
+		
+		try {
+		
+		this.Email.clear();
+		this.Email.sendKeys("email12");
 		Thread.sleep(500);
 		}
 		catch (Exception e) {

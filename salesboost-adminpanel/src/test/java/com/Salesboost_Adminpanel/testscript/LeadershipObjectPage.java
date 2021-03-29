@@ -2,12 +2,14 @@ package com.Salesboost_Adminpanel.testscript;
 
 import java.util.ArrayList;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.openqa.selenium.Alert;
 
 import com.Salesboost_Adminpanel.baseclass.BaseClass;
 import com.Salesboost_Adminpanel.objectrepository.AddLeadershipToolObject;
@@ -16,6 +18,7 @@ import com.Salesboost_Adminpanel.objectrepository.DuplicateLeadershipObject;
 import com.Salesboost_Adminpanel.objectrepository.EditLeadershipToolObject;
 import com.Salesboost_Adminpanel.objectrepository.LeadershipToolObject;
 import com.Salesboost_Adminpanel.objectrepository.SignInObject;
+import com.Salesboost_Adminpanel.objectrepository.ToolkitObject;
 import com.Salesboost_Adminpanel.testdata.LeadershipToolData;
 import com.Salesboost_Adminpanel.testdata.TestDataImport;
 import com.aventstack.extentreports.Status;
@@ -28,6 +31,7 @@ public class LeadershipObjectPage extends BaseClass{
 	AddLeadershipToolObject addToolObj;
 	EditLeadershipToolObject editToolObj;
 	DuplicateLeadershipObject duplicateObj;
+	ToolkitObject toolkitObj;
 	LeadershipToolData leadershipData;
 	TestDataImport tdImport;
 	
@@ -336,6 +340,169 @@ public class LeadershipObjectPage extends BaseClass{
 		}		
 	}
 	
+	@Test(priority = 1)
+	public void validAddToolsWithoutData () {
+		try {
+				log.info("Tracks - active status add new tools- without req data");
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify add tools without req data");
+				eTest.assignCategory("leadership tools");
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();				
+				waitForElementToLoad(leadershipObj.addButton);
+				leadershipObj.addButton.click();
+				waitForElementToLoad(addToolObj.confText);				
+				addToolObj.addLeadershipToolWithoutData();
+				Alert confirmation = driver.switchTo().alert();
+				String alerttext = confirmation.getText();
+				System.out.println(alerttext);
+				Thread.sleep(2000);
+				actualstring = alerttext;
+				expectedstring = "Tool Kit";
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("leadership tool adding without req data  failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	}
+	
+	@Test(priority = 4)
+	public void editToolsWithoutData () {
+		try {
+				log.info("verify edit tools without data");
+				
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify update tool without req data");
+				eTest.assignCategory("leadership tools");
+				//search tool
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();
+				waitForElementToLoad(leadershipObj.addButton);
+				driver.findElement(By.xpath("//a[contains(text(),'track 1 test 1')]")).click();
+				//update the tool if found				
+				editToolObj.editleadershipToolWithoutData();
+				Alert confirmation = driver.switchTo().alert();
+				String alerttext = confirmation.getText();
+				System.out.println(alerttext);
+				Thread.sleep(2000);
+				actualstring = alerttext;
+				expectedstring = "Tool Kit";
+				
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("edit without required data verification failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	} 
+
+	@Test(priority = 4)
+	public void addSuppToolkit () {
+		try {
+				log.info("verify add supp toolkit");
+				
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify add supp toolkit");
+				eTest.assignCategory("leadership tools");
+				//search tool
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();
+				waitForElementToLoad(leadershipObj.addButton);
+				driver.findElement(By.xpath("//a[contains(text(),'track 1 test 1')]")).click();
+				//update the tool if found
+				editToolObj.tool.click();
+				Thread.sleep(1000);
+				LeadershipToolData leadershipData = new LeadershipToolData();
+				testdata = leadershipData.getAddSuppKitData(tdImport);
+				toolkitObj.addToolKit(testdata[0], testdata[1]);
+				Thread.sleep(2000);
+				actualstring = toolkitObj.docType.getText();
+				expectedstring = testdata[0];
+				
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("verify add supp toolkit failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	} 
+
+	@Test(priority = 4)
+	public void editSuppToolkit () {
+		try {
+				log.info("verify edit supp toolkit");
+				
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify edit supp toolkit");
+				eTest.assignCategory("leadership tools");
+				//search tool
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();
+				waitForElementToLoad(leadershipObj.addButton);
+				driver.findElement(By.xpath("//a[contains(text(),'track 1 test 1')]")).click();
+				//update the tool if found
+				editToolObj.tool.click();
+				Thread.sleep(1000);
+				LeadershipToolData leadershipData = new LeadershipToolData();
+				testdata = leadershipData.getEditSuppKitData(tdImport);
+				toolkitObj.addToolKit(testdata[0], testdata[1]);
+				Thread.sleep(2000);
+				actualstring = toolkitObj.docType.getText();
+				expectedstring = testdata[0];
+				
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("verify edit supp toolkit failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	} 
+	
+	@Test(priority = 4)
+	public void deleteSuppToolkit () {
+		try {
+				log.info("verify delete supp toolkit");
+				
+				actualstring ="";
+				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
+				eTest = eReports.createTest("verify delete supp toolkit");
+				eTest.assignCategory("leadership tools");
+				//search tool
+				dashboardObj.contentTab.click();
+				dashboardObj.leadershipTools.click();
+				waitForElementToLoad(leadershipObj.addButton);
+				driver.findElement(By.xpath("//a[contains(text(),'track 1 test 1')]")).click();
+				//update the tool if found
+				editToolObj.tool.click();
+				Thread.sleep(1000);
+				toolkitObj.deleteKit();
+				Thread.sleep(2000);
+				actualstring = toolkitObj.addKit.getText();
+				expectedstring = "add";
+				
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("verify edit supp toolkit failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		Assert.assertTrue(actualstring.contains(expectedstring));
+	}
+	
 	public static WebElement kitNameText(String kitName)
 	{
 	    WebElement kitVerificationText =  driver.findElement(By.xpath("//a[contains(text(),'"+kitName+"')]"));
@@ -355,6 +522,7 @@ public class LeadershipObjectPage extends BaseClass{
 			addToolObj = new AddLeadershipToolObject(driver);
 			editToolObj = new EditLeadershipToolObject(driver);
 			duplicateObj = new DuplicateLeadershipObject(driver);
+			toolkitObj = new ToolkitObject(driver);
 			tdImport.readExcel("LeadershipToolData");
 				
 		} 

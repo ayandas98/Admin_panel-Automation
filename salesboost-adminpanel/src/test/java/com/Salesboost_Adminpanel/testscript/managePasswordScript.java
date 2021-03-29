@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.openqa.selenium.Alert;
 
 import com.Salesboost_Adminpanel.baseclass.BaseClass;
 import com.Salesboost_Adminpanel.objectrepository.DashboardObject;
@@ -52,6 +53,57 @@ public class managePasswordScript extends BaseClass{
 		catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("validEmailGeneratePassword Failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 0)
+	public void invalidEmailGeneratePassword () {
+		try {
+			log.info("USERS->MANAGE PASSWORD: validEmailGeneratePassword");
+			actualstring = " "; expectedstring = "";
+			eTest = eReports.createTest("invalid Email GeneratePassword");
+			eTest.assignCategory("GeneratePassword");
+			
+			dashboardObj.usersTab.click();
+			dashboardObj.managePassword.click();
+			waitForElementToLoad(managePassword.Email);
+			managePassword.manageInvalidMail();
+			Alert confirmation = driver.switchTo().alert();
+			String alerttext = confirmation.getText();
+			System.out.println(alerttext);
+			expectedstring = "Invalid Email";
+			actualstring = alerttext;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("invalid Email GeneratePassword Failed");
+			eTest.log(Status.FAIL,"Exception: "+ e);
+		}
+		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		Assert.assertEquals(actualstring , expectedstring);
+	}
+	
+	@Test(priority = 0)
+	public void invalidEmailText() {
+		try {
+			log.info("USERS->MANAGE PASSWORD: validEmailGeneratePassword");
+			actualstring = " "; expectedstring = "";
+			eTest = eReports.createTest("invalid Email Text");
+			eTest.assignCategory("GeneratePassword");
+			
+			dashboardObj.usersTab.click();
+			dashboardObj.managePassword.click();
+			waitForElementToLoad(managePassword.Email);
+			managePassword.manageTextMail();
+			expectedstring = "Invalid email";
+			actualstring = managePassword.conf1.getText();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("invalid Email GeneratePassword Failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);

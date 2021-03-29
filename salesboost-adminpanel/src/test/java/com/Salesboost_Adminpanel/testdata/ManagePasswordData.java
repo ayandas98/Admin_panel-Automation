@@ -16,4 +16,18 @@ public class ManagePasswordData extends BaseClass {
 		testdata[0] = tdImport.getValue(0, 1);
 		return testdata;
 	}
+	
+	public String[] getInvalidEmail(TestDataImport tdImport) {
+		
+		testdata = new String[1];
+		testdata[0] = tdImport.getValue(0, 1);
+		return testdata;
+	}
+	
+	public String[] getInvalidEmailText(TestDataImport tdImport) {
+		
+		testdata = new String[1];
+		testdata[0] = tdImport.getValue(0, 1);
+		return testdata;
+	}
 }

@@ -38,4 +38,17 @@ public class LeadershipToolData extends BaseClass{
 		testdata[2] = tdImport.getValue(2, 13);
 		return testdata;
 	}
+
+	public String[] getAddSuppKitData (TestDataImport tdImport) {
+		testdata = new String[2];
+		testdata[0] = tdImport.getValue(2, 15);
+		testdata[1] = projectFolder + tdImport.getValue(2, 16);
+		return testdata;
+	}
+	public String[] getEditSuppKitData (TestDataImport tdImport) {
+		testdata = new String[2];
+		testdata[0] = tdImport.getValue(2, 15);
+		testdata[1] = projectFolder + tdImport.getValue(2, 16);
+		return testdata;
+	}
 }

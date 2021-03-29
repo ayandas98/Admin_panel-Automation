@@ -19,6 +19,8 @@ public class AddNewUserObject extends BaseClass {
 	@FindBy(xpath ="//select[@id='SelectedRole']") public WebElement accessLevel;
 	@FindBy(xpath ="//input[@id='btnSubmit']") public WebElement addUser;
 	@FindBy(xpath ="//h1[contains(text(),'Edit User')]") public WebElement valid;
+	@FindBy(xpath ="//span[@id='spanEmail']") public WebElement conf1;
+	@FindBy(xpath ="//p[contains(text(),'Account already exists having email aytesting0+451')]") public WebElement conf2;
 	
 	public AddNewUserObject (WebDriver driver) {
 		this.driver = driver;
@@ -39,12 +41,49 @@ public class AddNewUserObject extends BaseClass {
 			this.accessLevel.click();
 			this.accessLevel.sendKeys(role);
 			waitForElementToLoad(addUser);
-			addUser.click();			
+			this.addUser.click();			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
+	public void addUserWithoutData () {
+		try {
+			log.info("add user without mandatory fields ");
+			this.firstName.sendKeys("first");
+			this.accessLevel.click();
+			this.accessLevel.sendKeys("s");
+			waitForElementToLoad(addUser);
+			this.addUser.click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
+	public void userInvalidMail () {
+	try {
+		log.info("add user with invalid email id");
+		this.Email.sendKeys("abc12");
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+	}
+	
+	public void addUserExistingMail () {
+		try {
+			log.info("add user with existing email id");
+			this.Email.sendKeys("aytesting0+450@gmail.com");
+			this.firstName.sendKeys("firstname");
+			this.lastName.sendKeys("lastname");
+			this.accessLevel.sendKeys("A");
+			waitForElementToLoad(addUser);
+			this.addUser.click();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		}
 }

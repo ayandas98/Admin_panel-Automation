@@ -17,6 +17,7 @@ public class AccountHoldersObject extends BaseClass {
 	@FindBy(xpath ="//input[@class='button']") public WebElement searchButton ;
 	@FindBy(xpath ="//span[contains(text(),'Add New Account')]") public WebElement addNewAccount ;
 	@FindBy(xpath ="//strong[contains(text(),'SuperAdmin')]") public WebElement admin ;
+	@FindBy(xpath ="//tbody//tr//td") public WebElement conf1;
 	
 	public AccountHoldersObject (WebDriver driver) {
 		this.driver = driver;
@@ -34,6 +35,19 @@ public class AccountHoldersObject extends BaseClass {
 			this.searchButton.click();
 			
 		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void invalidAccountHolders () {
+		try {
+			log.info("account holders");
+			this.accountSearch.clear();
+			this.accountSearch.sendKeys("name");
+			waitForElementToLoad(accountSearch);
+			this.searchButton.click();
+			}
 		catch (Exception e) {
 			e.printStackTrace();
 		}

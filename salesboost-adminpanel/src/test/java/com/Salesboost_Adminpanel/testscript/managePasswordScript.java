@@ -33,7 +33,7 @@ public class managePasswordScript extends BaseClass{
 			log.info("USERS->MANAGE PASSWORD: validEmailGeneratePassword");
 			actualstring = " "; expectedstring = "";
 			eTest = eReports.createTest("validEmailGeneratePassword");
-			eTest.assignCategory("GeneratePassword");
+			eTest.assignCategory("Manage Password");
 			
 			dashboardObj.usersTab.click();
 			dashboardObj.managePassword.click();
@@ -55,17 +55,17 @@ public class managePasswordScript extends BaseClass{
 			System.out.println("validEmailGeneratePassword Failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 1)
 	public void invalidEmailGeneratePassword () {
 		try {
 			log.info("USERS->MANAGE PASSWORD: validEmailGeneratePassword");
 			actualstring = " "; expectedstring = "";
 			eTest = eReports.createTest("invalid Email GeneratePassword");
-			eTest.assignCategory("GeneratePassword");
+			eTest.assignCategory("Manage Password");
 			
 			dashboardObj.usersTab.click();
 			dashboardObj.managePassword.click();
@@ -82,17 +82,17 @@ public class managePasswordScript extends BaseClass{
 			System.out.println("invalid Email GeneratePassword Failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 2)
 	public void invalidEmailText() {
 		try {
 			log.info("USERS->MANAGE PASSWORD: validEmailGeneratePassword");
 			actualstring = " "; expectedstring = "";
 			eTest = eReports.createTest("invalid Email Text");
-			eTest.assignCategory("GeneratePassword");
+			eTest.assignCategory("ManagePassword");
 			
 			dashboardObj.usersTab.click();
 			dashboardObj.managePassword.click();
@@ -106,7 +106,7 @@ public class managePasswordScript extends BaseClass{
 			System.out.println("invalid Email GeneratePassword Failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	

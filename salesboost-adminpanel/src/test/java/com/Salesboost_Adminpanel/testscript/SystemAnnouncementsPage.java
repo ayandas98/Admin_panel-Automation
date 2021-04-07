@@ -32,9 +32,9 @@ public class SystemAnnouncementsPage extends BaseClass{
 	String[] testdata;
 	
 	@Test(priority = 0)
-	public void validActivePostAddSystemAnnouncements () {
+	public void validAddSystemAnnouncements () {
 		try {
-				log.info("system announcement active posts add new system announcements");
+				log.info("system announcements add new system announcements");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add active announcement");
@@ -61,53 +61,17 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid system announcement: active post adding failed");
+			System.out.println("valid system announcement: post adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	/*
-	//@Test(priority = 1)
-	public void validInActivePostAddSystemAnnouncements () {
+	
+	@Test(priority = 1)
+	public void validSystemAnnouncementListing () {
 		try {
-				log.info("system announcements - inactive posts add new system announcements");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add inactive announcement");
-				eTest.assignCategory("system announcement");
-				
-				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
-				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.systemAnnouncement.click();
-				
-				waitForElementToLoad(systemAnnouncementsObj.addPost);
-				systemAnnouncementsObj.addPost.click();
-				waitForElementToLoad(addSystemAnnouncementObj.confText);
-				
-				addSystemAnnouncementObj.AddSystemAnnouncements(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7]);
-				waitForElementToLoad (addSystemAnnouncementObj.postActive);
-				waitForElementToLoad (addSystemAnnouncementObj.addButton);
-				addSystemAnnouncementObj.addButton.click();	
-				Thread.sleep(2000);
-				actualstring = addSystemAnnouncementObj.actualVerificationText.getText() ;
-				expectedstring = testdata[0];				
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid system announcement: inactive post adding failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));
-	}
-	*/
-	@Test(priority = 2)
-	public void validSystemAnnouncementSelection () {
-		try {
-				log.info("valid System announcements selection");
+				log.info("valid System announcements listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid announcement listing");
@@ -125,12 +89,12 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid system announcements selection failed");
+			System.out.println("valid system announcements listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void validDeleteAnnouncement () {
 		try {
 				log.info("valid Delete announcement");
@@ -186,14 +150,14 @@ public class SystemAnnouncementsPage extends BaseClass{
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 4)
-	public void validInActivePostEditAnnouncement () {
+	@Test(priority = 3)
+	public void validEditAnnouncement () {
 		try {
-				log.info("valid active edit system announcement post");
+				log.info("valid edit system announcement post");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update Inactive announcement");
+				eTest = eReports.createTest("verify update announcement");
 				eTest.assignCategory("system announcement");
 							
 				// add post	
@@ -239,73 +203,13 @@ public class SystemAnnouncementsPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid active edit system announcement failed");
+			System.out.println("valid edit system announcement failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
-	/*
-	@Test(priority = 4)
-	public void validActivePostEditTrack () {
-		try {
-				log.info("valid Inactive edit edit track");
-				
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update active announcement");
-				eTest.assignCategory("system announcement");
-				
-				// add post	
-				SystemAnnouncementData systemAnnouncementData = new SystemAnnouncementData();
-				testdata = systemAnnouncementData.getAddSystemAnnouncementData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.systemAnnouncement.click();
-				
-				waitForElementToLoad(systemAnnouncementsObj.addPost);
-				systemAnnouncementsObj.addPost.click();
-				waitForElementToLoad(addSystemAnnouncementObj.confText);
-				
-				addSystemAnnouncementObj.AddSystemAnnouncements(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7]);
-				waitForElementToLoad (addSystemAnnouncementObj.postActive);
-				waitForElementToLoad (addSystemAnnouncementObj.addButton);
-				addSystemAnnouncementObj.addButton.click();	
-				Thread.sleep(2000);
-					
-				//search post from list as there is no specified search button this step integrated with edit
-				SystemAnnouncementData systemAnnouncementData1 = new SystemAnnouncementData();
-				testdata = systemAnnouncementData1.getAddSystemAnnouncementData(tdImport);
-				dashboardObj.contentTab.click();
-				dashboardObj.systemAnnouncement.click();
-				waitForElementToLoad(systemAnnouncementsObj.addPost);
-				systemAnnouncementsObj.systemAnnouncements(testdata[0], testdata[1]);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
-				
-				//update the post if user found
-				SystemAnnouncementData systemAnnouncementData2 = new SystemAnnouncementData();
-				testdata = systemAnnouncementData2.getAddSystemAnnouncementData(tdImport);
-			
-				editSystemAnnouncementsObj.EditAnnouncements(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7], testdata[8], testdata[9], testdata[10]);
-				Thread.sleep(2000);
-				waitForElementToLoad (editSystemAnnouncementsObj.postActive);
-				waitForElementToLoad (editSystemAnnouncementsObj.updateButton);
-				editSystemAnnouncementsObj.updateButton.click();
-				actualstring = editSystemAnnouncementsObj.actualVerificationText.getText() ;
-				expectedstring = testdata[0];		
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid In-active edit system announcement failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}	
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		assertTrue(actualstring.contains(expectedstring));
-	} 
-	*/
- 
-	
+		
 	@BeforeClass
 	public void initialize() {
 		try {

@@ -37,7 +37,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add account");
-				eTest.assignCategory("add account");
+				eTest.assignCategory("account holders");
 				
 				AccountHoldersData accountHoldersDataObj = new AccountHoldersData();
 				testdata = accountHoldersDataObj.getAddAccountData(tdImport);
@@ -62,7 +62,7 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("valid account adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\n Expected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	} 
 		
@@ -73,7 +73,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid search");
-				eTest.assignCategory("search account");
+				eTest.assignCategory("account holders");
 	/*
 				// add user
 				dashboardObj.usersTab.click();
@@ -116,7 +116,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid update account");
-				eTest.assignCategory("update account");
+				eTest.assignCategory("account holders");
 	/*
 				// add user
 				dashboardObj.usersTab.click();
@@ -158,18 +158,18 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
-	@Test(priority = 0)
+	@Test(priority = 3)
 	public void addaccountWithoutData () {
 		try {
 				log.info("Account holders page-add new account without mandatory data");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add account without required data");
-				eTest.assignCategory("add account");
+				eTest.assignCategory("account holders");
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
 				waitForElementToLoad(accountHoldersObj.addNewAccount);
@@ -186,18 +186,18 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("add account without mandatory data verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 4)
 	public void addaccountInvalidEmail () {
 		try {
 				log.info("Account holders page-add new account- invalid email");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add account- invalid email");
-				eTest.assignCategory("add account");
+				eTest.assignCategory("account holders");
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
 				waitForElementToLoad(accountHoldersObj.addNewAccount);
@@ -214,18 +214,18 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("invalid email account verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 5)
 	public void addaccountExistingEmail () {
 		try {
 				log.info("Account holders page-add new account- existing email");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add account- existing email");
-				eTest.assignCategory("add account");
+				eTest.assignCategory("account holders");
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
 				waitForElementToLoad(accountHoldersObj.addNewAccount);
@@ -242,11 +242,11 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("existing email account verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 6)
 	public void invalidEmailAccountUpdate () {
 		try {
 				log.info("valid edit/update account invalid email");
@@ -254,7 +254,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid update account- invalid email");
-				eTest.assignCategory("update account");
+				eTest.assignCategory("account holders");
 				//search user
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
@@ -270,11 +270,11 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("invalid email edit verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
-	@Test(priority = 2)
+	@Test(priority = 7)
 	public void existingEmailAccountUpdate () {
 		try {
 				log.info("valid edit/update account existing email");
@@ -282,7 +282,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid update account- invalid email");
-				eTest.assignCategory("update account");
+				eTest.assignCategory("account holders");
 				//search user
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
@@ -298,11 +298,11 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("existing email edit verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 8)
 	public void accountUpdateWithoutRequiredData () {
 		try {
 				log.info("valid edit/update account without mandatory data");
@@ -310,7 +310,7 @@ public class accountHoldersPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid update account- without required data");
-				eTest.assignCategory("update account");
+				eTest.assignCategory("account holders");
 				//search user
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
@@ -326,18 +326,18 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("edit without required data verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 9)
 	public void invalidAccountSearch () {
 		try {
 				log.info("invalid search user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("invalid user search");
-				eTest.assignCategory("search account");
+				eTest.assignCategory("account holders");
 				dashboardObj.usersTab.click();
 				dashboardObj.accountHolders.click();
 				waitForElementToLoad(accountHoldersObj.accountSearch);
@@ -352,7 +352,7 @@ public class accountHoldersPage extends BaseClass{
 			System.out.println("invalid account search verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 

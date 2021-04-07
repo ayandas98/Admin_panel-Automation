@@ -43,7 +43,7 @@ public class administratorsPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify add user");
-				eTest.assignCategory("add user");
+				eTest.assignCategory("administrators");
 				AdministratorsData administratorsData = new AdministratorsData();
 				testdata = administratorsData.getAddUserData(tdImport);
 				
@@ -65,7 +65,7 @@ public class administratorsPage extends BaseClass{
 			System.out.println("valid account adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
@@ -76,7 +76,7 @@ public class administratorsPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid search");
-				eTest.assignCategory("search user");
+				eTest.assignCategory("administrators");
 				
 				// add user 
 	/*
@@ -120,7 +120,7 @@ public class administratorsPage extends BaseClass{
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid update user");
-				eTest.assignCategory("update user");
+				eTest.assignCategory("administrators");
 				
 		/*		// add user
 				
@@ -163,18 +163,18 @@ public class administratorsPage extends BaseClass{
 			System.out.println("valid search failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
-	@Test(priority = 0)
+	@Test(priority = 3)
 	public void addUserInvalidEmail () {
 		try {
 				log.info("Administrator page-add new user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify add user invalid email");
-				eTest.assignCategory("add user");
+				eTest.assignCategory("administrators");
 							
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
@@ -191,18 +191,18 @@ public class administratorsPage extends BaseClass{
 			System.out.println("invalid Email verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 4)
 	public void addUserExistingEmail () {
 		try {
 				log.info("Administrator page-add new user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify add user with Existing Email");
-				eTest.assignCategory("add user");
+				eTest.assignCategory("administrators");
 							
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
@@ -219,18 +219,18 @@ public class administratorsPage extends BaseClass{
 			System.out.println("Existing Email verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 5)
 	public void addUserWithoutMandatoryData () {
 		try {
 				log.info("Administrator page-add new user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify add user without mandatory data");
-				eTest.assignCategory("add user");
+				eTest.assignCategory("administrators");
 							
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
@@ -247,18 +247,18 @@ public class administratorsPage extends BaseClass{
 			System.out.println("add user without mandatory data verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 6)
 	public void editUserInvalidEmail () {
 		try {
 			log.info("Administrator page-add edit user");
 			actualstring ="";
 			actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 			eTest = eReports.createTest("verify edit user invalid email");
-			eTest.assignCategory("edit user");
+			eTest.assignCategory("administrators");
 			//search user
 			dashboardObj.usersTab.click();
 			dashboardObj.administrator.click();
@@ -275,18 +275,18 @@ public class administratorsPage extends BaseClass{
 			System.out.println("invalid Email verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 
-	@Test(priority = 0)
+	@Test(priority = 7)
 	public void editUserExistingEmail () {
 		try {
 			log.info("Administrator page-edit user");
 			actualstring ="";
 			actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 			eTest = eReports.createTest("verify edit user with existing mail");
-			eTest.assignCategory("edit user");
+			eTest.assignCategory("administrators");
 			//search user
 			dashboardObj.usersTab.click();
 			dashboardObj.administrator.click();
@@ -303,18 +303,18 @@ public class administratorsPage extends BaseClass{
 			System.out.println("existing Email verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 0)
+	@Test(priority = 8)
 	public void editUserWithoutReqData () {
 		try {
 				log.info("Administrator page-edit user");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify edit user without mandatory data");
-				eTest.assignCategory("edit user");
+				eTest.assignCategory("administrators");
 							
 				dashboardObj.usersTab.click();
 				dashboardObj.administrator.click();
@@ -331,7 +331,7 @@ public class administratorsPage extends BaseClass{
 			System.out.println("invalid Edit without required data verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: "+actualstring+"\nExpcted: "+expectedstring);
+		System.out.println("Actual: "+actualstring+"\nExpected: "+expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	

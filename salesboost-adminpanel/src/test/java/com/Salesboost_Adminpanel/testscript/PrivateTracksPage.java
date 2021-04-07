@@ -40,7 +40,7 @@ public class PrivateTracksPage extends BaseClass {
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add private track");
-				eTest.assignCategory("add tracks");
+				eTest.assignCategory("private tracks");
 				
 				PrivateTracksData tracksData = new PrivateTracksData();
 				testdata = tracksData.getAddPrivateTrackData(tdImport);
@@ -65,18 +65,18 @@ public class PrivateTracksPage extends BaseClass {
 			System.out.println("valid account adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
 	@Test(priority = 1)
-	public void validtracksselection () {
+	public void validTracksListing () {
 		try {
 				log.info("valid tracks selection");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify tracks listing");
-				eTest.assignCategory("tracks listing");
+				eTest.assignCategory("private tracks");
 
 				// valid tracks selection for display based on active/inactive
 				
@@ -102,7 +102,7 @@ public class PrivateTracksPage extends BaseClass {
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify delete private track");
-				eTest.assignCategory("delete track");
+				eTest.assignCategory(" private tracks");
 				/*
 				//add track
 				PrivateTracksData tracksData = new PrivateTracksData();
@@ -156,7 +156,7 @@ public class PrivateTracksPage extends BaseClass {
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("verify update private track");
-				eTest.assignCategory("update track");
+				eTest.assignCategory("private tracks");
 				/*
 				// add track	
 				PrivateTracksData tracksData = new PrivateTracksData();
@@ -198,7 +198,7 @@ public class PrivateTracksPage extends BaseClass {
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 		

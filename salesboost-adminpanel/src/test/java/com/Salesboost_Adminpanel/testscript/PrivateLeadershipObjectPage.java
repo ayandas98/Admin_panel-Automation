@@ -62,51 +62,14 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			System.out.println("valid  private leadership tool adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	/*
+		
 	@Test(priority = 1)
-	public void validActiveStatusAddTools () {
+	public void validToolsListing () {
 		try {
-				log.info("Tracks - active status add new tools");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("add tips");
-				eTest.assignCategory("pvt leadership tip");
-				
-				PrivateLeadershipToolData leadershipData = new PrivateLeadershipToolData();
-				testdata = leadershipData.getAddPrivateLeadershipToolsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTools.click();
-				
-				waitForElementToLoad(leadershipObj.addButton);
-				leadershipObj.addButton.click();
-				waitForElementToLoad(addPrivateObj.confText);
-				
-				addPrivateObj.addLeadershipTool(testdata[0], testdata[1], testdata[2], testdata[3]);
-				waitForElementToLoad (addPrivateObj.kitStatus);
-				waitForElementToLoad (addPrivateObj.addButton);
-				addPrivateObj.kitStatus.click();
-				addPrivateObj.addButton.click();	
-				Thread.sleep(2000);
-				actualstring = addPrivateObj.actualVerificationText.getText();
-				expectedstring = testdata[0];				
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid active status private leadership tool adding failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));		
-	}
-	*/
-	@Test(priority = 2)
-	public void validtoolsselection () {
-		try {
-				log.info("valid tools selection");
+				log.info("valid tools listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid tools listing");
@@ -141,7 +104,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid selection failed");
+			System.out.println("valid listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
@@ -198,7 +161,7 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			System.out.println("valid delete failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
@@ -261,11 +224,9 @@ public class PrivateLeadershipObjectPage extends BaseClass{
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
-	
-	
 	
 	@BeforeClass
 	public void initialize() {

@@ -32,9 +32,9 @@ public class LeadershipTipsPage extends BaseClass{
 	String[] testdata;
 	
 	@Test(priority = 0)
-	public void validActivePostAddLeadershipTips () {
+	public void validAddLeadershipTips () {
 		try {
-				log.info("leadership tips active posts add new tips");
+				log.info("leadership tips add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add leadership tip");
@@ -62,52 +62,17 @@ public class LeadershipTipsPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid leadership tips: active post adding failed");
+			System.out.println("valid leadership tips: post adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	/*
+	
 	@Test(priority = 1)
-	public void validInActivePostAddLeadershipTips () {
+	public void validLeadershipTipsListing () {
 		try {
-				log.info("leadership tips In-active posts add new tips");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add In-active leadership tip");
-				eTest.assignCategory("leadership tips");
-				
-				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
-				testdata = leadershipTipsData.getAddLeadershipTipsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTips.click();
-				
-				waitForElementToLoad(leadershipTipsObj.addTips);
-				leadershipTipsObj.addTips.click();
-				waitForElementToLoad(addLeadershipTips.confText);
-				
-				addLeadershipTips.addTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6]);
-				waitForElementToLoad (addLeadershipTips.addButton);
-				addLeadershipTips.addButton.click();	
-				Thread.sleep(2000);
-				actualstring =addLeadershipTips.actualVerificationText.getText();
-				expectedstring = testdata[0];
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid leadership tips: active post adding failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));
-	}
-	*/
-	@Test(priority = 2)
-	public void validLeadershipTipsSelection () {
-		try {
-				log.info("valid leadership tips selection");
+				log.info("valid leadership tips listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid leadership tip listing");
@@ -126,12 +91,12 @@ public class LeadershipTipsPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid system announcements selection failed");
+			System.out.println("valid system announcements listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void validDeleteLeadershipTip () {
 		try {
 				log.info("valid delete leadership tip");
@@ -184,14 +149,14 @@ public class LeadershipTipsPage extends BaseClass{
 			System.out.println("valid delete leadership tip failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 
 	@Test(priority = 4)
-	public void validInActivePostEditLeadershipTip () {
+	public void validEditLeadershipTip () {
 		try {
-				log.info("valid active edit leadership tip");				
+				log.info("valid edit leadership tip");				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid update leadership tip");
@@ -241,75 +206,13 @@ public class LeadershipTipsPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid active edit leadership tip failed");
+			System.out.println("valid edit leadership tip failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	
-	/*
-	@Test(priority = 4)
-	public void validActivePostEditLeadershipTip () {
-		try {
-				log.info("valid In-active edit leadership tip");
-				
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("verify update tip");
-				eTest.assignCategory("leadership tips");
-				
-				// add user	
-				LeadershipTipsData leadershipTipsData = new LeadershipTipsData();
-				testdata = leadershipTipsData.getAddLeadershipTipsData(tdImport);
 			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTips.click();
-				
-				waitForElementToLoad(leadershipTipsObj.addTips);
-				leadershipTipsObj.addTips.click();
-				waitForElementToLoad(addLeadershipTips.confText);
-				
-				addLeadershipTips.addTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6]);
-				waitForElementToLoad (addLeadershipTips.addButton);
-				addLeadershipTips.addButton.click();	
-				Thread.sleep(2000);
-					
-				//search track from tracks list as there is no specified search button this step integrated with edit
-				LeadershipTipsData leadershipTipsData1 = new LeadershipTipsData();
-				testdata = leadershipTipsData1.getLeadershipTipsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTips.click();
-
-				waitForElementToLoad(leadershipTipsObj.addTips);
-				leadershipTipsObj.leadershipObject(testdata[0], testdata[1]);
-				Thread.sleep(1000);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
-				
-				//update the user if user found
-				LeadershipTipsData leadershipTipsData2 = new LeadershipTipsData();
-				testdata = leadershipTipsData2.getLeadershipTipsData(tdImport);
-			
-				editLeadershipTips.editTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6], testdata[7], testdata[8]);
-				Thread.sleep(2000);
-				waitForElementToLoad (editLeadershipTips.updateButton);
-				editLeadershipTips.updateButton.click();
-				actualstring = editLeadershipTips.actualVerificationText.getText();
-				expectedstring = testdata[0];		
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid In-active edit leadership tip failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));	
-	}
-	*/
-	
-		
 	@BeforeClass
 	public void initialize() {
 		try {

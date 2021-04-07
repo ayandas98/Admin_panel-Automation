@@ -68,7 +68,7 @@ public class RoleManagementPage extends BaseClass {
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	/*
+	
 	@Test(priority = 1)
 	public void validcanceladdroles () {
 		try {
@@ -102,12 +102,12 @@ public class RoleManagementPage extends BaseClass {
 			System.out.println("valid cancel role adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}		
-	}		*/
+	}	
 	
 	@Test(priority = 2)
-	public void validrolesselection () {
+	public void validrolesListing () {
 		try {
-				log.info("valid roles selection");
+				log.info("valid roles listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid roles listing");
@@ -124,7 +124,7 @@ public class RoleManagementPage extends BaseClass {
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid selection failed");
+			System.out.println("valid listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
@@ -231,7 +231,7 @@ public class RoleManagementPage extends BaseClass {
 		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
-	/*
+	
 	@Test(priority = 4)
 	public void validCancelEditRoles () {
 		try {
@@ -290,7 +290,7 @@ public class RoleManagementPage extends BaseClass {
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
 	}
-	*/
+	
 	
 	public static WebElement rolesNameText(String rolesName)
 	{

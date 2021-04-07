@@ -34,12 +34,12 @@ public class QuickSalesPage extends BaseClass{
 	String[] testdata2;
 	
 	@Test(priority = 0)
-	public void validActivePostAddSalesTips () {
+	public void validAddSalesTips () {
 		try {
-				log.info("sales tips active posts add new tips");
+				log.info("sales tips active: add new tips");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add active sales tip");
+				eTest = eReports.createTest("valid add sales tip");
 				eTest.assignCategory("quick sales");
 				
 				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
@@ -63,52 +63,17 @@ public class QuickSalesPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid sales tips: active post adding failed");
+			System.out.println("valid sales tips: post adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	/*
+	
 	@Test(priority = 1)
-	public void validInActivePostAddSalesTips () {
+	public void validSalesTipsListing () {
 		try {
-				log.info("sales tips In-active posts add new tips");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add inactive sales tip");
-				eTest.assignCategory("quick sales");
-				
-				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
-				testdata = 	quickSalesTipsData.getAddSalesTipsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.salesTips.click();
-				
-				waitForElementToLoad(quickTipsObj.addButton);
-				quickTipsObj.addButton.click();
-				waitForElementToLoad(addQuickSalesTips.addButton);
-				
-				addQuickSalesTips.addQuickTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
-				waitForElementToLoad (addQuickSalesTips.addButton);
-				addQuickSalesTips.addButton.click();	
-				Thread.sleep(2000);
-				actualstring = addQuickSalesTips.actualVerificationText.getText();
-				expectedstring = testdata[0];				
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid sales tips: In-active post adding failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}		
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));
-	}
-*/
-	@Test(priority = 2)
-	public void validSalesTipsSelection () {
-		try {
-				log.info("valid Sales tips selection");
+				log.info("valid Sales tips listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid sales tip listing");
@@ -127,12 +92,12 @@ public class QuickSalesPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid sales tips selection failed");
+			System.out.println("valid sales tips listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void validInDeleteSalesTip () {
 		try {
 				log.info("valid Delete Sales tip");
@@ -184,15 +149,14 @@ public class QuickSalesPage extends BaseClass{
 			System.out.println("valid delete sales tip failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 
-	
 	@Test(priority = 4)
 	public void validEditSalesTip () {
 		try {
-				log.info("valid active edit Sales tip");
+				log.info("valid edit Sales tip");
 				
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
@@ -243,75 +207,13 @@ public class QuickSalesPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid active edit sales tip failed");
+			System.out.println("valid edit sales tip failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
-	/*
-	@Test(priority = 4)
-	public void validActivePostEditSalesTip () {
-		try {
-				log.info("valid In-active edit Sales tip");
-				
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid update active sales tip");
-				eTest.assignCategory("quick sales");
-				
-				// add user	
-				QuickSalesTipsData 	quickSalesTipsData = new 	QuickSalesTipsData();
-				testdata = 	quickSalesTipsData.getAddSalesTipsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.salesTips.click();
-				
-				waitForElementToLoad(quickTipsObj.addButton);
-				quickTipsObj.addButton.click();
-				waitForElementToLoad(addQuickSalesTips.addButton);
-				
-				addQuickSalesTips.addQuickTips(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5]);
-				waitForElementToLoad (addQuickSalesTips.addButton);
-				addQuickSalesTips.addButton.click();	
-				Thread.sleep(2000);
-					
-				//search track from tracks list as there is no specified search button this step integrated with edit
-				QuickSalesTipsData 	quickSalesTipsData1 = new 	QuickSalesTipsData();
-				testdata = 	quickSalesTipsData1.getAddSalesTipsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.salesTips.click();
-
-				waitForElementToLoad(quickTipsObj.addButton);
-				quickTipsObj.quickTipsobject(testdata[0], testdata[1]);
-				Thread.sleep(1000);
-				driver.findElement(By.xpath(" //a[contains(text(),'" + testdata[1] + "')]")).click();
-				System.out.println(testdata[1]);
-				
-				//update the user if user found
-				QuickSalesTipsData 	quickSalesTipsData2 = new 	QuickSalesTipsData();
-				testdata = 	quickSalesTipsData2.getAddSalesTipsData(tdImport);
-			
-				editQuickSalesTip.editSalesTip(testdata[0], testdata[1], testdata[2], testdata[3], testdata[4], testdata[5], testdata[6]);
-				Thread.sleep(2000);
-				waitForElementToLoad (editQuickSalesTip.tipActive);
-				waitForElementToLoad (editQuickSalesTip.updateButton);
-				editQuickSalesTip.tipActive.click();
-				editQuickSalesTip.updateButton.click();
-				actualstring =editQuickSalesTip.actualVerificationText.getText();
-				expectedstring = testdata[0];		
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid In-active edit sales tip failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));	
-	}
-	*/
-	
+		
 	@BeforeClass
 	public void initialize() {
 		try {

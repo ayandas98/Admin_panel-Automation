@@ -64,15 +64,15 @@ public class TracksPage extends BaseClass{
 			System.out.println("valid track adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
 	
 	@Test(priority = 1)
-	public void validtracksselection () {
+	public void validTracksListing () {
 		try {
-				log.info("valid tracks selection");
+				log.info("valid tracks listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid tracks listings");
@@ -90,7 +90,7 @@ public class TracksPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid selection failed");
+			System.out.println("valid selection listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
@@ -145,11 +145,11 @@ public class TracksPage extends BaseClass{
 			System.out.println("valid delete failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void validEditTrack () {
 		try {
 				log.info("valid edit track");
@@ -194,7 +194,7 @@ public class TracksPage extends BaseClass{
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}	
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	

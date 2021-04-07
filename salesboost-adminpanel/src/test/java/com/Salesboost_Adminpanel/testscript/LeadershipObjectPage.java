@@ -37,47 +37,11 @@ public class LeadershipObjectPage extends BaseClass{
 	
 	String getTextboxData="";
 	String[] testdata;
-	/*
+	
 	@Test(priority = 0)
 	public void validAddTools () {
 		try {
-				log.info("add new tools");
-				actualstring ="";
-				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
-				eTest = eReports.createTest("valid add new tools");
-				eTest.assignCategory("leadership tools");
-				
-				LeadershipToolData leadershipData = new LeadershipToolData();
-				testdata = leadershipData.getAddLeadershipToolsData(tdImport);
-			
-				dashboardObj.contentTab.click();
-				dashboardObj.leadershipTools.click();
-				
-				waitForElementToLoad(leadershipObj.addButton);
-				leadershipObj.addButton.click();
-				waitForElementToLoad(addToolObj.confText);
-				
-				addToolObj.addLeadershipTool(testdata[0], testdata[1], testdata[2]);
-				waitForElementToLoad (addToolObj.addButton);
-				addToolObj.addButton.click();	
-				Thread.sleep(2000);
-				actualstring =addToolObj.actualVerificationText.getText();
-				expectedstring = testdata[0];
-								
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("valid leadership tool adding failed");
-			eTest.log(Status.FAIL,"Exception: "+ e);
-		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
-		Assert.assertTrue(actualstring.contains(expectedstring));
-	}
-	*/
-	@Test(priority = 1)
-	public void validActiveStatusAddTools () {
-		try {
-				log.info("Tracks - active status add new tools");
+				log.info("Tracks -add new tools");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid add new tools");
@@ -104,17 +68,17 @@ public class LeadershipObjectPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid active status leadership tool adding failed");
+			System.out.println("valid leadership tool adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 2)
-	public void validtoolsselection () {
+	@Test(priority = 1)
+	public void validToolsListing () {
 		try {
-				log.info("valid tools selection");
+				log.info("valid tools listing");
 				actualstring ="";
 				actualArray = new ArrayList<>(); expectedArray = new ArrayList<String>();
 				eTest = eReports.createTest("valid  search tool");
@@ -148,12 +112,12 @@ public class LeadershipObjectPage extends BaseClass{
 		}
 		catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("valid selection failed");
+			System.out.println("valid listing failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void validToolDelete () {
 		try {
 				log.info("valid tools delete");
@@ -205,11 +169,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("valid delete failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertEquals(actualstring , expectedstring);
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 3)
 	public void validEditTools () {
 		try {
 				log.info("valid edit tools");
@@ -266,13 +230,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("valid edit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
-	
-
-		
-	@Test(priority = 5)
+			
+	@Test(priority = 4)
 	public void validAddDuplicateTools () {
 		try {
 				log.info("new duplicate tools");
@@ -303,11 +265,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("valid duplicate leadership tool adding failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 5)
 	public void validCancelAddDuplicateTools () {
 		try {
 				log.info("Tools -cancel add new duplicate tools");
@@ -330,8 +292,7 @@ public class LeadershipObjectPage extends BaseClass{
 				waitForElementToLoad (duplicateObj.closeButton);
 				Thread.sleep(2000);
 				duplicateObj.closeButton.click();	
-				
-								
+											
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -340,7 +301,7 @@ public class LeadershipObjectPage extends BaseClass{
 		}		
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 6)
 	public void validAddToolsWithoutData () {
 		try {
 				log.info("Tracks - active status add new tools- without req data");
@@ -366,11 +327,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("leadership tool adding without req data  failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	
-	@Test(priority = 4)
+	@Test(priority = 7)
 	public void editToolsWithoutData () {
 		try {
 				log.info("verify edit tools without data");
@@ -399,11 +360,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("edit without required data verification failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 
-	@Test(priority = 4)
+	@Test(priority = 8)
 	public void addSuppToolkit () {
 		try {
 				log.info("verify add supp toolkit");
@@ -433,11 +394,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("verify add supp toolkit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 
-	@Test(priority = 4)
+	@Test(priority = 9)
 	public void editSuppToolkit () {
 		try {
 				log.info("verify edit supp toolkit");
@@ -467,11 +428,11 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("verify edit supp toolkit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	} 
 	
-	@Test(priority = 4)
+	@Test(priority = 10)
 	public void deleteSuppToolkit () {
 		try {
 				log.info("verify delete supp toolkit");
@@ -491,7 +452,7 @@ public class LeadershipObjectPage extends BaseClass{
 				toolkitObj.deleteKit();
 				Thread.sleep(2000);
 				actualstring = toolkitObj.addKit.getText();
-				expectedstring = "add";
+				expectedstring = "Add";
 				
 		}
 		catch (Exception e) {
@@ -499,7 +460,7 @@ public class LeadershipObjectPage extends BaseClass{
 			System.out.println("verify edit supp toolkit failed");
 			eTest.log(Status.FAIL,"Exception: "+ e);
 		}
-		System.out.println("Actual: " + actualstring + "\nExpcted: " + expectedstring);
+		System.out.println("Actual: " + actualstring + "\nExpected: " + expectedstring);
 		Assert.assertTrue(actualstring.contains(expectedstring));
 	}
 	

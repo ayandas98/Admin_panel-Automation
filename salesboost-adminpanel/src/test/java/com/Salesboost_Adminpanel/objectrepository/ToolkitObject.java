@@ -45,6 +45,8 @@ public class ToolkitObject extends BaseClass{
 		try {
 		log.info("delete asso kit");
 		this.deleteKit.click();
+		driver.switchTo().alert().accept();
+		Thread.sleep(2000);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
